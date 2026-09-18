@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>UK JE Civil — Practice Hub</title>
+<style>
+:root{--bg:#f5f6fa;--sf:#fff;--sa:#eef0f6;--tx:#1b1f3b;--tm:#6b7194;--pr:#4361ee;--pl:#e8ecfd;--pd:#3249cb;--ok:#0fa968;--ob:#e6f9f0;--no:#e5383b;--nb:#fde8e8;--wa:#f59e0b;--bd:#dfe2ec;--r:12px;--rs:8px;--sh:0 2px 12px rgba(27,31,59,.07);--sl:0 8px 30px rgba(27,31,59,.12);--f:'Segoe UI',system-ui,-apple-system,sans-serif;--t:.25s cubic-bezier(.4,0,.2,1)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1023;--sf:#1a1b36;--sa:#24264a;--tx:#e4e6f0;--tm:#8d90b0;--pr:#6b8aff;--pl:#1e2352;--pd:#8da4ff;--bd:#2d2f52;--sh:0 2px 12px rgba(0,0,0,.3);--sl:0 8px 30px rgba(0,0,0,.45);--ob:#0d2e1f;--nb:#2e0f10}}
+:root[data-theme="dark"]{--bg:#0f1023;--sf:#1a1b36;--sa:#24264a;--tx:#e4e6f0;--tm:#8d90b0;--pr:#6b8aff;--pl:#1e2352;--pd:#8da4ff;--bd:#2d2f52;--sh:0 2px 12px rgba(0,0,0,.3);--sl:0 8px 30px rgba(0,0,0,.45);--ob:#0d2e1f;--nb:#2e0f10}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}html{font-size:16px}body{font-family:var(--f);background:var(--bg);color:var(--tx);min-height:100vh;line-height:1.6;-webkit-font-smoothing:antialiased}
+.app{max-width:820px;margin:0 auto;padding:20px 16px 40px}.screen{display:none;animation:fu .3s ease both}.screen.active{display:block}@keyframes fu{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+.hdr{text-align:center;padding:28px 0 8px}.hdr h1{font-size:1.5rem;font-weight:700;letter-spacing:-.02em}.hdr h1 span{color:var(--pr)}.hdr p{color:var(--tm);font-size:.88rem;margin-top:4px}.badge{display:inline-block;background:var(--pl);color:var(--pr);font-size:.72rem;font-weight:600;padding:3px 10px;border-radius:20px;margin-bottom:8px}
+.sl{font-size:.8rem;font-weight:600;color:var(--tm);margin:20px 0 10px;text-transform:uppercase;letter-spacing:.06em}
+.sg{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.sc{background:var(--sf);border:1.5px solid var(--bd);border-radius:var(--r);padding:16px 12px;cursor:pointer;transition:all var(--t);text-align:center;position:relative;overflow:hidden}.sc:hover{border-color:var(--pr);box-shadow:var(--sh);transform:translateY(-2px)}.sc.sel{border-color:var(--pr);background:var(--pl)}.sc .ic{font-size:1.6rem;display:block;margin-bottom:6px}.sc .nm{font-size:.8rem;font-weight:600;line-height:1.3}.sc .ct{font-size:.68rem;color:var(--tm);margin-top:3px}.sc .ck{position:absolute;top:6px;right:6px;width:20px;height:20px;border-radius:50%;background:var(--pr);color:#fff;display:none;align-items:center;justify-content:center;font-size:.65rem;font-weight:700}.sc.sel .ck{display:flex}
+.sp{background:var(--sf);border-radius:var(--r);padding:20px;margin-top:16px;box-shadow:var(--sh)}.sr{margin-bottom:16px}.sr label{display:block;font-size:.8rem;font-weight:600;margin-bottom:6px;color:var(--tm)}.pg{display:flex;gap:6px;flex-wrap:wrap}.pi{padding:7px 16px;border:1.5px solid var(--bd);border-radius:20px;background:var(--sf);cursor:pointer;font-size:.8rem;font-weight:500;transition:all var(--t);color:var(--tx)}.pi:hover{border-color:var(--pr)}.pi.a{background:var(--pr);color:#fff;border-color:var(--pr)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:11px 24px;border:none;border-radius:var(--rs);font-size:.88rem;font-weight:600;cursor:pointer;transition:all var(--t);font-family:var(--f)}.bp{background:var(--pr);color:#fff}.bp:hover{background:var(--pd);transform:translateY(-1px)}.bp:disabled{opacity:.4;cursor:not-allowed;transform:none}.bo{background:transparent;color:var(--pr);border:1.5px solid var(--pr)}.bo:hover{background:var(--pl)}.bg{display:flex;gap:8px;margin-top:20px;justify-content:center;flex-wrap:wrap}
+.qt{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px;flex-wrap:wrap;gap:6px}.qt .st{font-size:.73rem;font-weight:600;color:var(--pr);background:var(--pl);padding:3px 10px;border-radius:14px}.qt .qc{font-size:.82rem;font-weight:600;color:var(--tm)}.qt .tm{font-size:.82rem;font-weight:700;color:var(--wa);min-width:46px;text-align:right}
+.pt{width:100%;height:5px;background:var(--sa);border-radius:3px;margin-bottom:20px;overflow:hidden}.pf{height:100%;background:var(--pr);border-radius:3px;transition:width .4s ease}
+.qc2{background:var(--sf);border-radius:var(--r);padding:24px 20px;box-shadow:var(--sh)}.qtx{font-size:1rem;font-weight:600;line-height:1.5;margin-bottom:18px}
+.ol{display:flex;flex-direction:column;gap:8px}.op{display:flex;align-items:flex-start;gap:10px;padding:12px 14px;border:1.5px solid var(--bd);border-radius:var(--rs);cursor:pointer;transition:all var(--t);background:var(--sf)}.op:hover:not(.dis){border-color:var(--pr);background:var(--pl)}.op.sel{border-color:var(--pr);background:var(--pl)}.op.cor{border-color:var(--ok);background:var(--ob)}.op.wrg{border-color:var(--no);background:var(--nb)}.op.dis{cursor:default;opacity:.85}.op.dis.cor{opacity:1}
+.op .lt{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;flex-shrink:0;transition:all var(--t);color:var(--tm)}.op.sel .lt{background:var(--pr);color:#fff;border-color:var(--pr)}.op.cor .lt{background:var(--ok);color:#fff;border-color:var(--ok)}.op.wrg .lt{background:var(--no);color:#fff;border-color:var(--no)}.op .ot{font-size:.87rem;padding-top:2px;line-height:1.4}
+.eb{margin-top:14px;padding:14px;background:var(--sa);border-radius:var(--rs);border-left:3px solid var(--pr);font-size:.83rem;line-height:1.5;color:var(--tm);animation:fu .3s ease}.eb strong{color:var(--tx);font-weight:600}
+.qn{display:flex;justify-content:space-between;margin-top:16px;gap:8px}
+.rh{text-align:center;padding:28px 16px;background:var(--sf);border-radius:var(--r);box-shadow:var(--sl);margin-bottom:20px}
+.sring{width:130px;height:130px;margin:0 auto 12px;position:relative}.sring svg{transform:rotate(-90deg)}.sring .rb{fill:none;stroke:var(--sa);stroke-width:10}.sring .rf{fill:none;stroke-width:10;stroke-linecap:round;transition:stroke-dashoffset 1.2s ease}.scn{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}.scn .pc{font-size:1.9rem;font-weight:800;line-height:1}.scn .of{font-size:.75rem;color:var(--tm);margin-top:2px}.rg{font-size:1.05rem;font-weight:700;margin-top:4px}.rs2{display:flex;justify-content:center;gap:24px;margin-top:12px;font-size:.8rem;color:var(--tm)}.rs2 span{display:flex;align-items:center;gap:4px}.dt{width:8px;height:8px;border-radius:50%;display:inline-block}.dt.g{background:var(--ok)}.dt.r{background:var(--no)}.dt.y{background:var(--wa)}
+.rvh{font-size:.9rem;font-weight:700;margin:20px 0 12px}.rvi{background:var(--sf);border-radius:var(--rs);padding:14px;margin-bottom:8px;border-left:3px solid var(--bd)}.rvi.wc{border-left-color:var(--ok)}.rvi.ww{border-left-color:var(--no)}.rvi.ws{border-left-color:var(--wa)}.rvq{font-size:.85rem;font-weight:600;margin-bottom:6px;line-height:1.4}.rva{font-size:.8rem;color:var(--tm);line-height:1.45}.rva .tg{display:inline-block;font-size:.68rem;font-weight:700;padding:2px 7px;border-radius:4px;margin-right:4px}.tg.ct2{background:var(--ob);color:var(--ok)}.tg.wt{background:var(--nb);color:var(--no)}.tg.skt{background:#fef3c7;color:#92400e}.rve{font-size:.78rem;color:var(--tm);margin-top:4px;line-height:1.45;font-style:italic}
+.tc{text-align:center}.hd{display:none!important}
+@media(max-width:500px){.sg{grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:6px}.sc{padding:12px 8px}.qc2{padding:16px 14px}.qn{flex-direction:column}.qn .btn{width:100%}.app{padding:10px 8px 28px}}
+</style>
+</head>
+<body>
+<div class="app" id="app">
+<div class="screen active" id="home-screen">
+<div class="hdr"><div class="badge">UKPSC / UKSSSC — Uttarakhand</div><h1>JE Civil <span>Practice Hub</span></h1><p id="total-count"></p></div>
+<div class="sl">Pick one or more subjects</div>
+<div class="sg" id="subject-grid"></div>
+<div class="sp">
+<div class="sr"><label>Difficulty</label><div class="pg" id="dp"><div class="pi a" data-v="easy">Easy</div><div class="pi" data-v="medium">Medium</div><div class="pi" data-v="hard">Hard</div><div class="pi" data-v="mixed">Mixed</div></div></div>
+<div class="sr"><label>Questions</label><div class="pg" id="cp"><div class="pi" data-v="10">10</div><div class="pi a" data-v="25">25</div><div class="pi" data-v="50">50</div><div class="pi" data-v="75">75</div><div class="pi" data-v="100">100</div><div class="pi" data-v="all">All</div></div></div>
+<div class="sr"><label>Timer</label><div class="pg" id="tp"><div class="pi a" data-v="0">Off</div><div class="pi" data-v="30">30s</div><div class="pi" data-v="60">60s</div><div class="pi" data-v="90">90s</div></div></div>
+<div class="bg"><button class="btn bp" id="start-btn" disabled>Start Quiz</button></div>
+<p id="si" class="tc" style="font-size:.78rem;color:var(--tm);margin-top:10px">Select at least one subject</p>
+</div></div>
+<div class="screen" id="quiz-screen">
+<div class="qt"><span class="st" id="qs"></span><span class="qc" id="qcn"></span><span class="tm" id="qtm"></span></div>
+<div class="pt"><div class="pf" id="pf"></div></div>
+<div class="qc2"><div class="qtx" id="qtxt"></div><div class="ol" id="qo"></div><div class="eb hd" id="qe"></div></div>
+<div class="qn"><button class="btn bo" id="skip-b">Skip</button><button class="btn bp" id="next-b" style="display:none">Next →</button><button class="btn bp" id="fin-b" style="display:none">See Results</button></div>
+</div>
+<div class="screen" id="result-screen">
+<div class="rh"><div class="sring"><svg viewBox="0 0 130 130" width="130" height="130"><circle class="rb" cx="65" cy="65" r="56"/><circle class="rf" id="ring" cx="65" cy="65" r="56" stroke-dasharray="352" stroke-dashoffset="352"/></svg><div class="scn"><div class="pc" id="rpc">0%</div><div class="of" id="rof"></div></div></div><div class="rg" id="rgr"></div><div class="rs2" id="rst"></div></div>
+<div class="bg"><button class="btn bo" onclick="goHome()">New Quiz</button><button class="btn bp" onclick="document.getElementById('rvs').classList.toggle('hd')">Review Answers</button></div>
+<div id="rvs" class="hd"><div class="rvh">Question-by-question Review</div><div id="rvl"></div></div>
+</div></div>
+<script>
+const QB={
+"bm":{n:"Building Materials",ic:"🧱",q:{
+easy:[
+{q:"Standard modular brick size including mortar in India is:",o:["190×90×90 mm","200×100×100 mm","230×115×75 mm","225×110×75 mm"],c:1,e:"Modular brick = 200×100×100 mm (with 10 mm mortar). Actual brick = 190×90×90 mm."},
+{q:"Gypsum is added to cement clinker to:",o:["Retard setting of C₃A","Increase strength","Improve colour","Reduce cost"],c:0,e:"3–5% gypsum retards rapid hydration of C₃A, preventing flash setting."},
+{q:"The colour of good quality OPC is:",o:["White","Brown","Greenish grey","Yellow"],c:2,e:"Good OPC has greenish grey colour. Excess lime → white; excess clay → bluish."},
+{q:"Specific gravity of Portland cement is approximately:",o:["2.40","2.65","3.50","3.15"],c:3,e:"OPC Gs ≈ 3.15, measured by Le Chatelier flask using kerosene."},
+{q:"Bulking of sand is caused by:",o:["Organic impurities","High temperature","Chemical reaction","Presence of moisture"],c:3,e:"Moisture films around particles push them apart. Maximum bulking at 4–6% moisture."},
+{q:"Minimum crushing strength of first-class brick per IS 1077:",o:["14 N/mm²","3.5 N/mm²","10.5 N/mm²","7 N/mm²"],c:2,e:"1st class ≥ 10.5, 2nd class ≥ 7, 3rd class ≥ 3.5 N/mm²."},
+{q:"OPC grade numbers 33, 43, 53 denote:",o:["Setting time in min","% ofite","Fineness in m²/kg","28-day compressive strength in MPa"],c:3,e:"Grades refer to minimum 28-day compressive strength per IS 269/8112/12269."},
+{q:"Which timber defect is caused by fungi?",o:["Knot","Dry rot","Heart shake","Upset"],c:1,e:"Dry rot: fungi consume cellulose in damp, poorly ventilated wood."},
+{q:"Water absorption of a good brick should not exceed:",o:["25%","15%","10%","20%"],c:3,e:"IS 1077: max 20% for first-class bricks. Lower absorption = denser brick."},
+{q:"Seasoning of timber means:",o:["Painting the surface","Chemical treatment","Drying to remove moisture","Cutting into planks"],c:2,e:"Seasoning reduces moisture to improve strength, durability, and workability."},
+{q:"Plywood is made by gluing thin sheets called:",o:["Veneers","Planks","Battens","Laminates"],c:0,e:"Veneers peeled from logs, bonded with alternating grain direction for strength."},
+{q:"IS code for 43-grade OPC is:",o:["IS 269","IS 1489","IS 8112","IS 12269"],c:2,e:"IS 8112→43-grade; IS 269→33-grade; IS 12269→53-grade; IS 1489→PPC."},
+{q:"Mild steel carbon content is approximately:",o:["0.50–0.70%","0.15–0.30%","1.0–1.5%","0.05–0.10%"],c:1,e:"Mild steel: 0.15–0.30% C. Medium: 0.30–0.60%. High: >0.60%."},
+{q:"Most durable natural building stone is:",o:["Laterite","Sandstone","Slate","Granite"],c:3,e:"Granite: extremely hard, weather-resistant, compressive strength >100 MPa."},
+{q:"Bitumen is obtained from:",o:["Coal tar","Natural gas","Petroleum refining","Cement kilns"],c:2,e:"Bitumen = residue from fractional distillation of crude petroleum."},
+{q:"Which rock type is marble?",o:["Metamorphic","Igneous","Sedimentary","Volcanic"],c:0,e:"Marble = metamorphosed limestone. Granite=igneous; sandstone=sedimentary."},
+{q:"Fineness of cement is tested using:",o:["Vicat apparatus","Compression machine","Le Chatelier flask","90 µm IS sieve"],c:3,e:"Residue on 90 µm sieve ≤ 10% for OPC. Finer cement → faster hydration."},
+{q:"Varnish is a solution of:",o:["Calcium in acid","Cement and water","Iron in alkali","Resin in oil or spirit"],c:3,e:"Varnish = resin dissolved in oil (oil varnish) or spirit. Contains no pigment."},
+{q:"IS code for bricks is:",o:["IS 456","IS 516","IS 1077","IS 1200"],c:2,e:"IS 1077: common burnt clay building bricks — classification and requirements."},
+{q:"The most commonly used coarse aggregate in concrete is:",o:["Marble","Granite","Sandstone","Limestone"],c:1,e:"Granite is hard, durable, abundantly available — widely used as coarse aggregate."},
+{q:"Slaked lime is chemically:",o:["CaCO₃","CaO","CaSO₄","Ca(OH)₂"],c:3,e:"CaO + H₂O → Ca(OH)₂. CaCO₃ = limestone; CaO = quicklime."},
+{q:"Standard test for aggregate impact value uses:",o:["Marshall apparatus","Los Angeles machine","Aggregate impact testing machine","Deval machine"],c:2,e:"AIV test: 15 blows of 14 kg hammer on aggregate in a cup. AIV < 30% for concrete."},
+{q:"Unit weight of steel is approximately:",o:["25 kN/m³","50 kN/m³","27 kN/m³","78.5 kN/m³"],c:3,e:"Steel ≈ 7850 kg/m³ = 78.5 kN/m³. Concrete ≈ 24 kN/m³; RCC ≈ 25 kN/m³."},
+{q:"Efflorescence in bricks is caused by:",o:["Iron oxide","Calcium oxide","ite","Soluble salts"],c:3,e:"Soluble alkali sulphates migrate to surface with moisture, crystallise as white patches."},
+{q:"AAC blocks are made from:",o:["Only clay","Fly ash+lime+cement+Al powder","Only concrete","Wood fibres"],c:1,e:"Autoclaved Aerated Concrete: fly ash + lime + cement + aluminium powder + steam curing."},
+{q:"Normal consistency of cement is about:",o:["5%","50%","10%","25–33%"],c:3,e:"Standard consistency ≈ 25–33% water by weight, measured by Vicat 10 mm plunger."},
+{q:"TMT bars are preferred because of:",o:["Lower cost","Lighter weight","Higher ductility and strength","Easier cutting"],c:2,e:"Thermo-Mechanically Treated bars: tough outer + ductile core = strength + ductility."},
+{q:"PPC contains OPC clinker plus:",o:["15–35% pozzolanic material","50%ite","75%ite","5% calcium chloride"],c:0,e:"PPC (IS 1489): OPC clinker + 15–35% fly ash or calcined clay."},
+{q:"Minimum initial setting time for OPC is:",o:["15 min","60 min","30 min","120 min"],c:2,e:"IS 269: initial ≥ 30 min; final ≤ 600 min."},
+{q:"Los Angeles abrasion test measures:",o:["Soundness","Impact resistance","Crushing value","Wear resistance (hardness)"],c:3,e:"LA test: loss < 30% for wearing surfaces, < 50% for base course."}
+],
+medium:[
+{q:"Bogue compound C₃S is responsible for:",o:["Colour of cement","Sulphate resistance","Early strength development","Initial setting"],c:2,e:"C₃S hydrates fast → early strength (up to 28 days). C₂S gives long-term strength."},
+{q:"Le Chatelier test determines:",o:["Fineness","Setting time","Consistency","Soundness of cement"],c:3,e:"Measures expansion from free CaO and MgO — soundness check."},
+{q:"CaCl₂ added to concrete acts as:",o:["Retarder","Plasticiser","Air-entrainer","Accelerator"],c:3,e:"Calcium chloride accelerates setting and early strength; limit 2% of cement weight."},
+{q:"Rapid hardening cement achieves 3-day strength equal to OPC's:",o:["3-day","28-day","56-day","7-day"],c:3,e:"RHC has more C₃S and finer grinding → 3-day strength ≈ OPC 7-day."},
+{q:"Low-heat cement has higher proportion of:",o:["C₃A","C₃S","C₄AF","C₂S"],c:3,e:"C₂S hydrates slowly → less heat. Used in mass concrete (dams)."},
+{q:"Fly ash is a by-product of:",o:["Cement factories","Brick kilns","Steel plants","Thermal power plants"],c:3,e:"Fine ash from flue gases of coal-fired thermal power stations."},
+{q:"IS code for 53-grade OPC is:",o:["IS 269","IS 8112","IS 1489","IS 12269"],c:3,e:"IS 12269→53-grade; IS 8112→43-grade; IS 269→33-grade."},
+{q:"Porosity of good building stone should be less than:",o:["20%","10%","1%","5%"],c:3,e:"Low porosity (<5%) = dense, strong, durable. High porosity → weathering."},
+{q:"Aggregate Crushing Value for concrete surfaces ≤:",o:["45%","10%","20%","30%"],c:3,e:"ACV < 30% for wearing surfaces; < 45% for other concrete."},
+{q:"High Alumina Cement resists:",o:["Acid attack","Fire only","Frost only","Sulphate attack"],c:3,e:"HAC: high aluminate content, rapid strength, resists sulphate-bearing waters."},
+{q:"43-grade OPC mortar cube (1:3) at 7 days should have min strength of:",o:["16 MPa","33 MPa","43 MPa","23 MPa"],c:3,e:"IS 8112: 7 days ≥ 23 MPa; 28 days ≥ 43 MPa."},
+{q:"Alumina in brick earth should be about:",o:["5–10%","50–60%","70–80%","20–30%"],c:3,e:"Alumina 20–30% for plasticity; silica 50–60% prevents cracking."},
+{q:"Autoclave test on cement detects expansion due to:",o:["Free lime only","Free MgO only","Alkali content","Both free CaO and MgO"],c:3,e:"Autoclave test (IS 4031 Part 3) detects expansion from both under high-pressure steam."},
+{q:"Fe 500D steel — 'D' stands for:",o:["Dense","Drawn","Duplex","Ductile"],c:3,e:"Fe 500D: higher ductility requirements — min elongation and UTS/YS ≥ 1.08."},
+{q:"Maximum w/c ratio for moderate exposure (IS 456):",o:["0.55","0.45","0.40","0.50"],c:3,e:"IS 456 Table 5: Mild=0.55, Moderate=0.50, Severe=0.45, Extreme=0.40."},
+{q:"Minimum cement content for M25 moderate exposure per IS 456:",o:["220 kg/m³","340 kg/m³","360 kg/m³","300 kg/m³"],c:3,e:"IS 456 Table 5: Moderate→min 300 kg/m³, max w/c=0.50, min grade M25."},
+{q:"ISI mark for TMT steel bars is covered under:",o:["IS 456","IS 432","IS 2062","IS 1786"],c:3,e:"IS 1786: HSD bars including TMT — Fe 415, Fe 500, Fe 550, Fe 600."},
+{q:"Carbonation of concrete involves reaction with:",o:["O₂","N₂","SO₂","CO₂"],c:3,e:"CO₂ + Ca(OH)₂ → CaCO₃, reducing pH → depassivation → corrosion."},
+{q:"Heat of hydration of OPC at 7 days is approximately:",o:["40–50 cal/g","120–150 cal/g","200+ cal/g","65–80 cal/g"],c:3,e:"OPC ~65–80 cal/g at 7 days. Low-heat cement <65 cal/g at 7 days."},
+{q:"White cement reduces content of:",o:["Silica","Alumina","Lime","Iron oxide and manganese oxide"],c:3,e:"Fe₂O₃ and MnO give grey colour. White cement uses pure limestone with negligible iron."},
+{q:"Superplasticisers improve:",o:["Setting time","Colour","Curing temperature","Workability retention"],c:3,e:"SNF/PCE types disperse cement particles, maintain workability without extra water."},
+{q:"The Vicat apparatus tests:",o:["Fineness and soundness","Strength and durability","Permeability","Consistency and setting time"],c:3,e:"Normal consistency (10mm plunger), initial setting (1mm needle), final setting."},
+{q:"Corrosion of reinforcement is an:",o:["Oxidation process","Reduction process","Mechanical process","Electrochemical process"],c:3,e:"Anodic: Fe→Fe²⁺; cathodic: O₂ reduction. Moisture and chlorides accelerate."},
+{q:"Drying shrinkage strain of concrete ≈:",o:["0.003","0.03","0.3","0.0003 (300 µε)"],c:3,e:"IS 456 cl. 6.2.4.1: ultimate drying shrinkage ≈ 0.0003."},
+{q:"Creep coefficient loaded at 28 days per IS 456:",o:["0.8","2.2","1.2","1.6"],c:3,e:"IS 456: θ=1.6 (28d), 2.2 (7d), 1.1 (1yr)."},
+{q:"Modulus of elasticity of M25 per IS 456:",o:["15000 MPa","30000 MPa","5000 MPa","25000 MPa"],c:3,e:"Ec=5000√fck. M25: 5000×5=25000 MPa."},
+{q:"Pozzolanic materials react with:",o:["C₃A","Gypsum","MgO","Ca(OH)₂"],c:3,e:"Pozzolans + Ca(OH)₂ → additional C-S-H gel → long-term strength."},
+{q:"Split tensile strength of M25 concrete ≈:",o:["1.5 MPa","3.5 MPa","5.0 MPa","2.5 MPa"],c:3,e:"Split tensile ≈ fck/10 to fck/12. M25: ≈2.5 MPa."},
+{q:"Alkali-aggregate reaction is prevented by using:",o:["Reactive aggregates","Calcium chloride","High w/c ratio","Low-alkali cement (<0.6% Na₂Oe)"],c:3,e:"Low alkali cement, non-reactive aggregates, pozzolans, lithium compounds."},
+{q:"C₃A causes flash set when absent is:",o:["C₃S","C₂S","C₄AF","Gypsum"],c:3,e:"Without gypsum, C₃A reacts extremely rapidly with water → flash set."}
+],
+hard:[
+{q:"Bogue compound causing flash set if gypsum absent:",o:["C₂S","C₃S","C₃A","C₄AF"],c:2,e:"C₃A reacts extremely rapidly with water. Gypsum controls this."},
+{q:"Soundness by Le Chatelier should not exceed:",o:["5 mm","2 mm","15 mm","10 mm"],c:3,e:"IS 4031: Le Chatelier expansion ≤ 10 mm for OPC."},
+{q:"Modular ratio for M20 concrete ≈:",o:["7","15","13","10"],c:2,e:"m=280/(3σcbc). M20: σcbc=7, m=280/21≈13."},
+{q:"Standard compressive strength test uses cube of size:",o:["100 mm","200 mm","150 mm","300 mm"],c:2,e:"IS 516: 150 mm cube at 28 days. Cylinder ≈ 0.8 × cube strength."},
+{q:"Chloride limit in RCC per IS 456:",o:["0.3 kg/m³","1.0 kg/m³","0.6 kg/m³","No limit"],c:2,e:"Max total chloride = 0.6 kg/m³ for RCC; 0.3 for PSC."},
+{q:"Degree of hydration at 28 days ≈:",o:["30%","50%","70%","100%"],c:2,e:"~70% hydration at 28 days (w/c 0.5). Complete hydration needs w/c ≈ 0.38."},
+{q:"Cylinder to cube strength ratio:",o:["1.0","1.25","0.8","0.5"],c:2,e:"Cylinder strength ≈ 0.80 × cube strength due to different aspect ratio."},
+{q:"Gel-space ratio (Powers) determines:",o:["Workability","Permeability","Compressive strength of paste","Heat of hydration"],c:2,e:"Strength ∝ (gel-space ratio)³. Gel-space = gel volume/(gel + capillary pores)."},
+{q:"Interfacial transition zone (ITZ) is the:",o:["Mixing zone","Curing zone","Paste-aggregate interface (~50 µm)","Formwork contact zone"],c:2,e:"ITZ: weaker, more porous zone around aggregate. Often where cracks initiate."},
+{q:"Delayed ettringite formation occurs when concrete is:",o:["Never heated","Water-cured at 20°C","Steam-cured >65°C then exposed to moisture","Air-dried"],c:2,e:"High early temperature prevents normal ettringite → later DEF causes expansion and cracking."},
+{q:"RCPT measures chloride permeability in:",o:["mm/s","kg/m³","Coulombs","MPa"],c:2,e:"ASTM C1202: total charge in 6 hrs. <1000C very low; >4000C high permeability."},
+{q:"Geopolymer concrete uses:",o:["OPC + water","Only aggregate","Fly ash + alkaline activator (no OPC)","Gypsum + lime"],c:2,e:"Aluminosilicate (fly ash/GGBS) + NaOH + Na₂SiO₃. No Portland cement."},
+{q:"Autogenous shrinkage is significant for w/c:",o:[">0.50","=0.60","<0.42","Any w/c"],c:2,e:"Low w/c (<0.42): insufficient water for hydration → self-desiccation → shrinkage."},
+{q:"Sulphate attack converts C₃A hydration products to:",o:["C-S-H gel","CaCO₃","Ettringite (expansive)","Ca(OH)₂"],c:2,e:"Sulphate + C₃A → ettringite → expansion → cracking. Use low-C₃A cement."},
+{q:"Flexural strength (modulus of rupture) of M25 ≈:",o:["1.5 MPa","5.0 MPa","3.5 MPa (0.7√fck)","7.0 MPa"],c:2,e:"IS 456: fcr = 0.7√fck. M25: 0.7×5 = 3.5 MPa."},
+{q:"Target mean strength per IS 10262:",o:["fck","fck+2s","fck+1.65s","fck+s"],c:2,e:"Target = fck + 1.65s ensuring 95% results exceed fck."},
+{q:"Entrapped air for 20mm aggregate (IS 10262):",o:["1%","3%","2%","5%"],c:2,e:"20mm=2%; 10mm=3%; 40mm=1%."},
+{q:"Air-entrainment improves:",o:["Strength","Density","Freeze-thaw resistance","Setting time"],c:2,e:"Tiny bubbles (3–6%) improve frost resistance and workability; slightly reduce strength."},
+{q:"UPV for good concrete should be:",o:["<3.0 km/s","3.0–3.5 km/s",">4.5 km/s","1.0–2.0 km/s"],c:2,e:"Good: >4.5 km/s. Doubtful: 3.0–3.5. Poor: <3.0."},
+{q:"HPC typically has w/c of:",o:["0.45–0.50","0.55–0.60","0.25–0.35","0.35–0.40"],c:2,e:"HPC: w/c 0.25–0.35 with superplasticisers + SCMs. Strength >60 MPa."},
+{q:"Carbonation depth in concrete increases with:",o:["Higher cover","Higher w/c ratio and time","Lower w/c","Better curing"],c:1,e:"Higher w/c → more porous → faster CO₂ ingress. Depth ∝ √time."},
+{q:"Corrosion protection by cover works because concrete is:",o:["Waterproof","Alkaline (pH ~12.5) forming passive film on steel","Acidic","Airtight"],c:1,e:"High pH forms protective Fe₂O₃ film on steel. Carbonation or chlorides break it."},
+{q:"Bleeding in concrete increases with:",o:["Lower w/c","More fines","Higher w/c and less fines","Better grading"],c:2,e:"Higher water content and fewer fines → more water rises to surface."},
+{q:"Maximum temperature of fresh concrete at placing ≈:",o:["20°C","50°C","40°C","60°C"],c:2,e:"Hot weather: max 40°C (30°C for mass concrete). Use ice, cool aggregates."},
+{q:"For pumpable concrete, min cement content:",o:["200 kg/m³","350 kg/m³","300 kg/m³","250 kg/m³"],c:2,e:"Min 300 kg/m³, max 20mm aggregate, slump 75–150 mm."},
+{q:"Fibre-reinforced concrete uses fibres to improve:",o:["Compressive strength only","Colour","Tensile strength, crack resistance, ductility","Setting time"],c:2,e:"Steel/polypropylene/glass fibres improve tensile, impact, and crack resistance."},
+{q:"Silica fume particle size is:",o:["Same as cement","10× coarser","100× finer than cement","Same as sand"],c:2,e:"Silica fume ≈ 0.1 µm (100× finer than cement). Fills pores, reacts pozzolanically."},
+{q:"SCC (Self-Compacting Concrete) requires no:",o:["Cement","Water","Vibration","Aggregate"],c:2,e:"SCC flows under self-weight, filling formwork without vibration. High powder + superplasticiser."},
+{q:"Maturity of concrete = Σ(time ×",o:["Pressure)","Humidity)","Temperature)","Load)"],c:2,e:"Maturity = Σ(T×t) in °C·hours. Higher maturity → higher strength."},
+{q:"IS code for concrete mix design:",o:["IS 456","IS 516","IS 10262","IS 1199"],c:2,e:"IS 10262: mix proportioning. IS 456: code of practice. IS 516: testing."}
+]}},
+"sv":{n:"Surveying",ic:"📐",q:{
+easy:[
+{q:"Chain surveying principle is:",o:["Traversing","Triangulation","Radiation","Working whole to part"],c:1,e:"Area divided into triangles—plotted with side lengths alone."},
+{q:"Gunter's chain length is:",o:["20 m","100 feet","66 feet","30 m"],c:2,e:"66 ft = 22 yards, 100 links of 0.66 ft each."},
+{q:"Contour lines join points of equal:",o:["Slope","Bearing","Distance","Elevation"],c:3,e:"Closely spaced contours = steep terrain."},
+{q:"WCB is measured clockwise from:",o:["South","Magnetic east","North","West"],c:2,e:"Whole Circle Bearing: 0°–360° clockwise from north."},
+{q:"Levelling determines difference in:",o:["Bearing","Distance","Latitude","Elevation"],c:3,e:"Establishes height differences using a level instrument and staff."},
+{q:"Theodolite measures:",o:["Distance only","Elevation only","Horizontal and vertical angles","Bearing only"],c:2,e:"Theodolite: precise angular measurement instrument."},
+{q:"Benchmark is a point of known:",o:["Distance","Bearing","Latitude","Elevation"],c:3,e:"BMs have known RL above mean sea level—reference for levelling."},
+{q:"Zero of a levelling staff is at its:",o:["Top","Middle","Bottom","Any point"],c:2,e:"Graduations begin from bottom (zero at base), reading upward."},
+{q:"Prismatic compass reads:",o:["ReducedBearing directly","Only angles","Only distances","WCB directly"],c:3,e:"Prismatic compass: prism for reading WCB while sighting object."},
+{q:"Offset is taken:",o:["Along chain line","Diagonally","At any angle","Perpendicular to chain line"],c:3,e:"Short perpendicular measurements from survey line to locate detail."},
+{q:"Height of instrument (HI) =:",o:["RL of BM − BS","RL of BM × BS","BS − FS","RL of BM + BS"],c:3,e:"HI = RL + BS. Then RL of new point = HI − FS."},
+{q:"Ranging establishes:",o:["Bearings","Areas","Volumes","Intermediate points on a straight line"],c:3,e:"Intermediate points placed between two endpoints using ranging rods."},
+{q:"Metric chain of 20 m has links of:",o:["1 m","0.5 m","0.1 m","0.2 m"],c:3,e:"20 m chain: 100 links × 0.2 m each."},
+{q:"Plane table surveying combines:",o:["Only measuring distances","Only angles","Only computing areas","Field work and plotting simultaneously"],c:3,e:"Map drawn in the field while observations are taken."},
+{q:"Dumpy level telescope is:",o:["Detachable","Tilting","Rotating vertically","Rigidly fixed"],c:3,e:"Cannot tilt like a tilting level; fixed to vertical spindle."},
+{q:"FB of AB=60°. BB of AB=:",o:["60°","120°","300°","240°"],c:3,e:"BB = FB+180° = 60+180 = 240°."},
+{q:"Triangulation survey covers:",o:["Small plots","Road surveys only","Building surveys only","Large areas and geodetic surveys"],c:3,e:"Network of triangles with precisely measured angles and baseline."},
+{q:"Clinometer measures:",o:["Horizontal angles","Distances","Bearings","Vertical angles/slopes"],c:3,e:"Clinometer (Abney level): measures slopes and vertical angles."},
+{q:"Standard metric chain lengths in India:",o:["10m or 20m","50m or 100m","5m or 10m","20m or 30m"],c:3,e:"20m (100 links) or 30m (150 links)."},
+{q:"Scale 1:50000 — 3cm on map represents:",o:["150 m","15 km","1.5 km","1500 m"],c:3,e:"3cm × 50000 = 150000 cm = 1500 m = 1.5 km."},
+{q:"GPS requires minimum satellites for 3D fix:",o:["2","3","6","4"],c:3,e:"4 satellites needed for 3D position fix (latitude, longitude, altitude)."},
+{q:"Planimeter measures:",o:["Distances","Heights","Volumes","Areas on a map"],c:3,e:"Traces boundary and gives enclosed area directly."},
+{q:"Magnetic north differs from true north by:",o:["Grid angle","Convergence","Bearing","Declination angle"],c:3,e:"Declination = angle between magnetic and true meridians."},
+{q:"At a change point in levelling:",o:["Only BS taken","Only FS taken","Level is set up","Both FS and next BS taken"],c:3,e:"FS closes previous setup; BS starts new instrument position."},
+{q:"Closed traverse with 5 sides: sum of interior angles =:",o:["360°","720°","900°","540°"],c:3,e:"Sum = (2n−4)×90° = (10−4)×90° = 540°."},
+{q:"Total station directly measures:",o:["Only distance","Coordinates only","Elevation only","Slope distance and angles"],c:3,e:"Electronic theodolite + EDM → slope distance + H/V angles."},
+{q:"Hydrographic survey deals with:",o:["Mountain surveys","Aerial surveys","City surveys","Underwater surveys"],c:3,e:"Maps underwater features—depths, tides, currents."},
+{q:"Number of satellites in GPS constellation:",o:["12","24","48","31–32"],c:3,e:"31–32 operational in 6 orbital planes."},
+{q:"EDM measures distance using:",o:["Angle subtended","Staff intercept","Chain length","Phase difference of reflected wave"],c:3,e:"Modulated wave sent; phase difference gives distance."},
+{q:"LIDAR uses:",o:["Radio waves","Sound waves","X-rays","Laser pulses"],c:3,e:"Sends laser pulses, measures return time → 3D point clouds."}
+],
+medium:[
+{q:"Curvature correction =:",o:["0.0112 D²","0.0673 D²","0.0067 D²","0.0785 D² m"],c:3,e:"Curvature=0.0785D² (D in km), subtractive. Refraction=0.0112D²."},
+{q:"Reciprocal levelling eliminates:",o:["Chaining errors","Bearing errors","Staff mistakes","Collimation + curvature + refraction errors"],c:3,e:"Reading from both sides cancels systematic errors."},
+{q:"Simpson's rule needs odd number of:",o:["Stations","Lines","Angles","Ordinates"],c:3,e:"Odd ordinates (even intervals), approximates each pair as parabola."},
+{q:"Closed traverse: sum of interior angles =:",o:["(2n+4)×90°","n×180°","360°","(2n−4)×90°"],c:3,e:"Polygon interior angles = (2n−4)×90°, n = sides."},
+{q:"Tacheometry measures distance using:",o:["Chain","Tape","Compass","Stadia readings"],c:3,e:"D = Ks+C (level ground). K=100 typically."},
+{q:"Local attraction affects:",o:["Chain","Level","Theodolite circle","Compass needle"],c:3,e:"Magnetic materials near compass deflect the needle."},
+{q:"'Working whole to part' ensures:",o:["Speed","Fewer instruments","Only detail accuracy","Errors are localised"],c:3,e:"Overall framework first → details within → no error accumulation."},
+{q:"Bowditch rule distributes error proportional to:",o:["Angles only","Number of stations","Bearing","Lengths of traverse legs"],c:3,e:"Bowditch (compass) rule: error ∝ line length."},
+{q:"Bubble tube sensitivity increases with:",o:["Smaller radius","Shorter bubble","Thicker liquid","Larger radius of curvature"],c:3,e:"Larger radius → smaller angle per division → more sensitive."},
+{q:"Stadia tacheometry inclined sight: horiz. distance =:",o:["Ks+C","Ks sinθ","Ks/cosθ","Ks cos²θ + C cosθ"],c:3,e:"D = Ks cos²θ + C cosθ. Elevation diff = ½Ks sin2θ + C sinθ."},
+{q:"Error of closure in traverse =:",o:["Sum of all angles","Total distance","Only angular misclose","√(ΔL²+ΔD²)"],c:3,e:"Closing error = √(error in latitude² + error in departure²)."},
+{q:"In compass survey, included angle =:",o:["FB of next−FB of prev","Sum of all bearings","Only by theodolite","BB of previous − FB of next"],c:3,e:"Included angle = BB(prev line) − FB(next line). If negative, add 360°."},
+{q:"Three-point problem in plane tabling uses:",o:["One known point","No known points","Three unknown points","Three known visible points"],c:3,e:"Fixes position by resection from 3 known points (Bessel's method)."},
+{q:"Method of repetition in theodolite work:",o:["Measures distances","Sets out curves","Levels the instrument","Increases angular precision"],c:3,e:"Angle measured multiple times, accumulated, divided by repetitions."},
+{q:"Setting out circular curve: tangent length T =:",o:["R sin(Δ/2)","R cos(Δ/2)","R × Δ","R tan(Δ/2)"],c:3,e:"T = R tan(Δ/2). R=radius, Δ=deflection angle."},
+{q:"Transition curve most commonly used:",o:["Cubic parabola","Lemniscate","Bernoulli spiral","Spiral (clothoid)"],c:3,e:"Spiral (LS=Rθ) is standard; cubic parabola is an approximation."},
+{q:"Permissible angular closure for 1st-order traverse:",o:["30″√n","1′√n","5′√n","15″√n"],c:3,e:"1st order: 15″√n; 2nd: 30″√n; 3rd: 1′√n."},
+{q:"Aerial photo scale =:",o:["H/f","f×H","1/(f×H)","f/H"],c:3,e:"Scale = focal length / flying height = f/(H−h). Flat ground: f/H."},
+{q:"Map projection preserving shape is:",o:["Equal area","Azimuthal","Gnomonic","Conformal (orthomorphic)"],c:3,e:"Conformal preserves local shapes (e.g., Mercator)."},
+{q:"Collimation error is proportional to:",o:["Square of distance","Cube root","Independent","Sight distance"],c:3,e:"Error ∝ sight distance. Equalising BS and FS eliminates it."},
+{q:"Differential levelling closing error =:",o:["ΣFS−ΣBS","ΣBS+ΣFS","Last RL−first RL","(ΣBS−ΣFS)−(known ΔRL)"],c:3,e:"Closing error = (ΣBS−ΣFS) − (RL final BM − RL starting BM)."},
+{q:"HI method is preferred when there are:",o:["Few change points","Only two points","No BM available","Many intermediate sights"],c:3,e:"HI method: compute HI once, then RL=HI−IS for each. Faster for many IS."},
+{q:"Chain too long → measured distance is:",o:["Too long → subtract","No correction","Both possible","Too short → add correction"],c:3,e:"Long chain: fewer chain lengths laid → measured < true → add correction."},
+{q:"GPS satellites orbit at altitude ≈:",o:["200 km","35786 km","500 km","20200 km"],c:3,e:"Medium earth orbit ~20200 km. 6 orbital planes."},
+{q:"Accuracy of a 20″ theodolite traverse ≈:",o:["1 in 1000","1 in 3000","1 in 10000","1 in 5000"],c:3,e:"20″ theodolite → ~1:5000 linear accuracy in well-executed traverse."},
+{q:"Traverse expected closing error ∝:",o:["n","n²","1/n","√n"],c:3,e:"Random errors: resultant ∝ √n (law of propagation of errors)."},
+{q:"When declination is 0°, magnetic north coincides with:",o:["Grid north","Assumed north","South","True north"],c:3,e:"Zero declination = magnetic and true meridians coincide."},
+{q:"Rise-and-fall method provides:",o:["Only RL","Only HI","Only differences","Built-in arithmetic check"],c:3,e:"Σrise−Σfall = last RL−first RL = ΣBS−ΣFS. Double check."},
+{q:"Geodetic surveying accounts for:",o:["Only distances","Magnetic variation","Local attraction","Earth's curvature"],c:3,e:"For large areas (>250 km²), spheroidal shape matters."},
+{q:"Well-conditioned triangles have angles between:",o:["0°–15°","60°–90° only","Any angles","30°–120°"],c:3,e:"Angles 30–120° give well-conditioned triangles. Ill-conditioned amplify errors."}
+],
+hard:[
+{q:"In photogrammetry, vertical photograph scale = f/(H−h). For flat terrain:",o:["H/f","f×H","f/H","1/(fH)"],c:2,e:"Scale = f/H when ground is flat (h=0)."},
+{q:"Sensitiveness of bubble tube expressed as:",o:["Length of bubble","Diameter of tube","Angle subtended per division","Radius in mm"],c:2,e:"Sensitivity = angle per graduation. Larger radius → finer sensitivity."},
+{q:"No. of independent dimensionless π-groups (Buckingham) = n−m. In surveying, error propagation uses:",o:["Poisson distribution","Uniform distribution","Normal (Gaussian) distribution","Binomial distribution"],c:2,e:"Survey errors assumed normally distributed. Standard error ∝ √n for random errors."},
+{q:"In EDM, the modulated wavelength determines:",o:["Angular accuracy","Only direction","Bearing precision","Distance resolution"],c:3,e:"Shorter modulated wavelength → higher distance resolution. Multiple frequencies used for ambiguity resolution."},
+{q:"Parallax in levelling is removed by adjusting:",o:["Bubble tube","Object glass","Eye-piece focusing (parallax screw)","Tribrach"],c:2,e:"Focus eyepiece on crosshairs, then objective on target to eliminate parallax."},
+{q:"Curvature of earth: in 1 km distance, the earth curves away by approximately:",o:["0.0785 m","0.785 m","7.85 m","78.5 m"],c:0,e:"Cc = 0.0785D² = 0.0785 × 1² = 0.0785 m ≈ 78.5 mm per km."},
+{q:"In triangulation, base line measurement accuracy should be at least:",o:["1 in 100","1 in 1000","1 in 5000","1 in 10000 to 1 in 50000"],c:3,e:"Primary triangulation baseline: 1 in 10000 to 1 in 50000 accuracy."},
+{q:"Electromagnetic spectrum used in EDM (infrared type):",o:["X-ray","Gamma ray","Infrared (0.8–0.9 µm)","Ultraviolet"],c:2,e:"Infrared EDM: 0.8–0.9 µm wavelength. Microwave EDM also used for longer ranges."},
+{q:"In a compass traverse, if FB and BB differ by not exactly 180°, the error is due to:",o:["Chaining error","Graduation error","Local attraction","Instrument height"],c:2,e:"Local attraction at one or both stations causes BB≠FB±180°."},
+{q:"The chord length for setting out a simple circular curve by Rankine's method:",o:["R×Δ","2R sin(δ)","R tan(Δ/2)","R cos(Δ/2)"],c:1,e:"Chord = 2R sin(deflection angle). Sub-chord for first and last."},
+{q:"In levelling, curvature correction is always:",o:["Additive","Zero","Variable","Subtractive"],c:3,e:"Curvature makes objects appear lower → subtracted from observed reading. Refraction is additive."},
+{q:"Anallactic lens in tacheometer makes additive constant C =:",o:["100","50","1","0"],c:3,e:"Anallactic lens eliminates additive constant → D=Ks (simplified)."},
+{q:"Cadastral survey is for:",o:["Topographic mapping","Hydrographic charting","Route alignment","Property boundary demarcation"],c:3,e:"Cadastral: legal boundary surveys for land ownership and revenue records."},
+{q:"Precise levelling uses a:",o:["Dumpy level","Abney level","Precise tilting level with micrometer","Hand level"],c:2,e:"Precise level: optical micrometer reads to 0.01 mm. Double-run levelling."},
+{q:"Spherical excess in a geodetic triangle is:",o:["Always zero","Negligible for small areas","Proportional to the area of the triangle","Fixed at 1°"],c:2,e:"Spherical excess ε″ = Area/(R²×sin1″). Becomes significant for very large triangles."},
+{q:"In photogrammetry, relief displacement is:",o:["Always zero","Outward from nadir for points above datum","Inward toward nadir","Random"],c:1,e:"Points above datum are displaced radially outward from the photo nadir point."},
+{q:"RTK-GPS achieves accuracy of:",o:["±10 m","±1 m","±1–2 cm","±100 m"],c:2,e:"Real-Time Kinematic GPS: cm-level accuracy using carrier phase measurements."},
+{q:"Reciprocal trigonometric levelling eliminates effect of:",o:["Chaining","Only curvature","Local attraction","Curvature and refraction"],c:3,e:"Observations from both ends → curvature and refraction cancel out."},
+{q:"In a closed traverse (Bowditch rule), latitude correction for a line =:",o:["Total latitude error × (length of line / perimeter)","Error/n","Error × angle","Error × bearing"],c:0,e:"Correction = total error × (line length / total perimeter). Applied proportionally."},
+{q:"The Indian Survey datum is based on:",o:["WGS-84","Bessel spheroid","Everest spheroid","Clarke spheroid"],c:2,e:"Survey of India traditionally uses Everest spheroid (1830). Modern work uses WGS-84."},
+{q:"In curve setting, the degree of a curve (metric definition) is the angle subtended by:",o:["10 m chord","20 m chord","50 m chord","100 m chord"],c:1,e:"In India/metric: Degree of curve = angle subtended by 20 m chord at centre. Higher degree → sharper curve."},
+{q:"Photogrammetric overlap between consecutive photos is kept at:",o:["30%","40%","60%","80%"],c:2,e:"Forward overlap ≈ 60% for stereoscopic viewing; side overlap ≈ 25–30%."},
+{q:"Subtense bar is used with a theodolite to measure:",o:["Vertical angles","Bearings","Horizontal distances","Elevations"],c:2,e:"Subtense bar: fixed horizontal length (2m); angle measured → distance = bar/(2×tan(θ/2))."},
+{q:"In GPS, GDOP stands for:",o:["Global Data Output Processing","Geometric Dilution of Precision","Ground Distance Over Point","General Deviation of Position"],c:1,e:"GDOP indicates the geometric strength of satellite configuration. Lower GDOP → better accuracy."},
+{q:"Tacheometric constants for an external focusing telescope:",o:["K=100, C=0 always","K=100, C=0.3–0.5m","K=50, C=0","K=200, C=1"],c:1,e:"K (multiplying constant)=100; C (additive constant)=0.3–0.5m for external focusing. Internal focusing: C≈0."},
+{q:"The three axes of a theodolite that must intersect at one point are:",o:["Vertical, horizontal, line of sight","Only vertical and horizontal","Only line of sight and vertical","Vertical and bubble tube"],c:0,e:"All three axes (vertical/standing, horizontal/trunnion, line of collimation) must meet at the instrument centre."},
+{q:"A sextant can measure angles up to:",o:["90°","120°","180°","360°"],c:1,e:"Sextant arc is 60° (1/6 of circle) but reads up to 120° due to double reflection principle."},
+{q:"In a traverse, departure of a line =:",o:["L cos θ","L sin θ","L tan θ","L / sin θ"],c:1,e:"Latitude = L cos θ; Departure = L sin θ. θ = WCB of the line."},
+{q:"Error in chaining due to incorrect alignment is always:",o:["Negative","Zero","Positive (measured > actual)","Random"],c:2,e:"If chain is off-line, the measured distance along the offset line is always longer than the true horizontal distance."},
+{q:"Remote sensing uses which part of the electromagnetic spectrum?",o:["Only visible","Only X-ray","Only sound waves","Visible, infrared, and microwave"],c:3,e:"Passive sensors: visible + infrared. Active (radar): microwave. Thermal: thermal IR."}
+]}},
+"sm":{n:"Soil Mechanics",ic:"⛰️",q:{
+easy:[
+{q:"Void ratio (e) = Vv/:",o:["V","Vw","Va","Vs"],c:3,e:"e = Vv/Vs. Porosity n=Vv/V. Relation: n=e/(1+e)."},
+{q:"Liquid limit defines boundary between:",o:["Solid and semi-solid","Semi-solid and plastic","Liquid and gas","Plastic and liquid"],c:3,e:"LL at 25 blows (Casagrande) or 20 mm cone penetration."},
+{q:"SPT gives:",o:["Shear strength directly","Void ratio","Water content","N-value (blows/300mm)"],c:3,e:"63.5 kg hammer, 750 mm fall. N = blows for 300 mm penetration."},
+{q:"In IS classification, CL means:",o:["Coarse laterite","Clay low compressibility","Calcareous loam","Clay of low plasticity"],c:3,e:"C=Clay, L=Low plasticity (LL<50%). CH=Clay High (LL≥50%)."},
+{q:"Unit weight of water:",o:["10.81 kN/m³","8.81 kN/m³","11 kN/m³","9.81 kN/m³"],c:3,e:"γw ≈ 9.81 kN/m³. Often rounded to 10 kN/m³."},
+{q:"Specific gravity of most soils:",o:["1.0–1.5","4.0–5.0","0.5–1.0","2.60–2.75"],c:3,e:"Most soils Gs≈2.65. Organic<2.5; iron-rich>2.8."},
+{q:"Plasticity Index PI =:",o:["LL+PL","LL×PL","PL−SL","LL−PL"],c:3,e:"PI = range of water content where soil is plastic."},
+{q:"Relative density describes:",o:["Cohesive soils","Organic soils","Rock","Granular soils"],c:3,e:"Dr = (emax−e)/(emax−emin)×100%. Compaction state of sand/gravel."},
+{q:"Proctor test gives:",o:["Shear strength","Permeability","Consolidation parameters","OMC and MDD"],c:3,e:"Standard Proctor (IS 2720 Part 7): Optimum Moisture Content and Maximum Dry Density."},
+{q:"Darcy's law: v =:",o:["kD","k/i","ki²","ki"],c:3,e:"v = k×i. k=permeability, i=hydraulic gradient."},
+{q:"Cohesion c is shear strength at:",o:["σ=infinity","σ=100 kPa","Any stress","σ=0"],c:3,e:"Mohr-Coulomb: τ=c+σ tanφ. At σ=0, τ=c."},
+{q:"Well-graded soil has:",o:["Uniform sizes","Only fine","Only coarse","Wide range of particle sizes"],c:3,e:"Cu>4 (gravel) or >6 (sand) AND 1<Cc<3."},
+{q:"Hydrometer analysis uses:",o:["Sieve","Proctor mould","CBR apparatus","Stokes' law (settling velocity)"],c:3,e:"For silt/clay (<75µm). Settling velocity depends on diameter."},
+{q:"Shrinkage limit: below it:",o:["Soil becomes liquid","Soil cracks","Soil becomes plastic","No further volume change on drying"],c:3,e:"Below SL, soil mass doesn't shrink further. Air enters voids."},
+{q:"Sandy soil has higher k than clay because:",o:["Sand is heavier","More minerals","Absorbs more water","Larger pore spaces"],c:3,e:"Larger particles → larger voids → less resistance to flow."},
+{q:"Safe bearing capacity = Ultimate BC /:",o:["Depth","Width","Area","Factor of safety"],c:3,e:"Typically FOS = 2.5–3 for shallow footings."},
+{q:"Vane shear test measures:",o:["Sandy soil strength","Rock strength","Gravel properties","Undrained strength of soft clay"],c:3,e:"Torque to rotate 4-bladed vane in soft saturated clay in-situ."},
+{q:"Flow net consists of:",o:["Contour lines only","Grid lines","Stress lines","Flow lines + equipotential lines"],c:3,e:"Orthogonal families: flow lines (seepage paths) and equipotential lines."},
+{q:"Phase diagram shows:",o:["Soil profile","Mineral content","Temperature","Solid, water, air phases"],c:3,e:"Three-phase: volumes and weights of solids, water, air."},
+{q:"For S=100%, w = eS/Gs simplifies to:",o:["w=Gs/e","w=e+Gs","w=e×Gs","w=e/Gs"],c:3,e:"Fully saturated: Se=wGs → w=e/Gs when S=1."},
+{q:"Constant head permeability test is for:",o:["Clay","Organic soils","All soils","Coarse-grained soils"],c:3,e:"Constant head: sand/gravel (high k). Falling head: silt/clay."},
+{q:"Atterberg limits are determined on soil passing:",o:["4.75mm sieve","2mm sieve","75µm sieve","425µm sieve"],c:3,e:"Liquid and plastic limits: soil passing 425µm IS sieve."},
+{q:"CBR test evaluates:",o:["Consolidation","Permeability","Shear parameters","Subgrade strength for pavements"],c:3,e:"California Bearing Ratio: penetration resistance as % of standard."},
+{q:"Activity of clay = PI/:",o:["LL","PL","SL","% clay fraction"],c:3,e:"Activity = PI/clay%. Normal: 0.75–1.25. Active>1.25 (montmorillonite)."},
+{q:"Zero air void line on compaction curve represents:",o:["Minimum density","Maximum void ratio","Dry state","100% saturation"],c:3,e:"ZAV: theoretical max dry density at given w if all air expelled."},
+{q:"Pycnometer is used to determine:",o:["Permeability","Shear strength","Compaction","Specific gravity of soil"],c:3,e:"Water displacement method to find Gs of soil solids."},
+{q:"Liquid limit of soil is determined using:",o:["Proctor mould","CBR apparatus","Consolidation cell","Casagrande apparatus"],c:3,e:"Standard groove closure at 25 blows. Alternatively: cone penetrometer."},
+{q:"In IS classification, 'GP' means:",o:["Gravelly peat","Good plastic","Gravel poorly-graded","Gravel plastic"],c:2,e:"G=Gravel, P=Poorly graded. GW=Well graded gravel."},
+{q:"Coefficient of uniformity Cu =:",o:["D60/D30","D30/D10","D10/D60","D60/D10"],c:3,e:"Cu = D60/D10. Higher Cu = wider range of sizes."},
+{q:"Terzaghi is known as father of:",o:["Fluid mechanics","Surveying","Structural analysis","Soil mechanics"],c:3,e:"Karl Terzaghi: effective stress principle, consolidation theory."}
+],
+medium:[
+{q:"Terzaghi's effective stress: σ =:",o:["σ'−u","σ'×u","σ'/u","σ'+u"],c:3,e:"Total = Effective + Pore water pressure. σ' controls strength."},
+{q:"Angle of internal friction of loose sand:",o:["0°–5°","10°–15°","40°–45°","28°–34°"],c:3,e:"Loose: 28–34°. Dense: 35–45°."},
+{q:"Rankine Ka (c=0) =:",o:["(1+sinφ)/(1−sinφ)","tan²(45+φ/2)","cos²φ","(1−sinφ)/(1+sinφ)"],c:3,e:"Ka=tan²(45−φ/2). Kp=1/Ka."},
+{q:"Oedometer test determines:",o:["Shear strength","Permeability","Bearing capacity","Consolidation parameters (Cv, Cc)"],c:3,e:"Time-compression curves → Cv (Casagrande/Taylor method), Cc from e-log σ' plot."},
+{q:"UU triaxial test measures:",o:["Drained strength","Long-term strength","Residual strength","Undrained shear strength"],c:3,e:"No drainage → total stress parameters for immediate loading."},
+{q:"K₀ for NC clay ≈ 1−sinφ. For φ=30°, K₀≈:",o:["0","1.0","2.0","0.5"],c:3,e:"K₀=1−sin30°=1−0.5=0.5. Jaky's formula for NC soils."},
+{q:"Terzaghi bearing capacity (strip, c-φ): qu =:",o:["cNc only","γBNγ only","qNq only","cNc+qNq+0.5γBNγ"],c:3,e:"q=γDf (surcharge). Nc,Nq,Nγ depend on φ."},
+{q:"Compaction differs from consolidation: compaction:",o:["Removes water","Takes long time","Increases water content","Expels air by mechanical energy (rapid)"],c:3,e:"Compaction: rapid, mechanical, expels air. Consolidation: slow, expels water."},
+{q:"Critical hydraulic gradient for quicksand ≈:",o:["0.5","2.0","5.0","1.0"],c:3,e:"ic=(Gs−1)/(1+e). Sand (Gs=2.65, e=0.65): ic≈1.0."},
+{q:"Sensitivity of clay St =:",o:["PI/LL","e/emax","Cc/Cs","qu(undisturbed)/qu(remoulded)"],c:3,e:"St>8=quick clay. St 4–8=sensitive."},
+{q:"Swedish circle method analyses:",o:["Bearing capacity","Settlement","Seepage","Slope stability"],c:3,e:"Method of slices for circular failure surfaces in slopes."},
+{q:"Newmark's chart uses theory of:",o:["Rankine","Coulomb","Westergaard","Boussinesq"],c:3,e:"Determines vertical stress below irregularly shaped loaded areas."},
+{q:"Cc (compression index) correlates with:",o:["Plastic limit","Shrinkage limit","Specific gravity","Liquid limit"],c:3,e:"Terzaghi-Peck: Cc=0.009(LL−10) for NC clay."},
+{q:"OCR>1 means soil is:",o:["Normally consolidated","Under-consolidated","Liquefied","Over-consolidated"],c:3,e:"OCR=σ'p/σ'0. OC: past stress > current stress."},
+{q:"Retaining wall failure modes:",o:["Only overturning","Only sliding","Only shear","Overturning + sliding + bearing capacity"],c:3,e:"Check all three: overturning (FOS≥2), sliding (FOS≥1.5), bearing."},
+{q:"Coulomb's theory accounts for:",o:["Only horizontal backfill","Only vertical wall","Smooth wall only","Wall friction + inclined backfill"],c:3,e:"More general than Rankine: includes wall friction δ, inclined surfaces."},
+{q:"Consolidation settlement is significant in:",o:["Sandy soils","Gravel","Rock","Clayey soils"],c:3,e:"Low permeability → slow pore water dissipation → time-dependent settlement."},
+{q:"Degree of saturation S=100% means:",o:["Soil is dry","Maximum strength","No air voids","All voids filled with water"],c:3,e:"S=Vw/Vv×100%. Fully saturated."},
+{q:"Group Index ranges from:",o:["0 to 100","1 to 10","20 to 50","0 to 20"],c:3,e:"GI=0 excellent, GI=20 very poor. For pavement subgrade evaluation."},
+{q:"At-rest pressure applies to:",o:["Wall moving freely","Wall tilting forward","Sheet pile","Rigid wall with no lateral movement"],c:3,e:"Zero lateral strain: basement walls, bridge abutments."},
+{q:"Negative pore pressure in soil is called:",o:["Seepage pressure","Uplift","Excess pore pressure","Suction"],c:3,e:"Suction in partially saturated soils above water table → increases σ'."},
+{q:"For S=100%, γsat =:",o:["(Gs+e)γw/(1+e)","Gsγw","eγw","Gs/(1+e)"],c:0,e:"γsat = (Gs+e)/(1+e) × γw. Submerged: γ' = γsat − γw."},
+{q:"Plate load test uses a plate of diameter:",o:["30 cm","45 cm","60 cm","75 cm"],c:3,e:"Standard: 75 cm (30 inch) diameter rigid plate for modulus of subgrade reaction."},
+{q:"Thixotropy in clay means:",o:["Permanent strength loss","Strength increase with loading","Swelling","Strength loss on remoulding, partial regain with time"],c:3,e:"Thixotropic clays partially regain strength at constant water content."},
+{q:"Sand drain accelerates consolidation by:",o:["Increasing Cv","Increasing load","Removing soil","Reducing drainage path length"],c:3,e:"Vertical drains shorten path from full thickness to half drain spacing."},
+{q:"Liquefaction occurs in:",o:["Stiff clay under static load","Dense gravel","Dry sand","Loose saturated sand under cyclic loading"],c:3,e:"Cyclic loading → pore pressure buildup → σ'=0 → complete strength loss."},
+{q:"Unconfined compressive strength qu = 2cu because:",o:["Convention","σ₃=σ₁","Drainage occurs","σ₃=0, φu=0: τf=qu/2=cu"],c:3,e:"In UCS: σ₃=0. Mohr circle: τf=σ₁/2=qu/2=cu."},
+{q:"Tension crack depth in cohesive soil =:",o:["c/γ","c/(2γ)","4c/γ","2c/γ"],c:3,e:"zc=2c/γ. Reduces effective height of retaining wall."},
+{q:"IS 2720 Part 17 covers:",o:["Shear strength","Compaction","Consolidation","Permeability tests"],c:3,e:"Constant head and falling head permeability tests."},
+{q:"Bishop's simplified method includes:",o:["Only weight","Only cohesion","Interslice normal forces only","Pore pressure and slice weight"],c:3,e:"Iterative method considering pore pressure. More accurate than Fellenius."}
+],
+hard:[
+{q:"Degree of consolidation at Tv=0.848:",o:["50%","60%","80%","90%"],c:3,e:"Tv=0.197→50%; 0.403→70%; 0.848→90%."},
+{q:"Plate load test: for clay, footing BC vs plate BC:",o:["∝ B/Bp","∝ (B/Bp)²","Half of plate","Same as plate"],c:3,e:"φ=0: BC independent of width. Sand: varies linearly."},
+{q:"Skempton's B for saturated soil:",o:["0","0.5","Varies with OCR","1.0"],c:3,e:"B=Δu/Δσ₃. Saturated: B=1. Dry: B=0."},
+{q:"Westergaard theory differs from Boussinesq by assuming:",o:["Isotropic soil","Only vertical stress","Infinite depth","Thin rigid membrane layers (anisotropic)"],c:3,e:"Suitable for stratified deposits. Gives lower stresses."},
+{q:"Factor of safety against piping should be at least:",o:["1.5","2.0","10","4–5"],c:3,e:"Khosla: FOS=4–5 against piping (exit gradient/critical)."},
+{q:"Fellenius method neglects:",o:["Weight of slice","Pore pressure","Base friction","Inter-slice forces"],c:3,e:"Ordinary method: neglects inter-slice forces → conservative."},
+{q:"mv (volume compressibility) =:",o:["Δσ'/Δe","e/σ'","Cv×k","−(Δe/Δσ')/(1+e₀)"],c:3,e:"ΔH = mv×Δσ'×H. Direct settlement calculation."},
+{q:"Pore pressure coefficient Af for NC clay ≈:",o:["0","-0.5","2.0","0.5–1.0"],c:3,e:"NC: Af≈0.5–1.0. Heavily OC: negative (dilation)."},
+{q:"Cc/(1+e₀) for soft NC clay ranges:",o:["0.01–0.05","0.5–1.0","1.0–2.0","0.1–0.4"],c:3,e:"Compression ratio governs settlement magnitude."},
+{q:"For clay, log k vs e is:",o:["Parabolic","Exponential","Hyperbolic","Approximately linear"],c:3,e:"Semi-log plot: nearly straight line for clays."},
+{q:"Standard Proctor OMC is typically at:",o:["5%","25%","40%","10–15%"],c:3,e:"Most soils OMC≈10–15%. Modified Proctor: lower OMC, higher MDD."},
+{q:"Earth pressure at rest coefficient K₀ for NC sand (φ=35°):",o:["0","1.0","0.80","0.43"],c:3,e:"K₀=1−sin35°=1−0.574=0.426≈0.43."},
+{q:"Depth of zero net pressure behind retaining wall in cohesive soil:",o:["c/γ","c/(2γ)","4c/γ","2c/(γ√Ka)"],c:3,e:"Point where active pressure = 0. Below this, net pressure is positive."},
+{q:"Schmertmann method is used for:",o:["Slope stability","Consolidation","Permeability","Settlement of foundations on sand"],c:3,e:"Uses CPT data with strain influence factor diagram for settlement estimation."},
+{q:"Menard pressuremeter gives:",o:["Only shear strength","CBR value","N-value","In-situ modulus and limit pressure"],c:3,e:"Expands a cylindrical probe in borehole → pressure-volume curve → modulus."},
+{q:"For a strip footing, Terzaghi's Nc for φ=0 ≈:",o:["1.0","9.0","14.0","5.7"],c:3,e:"For φ=0: Nc=5.7, Nq=1.0, Nγ=0. qu=5.7c+q."},
+{q:"Coefficient of consolidation Cv typically ranges:",o:["10⁻¹ to 10⁰ m²/s","10⁻⁶ to 10⁻⁸ m²/s","10⁻² to 10⁻⁴ m²/s","10⁻³ to 10⁻⁵ cm²/s"],c:3,e:"Cv for clays: 10⁻³ to 10⁻⁵ cm²/s (or 10⁻⁷ to 10⁻⁹ m²/s)."},
+{q:"Passive earth pressure acts when wall moves:",o:["Away from soil","Downward","No movement","Toward soil (into backfill)"],c:3,e:"Active: wall moves away. Passive: wall pushed into soil. At-rest: no movement."},
+{q:"Mohr-Coulomb failure envelope for total stress (undrained clay):",o:["Inclined line","Vertical line","Parabola","Horizontal line (φu=0)"],c:3,e:"Undrained (UU): φu=0, τf=cu (constant). Horizontal envelope."},
+{q:"In CPT, cone resistance qc is measured by:",o:["Dynamic hammer blows","Torque on vane","Static push of 60° cone","Pressuremeter inflation"],c:2,e:"Cone Penetration Test: 60° cone pushed at 2 cm/s. Measures tip resistance + sleeve friction."},
+{q:"Preconsolidation pressure σ'p is found from:",o:["SPT","Proctor test","CBR test","Casagrande construction on e-log σ' curve"],c:3,e:"Point of maximum curvature on the e-log σ' plot → Casagrande method."},
+{q:"Coefficient of earth pressure at rest K₀ for OC clay ≈:",o:["0","0.5","K₀(NC)×OCR^m","Always 1.0"],c:2,e:"K₀(OC) = K₀(NC) × OCR^(sinφ). For heavily OC clay, K₀ can exceed 1.0."},
+{q:"For φ=0 analysis, bearing capacity factor Nc by Skempton for deep footings approaches:",o:["5.14","5.7","7.5","9.0"],c:3,e:"Skempton's Nc increases with depth: strip 5.14 (surface) → 7.5 (D/B=2.5). Circular: up to 9.0."},
+{q:"Negative skin friction on a pile occurs when:",o:["Pile is uplifted","Soil settles more than pile","Pile is too short","Load is too high"],c:1,e:"Surrounding soil settles (fill, consolidating clay) → drag down → negative friction adds to pile load."},
+{q:"In consolidation, secondary compression occurs:",o:["Before primary","During loading","Only in sand","After primary consolidation is complete"],c:3,e:"Creep under constant effective stress after excess pore pressure fully dissipated."},
+{q:"Coefficient of permeability by Hazen's formula: k(cm/s) ≈:",o:["D10²","D60²","D30²","C×D10²"],c:3,e:"k = C×D10² (cm/s). C≈100 for clean sands. D10 in cm."},
+{q:"In triaxial test, deviator stress σd =:",o:["σ1+σ3","σ3/σ1","σ1×σ3","σ1−σ3"],c:3,e:"Deviator stress = σ1−σ3. At failure: σd = σ1f−σ3."},
+{q:"For square footing, Terzaghi's bearing capacity uses shape factors:",o:["Same as strip","qu=1.3cNc+qNq+0.4γBNγ","qu=0.5cNc+qNq","qu=cNc only"],c:1,e:"Square: 1.3 and 0.4 factors. Circular: 1.3 and 0.3."},
+{q:"Slope stability analysis by Taylor's stability number assumes:",o:["Only translational failure","Only wedge failure","Only planar failure","Circular failure surface (φ=0 method)"],c:3,e:"Taylor's chart: Sn=c/(γHF). For φ=0 undrained analysis of cohesive slopes."},
+{q:"In direct shear test, the failure plane is:",o:["At 45°","Variable","At (45+φ/2)°","Predetermined (horizontal)"],c:3,e:"Failure forced along horizontal plane between upper and lower boxes. Disadvantage: not the weakest plane."}
+]}},
+"hy":{n:"Hydraulics",ic:"💧",q:{
+easy:[
+{q:"Specific gravity of mercury:",o:["1.0","16.0","10.6","13.6"],c:3,e:"Mercury SG=13.6, density≈13600 kg/m³."},
+{q:"Bernoulli's equation based on:",o:["Mass conservation","Momentum","Newton's 2nd law","Energy conservation"],c:3,e:"P/γ+V²/2g+z = constant along streamline."},
+{q:"Fluid at rest has:",o:["Shear stress","Both shear and normal","No stress","Only normal stress (pressure)"],c:3,e:"Static fluid: no shear; pressure acts equally in all directions."},
+{q:"SI unit of dynamic viscosity:",o:["m²/s","kg/m³","N/m²","Pa·s (N·s/m²)"],c:3,e:"μ in Pa·s. Kinematic ν=μ/ρ in m²/s."},
+{q:"Reynolds number = ratio of:",o:["Gravity to viscous","Pressure to viscous","Elastic to inertia","Inertia to viscous"],c:3,e:"Re=ρVD/μ. <2000 laminar, >4000 turbulent."},
+{q:"Atmospheric pressure at sea level:",o:["76 cm Hg","100 cm Hg","50 cm Hg","101.325 kPa"],c:3,e:"101.325 kPa = 760 mmHg = 10.33 m water."},
+{q:"Discharge Q =:",o:["Pressure×Area","Force/Velocity","Mass×Acceleration","Area×Velocity"],c:3,e:"Continuity: Q=A₁V₁=A₂V₂ for incompressible."},
+{q:"Pitot tube measures:",o:["Discharge","Pressure only","Viscosity","Velocity of flow"],c:3,e:"V=√(2gΔh). Stagnation minus static pressure."},
+{q:"Ideal fluid has:",o:["High viscosity","Compressible","Surface tension","Zero viscosity + incompressible"],c:3,e:"Inviscid (μ=0) and incompressible—theoretical concept."},
+{q:"Hydrostatic pressure at depth h:",o:["p=ρg/h","p=ρ/gh","p=gh/ρ","p=ρgh"],c:3,e:"Gauge pressure increases linearly with depth."},
+{q:"Centre of pressure on submerged vertical plane is:",o:["At centroid","Above centroid","At free surface","Below the centroid"],c:3,e:"Always below centroid by IG sinα/(Aȳ)."},
+{q:"Buoyancy force equals weight of:",o:["Object","Volume of object","Pressure at bottom","Fluid displaced"],c:3,e:"Archimedes: buoyancy=ρf×g×V_submerged."},
+{q:"Pascal's law: pressure acts:",o:["Only downward","Only upward","Only horizontally","Equally in all directions"],c:3,e:"Basis of hydraulic machines."},
+{q:"Manometer measures:",o:["Velocity","Discharge","Temperature","Pressure difference"],c:3,e:"U-tube: height difference of manometric fluid."},
+{q:"Steady flow means:",o:["∂V/∂s=0","Laminar","Turbulent","∂V/∂t=0"],c:3,e:"Velocity doesn't change with time at a point."},
+{q:"Head loss in pipes given by:",o:["Bernoulli","Continuity","Momentum","Darcy-Weisbach equation"],c:3,e:"hf=fLV²/(2gD). f=friction factor."},
+{q:"Weir measures:",o:["Pressure","Velocity","Temperature","Discharge in open channels"],c:3,e:"Q calculated from head over crest."},
+{q:"Stagnation pressure =:",o:["Static−Dynamic","Static×Dynamic","Dynamic only","Static+Dynamic"],c:3,e:"p_stag=p_static+½ρV²."},
+{q:"Surface tension causes:",o:["Faster flow","Increased viscosity","Increased density","Capillary rise and droplets"],c:3,e:"h=4σcosθ/(γd). Forms meniscus."},
+{q:"Hydraulic radius R =:",o:["A×P","P/A","A+P","A/P"],c:3,e:"R=Area/Wetted Perimeter. Pipe full: R=D/4."},
+{q:"Laminar flow velocity profile in pipe:",o:["Uniform","Logarithmic","Linear","Parabolic"],c:3,e:"V(r)=Vmax[1−(r/R)²]. Vmax=2Vmean."},
+{q:"Coefficient of discharge for sharp orifice ≈:",o:["0.75","0.97","1.0","0.62"],c:3,e:"Cd=Cc×Cv≈0.64×0.97≈0.62."},
+{q:"Froude number Fr=1 indicates:",o:["Subcritical","Supercritical","No flow","Critical flow"],c:3,e:"Fr=V/√(gD). Fr<1 subcritical; Fr>1 supercritical."},
+{q:"Manning's n for concrete-lined channel:",o:["0.025–0.030","0.040–0.050","0.001","0.012–0.015"],c:3,e:"Concrete: 0.012–0.015. Earth: 0.020–0.025."},
+{q:"Cavitation occurs when pressure drops below:",o:["Atmospheric","Zero gauge","Zero absolute","Vapour pressure"],c:3,e:"Liquid vaporises → bubbles collapse violently."},
+{q:"In siphon, summit pressure is:",o:["Atmospheric","Above atmospheric","Zero absolute","Below atmospheric"],c:3,e:"Sub-atmospheric at summit. If drops to vapour pressure, siphon breaks."},
+{q:"Power of hydraulic turbine P =:",o:["ρQV","γQ","ρQ²","ρgQH"],c:3,e:"P=ρgQH (watts). With η: P_out=η×ρgQH."},
+{q:"Specific energy in open channel E =:",o:["y only","V²/2g only","y−V²/2g","y+V²/2g"],c:3,e:"E=depth+velocity head. Minimum at critical depth."},
+{q:"Velocity is maximum at:",o:["Pipe wall","Quarter radius","Three-quarter radius","Centre of pipe"],c:3,e:"Max at centre, zero at wall (no-slip)."},
+{q:"Chezy's formula V =:",o:["C×R×S","(1/n)R^(2/3)S^(1/2)","C√(R/S)","C√(RS)"],c:3,e:"Relating: C=R^(1/6)/n."}
+],
+medium:[
+{q:"Venturimeter Q ∝:",o:["h","h²","1/h","√h"],c:3,e:"Q=Cd×A₁A₂√(2gh)/√(A₁²−A₂²)."},
+{q:"HGL lies below TEL by:",o:["Pressure head","Datum head","Friction head","V²/2g (velocity head)"],c:3,e:"HGL=TEL−V²/2g."},
+{q:"Major pipe losses are due to:",o:["Bends","Sudden expansion","Valves","Friction along pipe length"],c:3,e:"Darcy-Weisbach. Minor: bends, valves, expansions."},
+{q:"Most economical rectangular channel: d =:",o:["Width","Twice width","1/3 width","Half width (B/2)"],c:3,e:"Max Q with min P: d=B/2. R=d/2."},
+{q:"Specific energy minimum occurs at:",o:["Subcritical depth","Normal depth","Supercritical depth","Critical depth"],c:3,e:"dE/dy=0 at critical depth. Fr=1."},
+{q:"Moody diagram plots friction factor against:",o:["Velocity and diameter","Discharge and slope","Pressure and temperature","Re and relative roughness ε/D"],c:3,e:"Covers laminar, transition, turbulent regimes."},
+{q:"Hydraulic jump sequent depth y₂/y₁ =:",o:["(1+2Fr₁²)/3","Fr₁","2Fr₁²","(√(1+8Fr₁²)−1)/2"],c:3,e:"Belanger equation. Energy loss=(y₂−y₁)³/(4y₁y₂)."},
+{q:"Water hammer pressure (sudden closure) p =:",o:["ρV²/2","γh","ρgV","ρcV"],c:3,e:"c=wave celerity=√(K/ρ) for rigid pipe."},
+{q:"Buckingham Pi theorem: dimensionless groups =:",o:["n+m","n×m","n/m","n−m"],c:3,e:"Variables n, dimensions m → π-groups=n−m."},
+{q:"Energy loss in hydraulic jump =:",o:["(y₁−y₂)²","y₁y₂","V₁−V₂","(y₂−y₁)³/(4y₁y₂)"],c:3,e:"Used as energy dissipator at spillway base."},
+{q:"Surge tank protects penstock from:",o:["Corrosion","Freezing","Siltation","Water hammer"],c:3,e:"Absorbs pressure fluctuations from sudden load changes."},
+{q:"Drag force FD =:",o:["CdAρV","ρV²A","CdρgV","CdA½ρV²"],c:3,e:"CD=drag coefficient, A=projected area."},
+{q:"Normal depth is where:",o:["Energy is minimum","Fr=1","Velocity is max","Gravity balances friction (uniform flow)"],c:3,e:"S₀=Sf at normal depth → uniform flow."},
+{q:"Froude number = ratio of:",o:["Re","Weber","Euler","Inertia to gravity forces"],c:3,e:"Fr=V/√(gL). Dominates open channel/spillway flows."},
+{q:"RVF examples:",o:["Gradual expansion","Uniform flow","Laminar flow","Hydraulic jump, flow over weir"],c:3,e:"Rapidly varied: depth changes abruptly over short distance."},
+{q:"Metacentric height determines floating body's:",o:["Buoyancy","Speed","Weight","Stability against overturning"],c:3,e:"GM>0 stable; GM=0 neutral; GM<0 unstable."},
+{q:"Kaplan turbine is for:",o:["High head, low Q","Medium head","Very high head","Low head, high discharge"],c:3,e:"Axial flow reaction: 2–70m head. Pelton: high head."},
+{q:"Shallow water wave celerity c =:",o:["√(gd/2)","gd","√(2gd)","√(gd)"],c:3,e:"Shallow: c=√(gd). Deep: c=√(gλ/2π)."},
+{q:"At junction of pipe network: ΣQ_in = ΣQ_out is:",o:["Energy condition","Momentum","Friction","Continuity"],c:3,e:"Mass conservation at each node."},
+{q:"Froude similarity used for:",o:["Pipe flow","Aerodynamic testing","Viscous fluids","Open channel/spillway models"],c:3,e:"Free-surface flows where gravity dominates."},
+{q:"NPSH prevents:",o:["Turbulence","Water hammer","Priming issues","Cavitation in pumps"],c:3,e:"NPSHa must exceed NPSHr."},
+{q:"Hardy Cross method balances:",o:["Flow at each node","Velocity everywhere","Pressure at each point","Head losses in each loop"],c:3,e:"Iterative corrections so ΣhL=0 in each closed loop."},
+{q:"Colebrook-White equation gives:",o:["Explicit f","Discharge","Velocity","Implicit f for turbulent flow"],c:3,e:"1/√f=−2log(ε/3.7D+2.51/Re√f). Solved iteratively."},
+{q:"Francis formula for rectangular weir Q =:",o:["LH²","2.5LH","LH^(1/2)","1.84(L−0.1nH)H^(3/2)"],c:3,e:"n=end contractions (0 or 2). SI units."},
+{q:"GVF equation: dy/dx =:",o:["S₀ only","Sf only","1−Fr²","(S₀−Sf)/(1−Fr²)"],c:3,e:"Describes how depth changes gradually along channel."},
+{q:"Hazen-Williams formula is used for:",o:["Open channels","Gas flow","Compressible flow","Pipe flow (water supply)"],c:3,e:"V=0.849 C_HW R^0.63 S^0.54."},
+{q:"Thiem equation for steady well flow determines:",o:["Storage coefficient only","Only drawdown","Only flow rate","T and k from observation wells"],c:3,e:"Q=2πT(s₁−s₂)/ln(r₂/r₁). Requires 2 observation wells."},
+{q:"Euler's equation relates:",o:["Only pressure","Only gravity","Viscous forces","Pressure, gravity, and inertia"],c:3,e:"Integration gives Bernoulli's equation."},
+{q:"V-notch weir Q ∝:",o:["H","H²","H³","H^(5/2)"],c:3,e:"Q=(8/15)Cd√(2g)tan(θ/2)H^(5/2). V-notch more accurate for small flows."},
+{q:"Turbulent flow velocity profile is:",o:["Parabolic","Linear","Uniform","Logarithmic"],c:3,e:"Turbulent: logarithmic near wall, flatter than laminar parabolic."}
+],
+hard:[
+{q:"Coriolis coefficient α for turbulent flow ≈:",o:["2.0","0.5","1.5","1.05–1.10"],c:3,e:"α=kinetic energy correction. Laminar: 2.0. Turbulent: 1.05–1.10."},
+{q:"Momentum correction factor β for turbulent flow ≈:",o:["2.0","0.5","1.5","1.02–1.04"],c:3,e:"β for momentum equation. Laminar: 4/3. Turbulent: ~1.02–1.04."},
+{q:"Rehbock formula corrects discharge over a:",o:["Orifice","Siphon","V-notch","Sharp-crested rectangular weir"],c:3,e:"Accounts for crest height, approach velocity, and surface tension."},
+{q:"In GVF, M1 profile occurs when:",o:["yn<yc<y","yc<y<yn","y<yc<yn","y>yn>yc (mild slope, depth above normal)"],c:3,e:"M1: backwater curve above normal depth. Caused by dam downstream."},
+{q:"Critical depth yc for rectangular channel: yc =:",o:["Q/(gB)","(Q²/gB)^(1/2)","Q²/(gB²)","(Q²/gB²)^(1/3)"],c:3,e:"yc=(q²/g)^(1/3) where q=Q/B. At yc: E is minimum."},
+{q:"Pipe network: for n loops, the number of Hardy Cross corrections per iteration =:",o:["1","n−1","2n","n"],c:3,e:"One correction ΔQ computed and applied per loop per iteration."},
+{q:"In rapidly varied flow, the governing equations are:",o:["Only continuity","Only energy","Only diffusion","Continuity + momentum"],c:3,e:"Energy is dissipated → can't use energy equation alone. Momentum + continuity."},
+{q:"For a broad-crested weir, discharge Q =:",o:["1.84LH^(3/2)","CdL√(2g)H^(3/2)","2.5LH²","1.705 Cd L H^(3/2)"],c:3,e:"Q=1.705CdLH^(3/2) for rectangular broad-crested weir (SI)."},
+{q:"Pelton wheel specific speed range:",o:["300–600","60–300","10–30","600–1000"],c:2,e:"Pelton (impulse): 10–30. Francis: 60–300. Kaplan: 300–800."},
+{q:"Unsteady flow in pipe described by:",o:["Steady Bernoulli","Manning's equation","Darcy's law","Saint-Venant / waterhammer equations"],c:3,e:"Wave propagation in pipes: method of characteristics solves these."},
+{q:"For a submerged hydraulic jump, tailwater depth is:",o:["Less than sequent depth","Equal to sequent depth","Zero","Greater than sequent depth"],c:3,e:"Submergence ratio S=(yt−y₂)/y₂>0. Jump is 'drowned' under high tailwater."},
+{q:"In dimensional analysis, the Weber number represents:",o:["Inertia/gravity","Elastic/inertia","Pressure/inertia","Inertia/surface tension"],c:3,e:"We=ρV²L/σ. Important where surface tension dominates (small scale models)."},
+{q:"Propeller turbine differs from Kaplan in that Kaplan has:",o:["Fixed blades","No runner","No draft tube","Adjustable runner blades"],c:3,e:"Kaplan: adjustable runner AND guide vanes. Propeller: fixed runner blades."},
+{q:"For pipe in parallel, the total discharge =:",o:["Q1=Q2=...","Q1×Q2","Q1−Q2","Q1+Q2+..."],c:3,e:"Parallel: Q=ΣQi; head loss same. Series: Q same; hf=Σhfi."},
+{q:"Notch sensitivity factor for V-notch increases accuracy for:",o:["Large discharges","Medium discharges","Very large discharges","Small discharges"],c:3,e:"V-notch: full width used even at low flows → better accuracy for small Q."},
+{q:"Steady uniform flow: S₀ (bed slope) equals:",o:["0","Infinity","HGL slope","Sf (friction slope)"],c:3,e:"Uniform: S₀=Sf. Depth, velocity constant along the channel."},
+{q:"Stilling basin length is approximately:",o:["2×y₂","3–4× sequent depth","10×y₁","L/2"],c:1,e:"Basin length ≈ 5–6 × y₁ or 3–4 × y₂ depending on Fr₁."},
+{q:"In open channel, the most efficient trapezoidal section is a:",o:["Square","Rectangle","Triangle","Half-hexagon"],c:3,e:"Side slope = 60° (1:√3). Hydraulic radius = y/2."},
+{q:"The depth at which a circular channel gives max discharge:",o:["D","D/2","0.81D","0.95D"],c:3,e:"Max Q at d≈0.95D. Max velocity at d≈0.81D."},
+{q:"Navier-Stokes equations are the governing equations for:",o:["Ideal fluid only","Inviscid flow only","Only laminar flow","Viscous incompressible flow"],c:3,e:"Full equations of motion including viscous terms. Simplified → Euler (inviscid), Bernoulli."},
+{q:"In pipe flow, Hagen-Poiseuille equation gives hf for:",o:["Turbulent flow","Rough pipes","Transition flow","Laminar flow"],c:3,e:"hf=128μLQ/(πD⁴γ) for laminar (Re<2000). Not valid for turbulent."},
+{q:"Equivalent pipe method converts a system of pipes in series to:",o:["Parallel pipes","A network","A pump system","A single equivalent pipe"],c:3,e:"Same total head loss and discharge. Used for simplified analysis."},
+{q:"Pump efficiency = water power / shaft power. Typical centrifugal pump efficiency:",o:["20–30%","40–50%","95–100%","70–85%"],c:3,e:"Centrifugal pumps: typically 70–85% at best efficiency point (BEP)."},
+{q:"For flow over a flat plate, boundary layer thickness δ ∝:",o:["x²","1/x","x^(1/2)","x^(4/5)"],c:2,e:"Laminar BL: δ ∝ x^(1/2). Turbulent BL: δ ∝ x^(4/5)."},
+{q:"Critical Reynolds number for open channel flow transition ≈:",o:["2000","4000","10000","500"],c:3,e:"Open channel: Re_critical ≈ 500 (based on hydraulic radius). Pipe: 2000."},
+{q:"Cipolletti weir is a trapezoidal weir with side slopes of:",o:["1H:2V","2H:1V","1V:1H","1H:4V"],c:3,e:"Cipolletti: 1:4 (H:V) side slopes. Designed so the increase in Q from the sloping sides compensates for end contractions."},
+{q:"In unsteady flow, the celerity of a gravity wave in an open channel =:",o:["V","V²/g","g/V","√(gy)"],c:3,e:"c=√(gy). Speed of disturbance propagation relative to the fluid."},
+{q:"Specific speed of a pump Ns = N√Q / H^(3/4). Higher Ns means:",o:["High head, low Q","Medium head","Reciprocating type","Low head, high Q (axial flow)"],c:3,e:"Low Ns: centrifugal/radial. Medium: mixed flow. High: axial/propeller."},
+{q:"Affinity laws for pumps: Q ∝ N, H ∝ N², P ∝:",o:["N","N²","N⁴","N³"],c:3,e:"Affinity laws: Q∝N, H∝N², P∝N³. For varying speed."}
+]}},
+"ir":{n:"Irrigation Engg",ic:"🌾",q:{
+easy:[
+{q:"Duty = area irrigated per cumec during:",o:["Crop period","One day","One hour","Base period"],c:3,e:"Higher duty = more efficient use of water."},
+{q:"Weir across river is for:",o:["Storage","Power generation","Flood control","Diversion into canal"],c:3,e:"Raises water level to divert through head regulator."},
+{q:"Delta (Δ) = total depth of water during:",o:["One watering","One month","Sowing only","Entire base period"],c:3,e:"Δ=8.64B/D (B days, D ha/cumec)."},
+{q:"Kennedy's critical velocity V₀ =:",o:["C√RS","(1/n)R^(2/3)S^(1/2)","Q/A","0.55my^0.64"],c:3,e:"m=CVR. Ensures no silting or scouring."},
+{q:"Aqueduct carries:",o:["Drain over canal","Both at same level","Road over canal","Canal over drain"],c:3,e:"Super passage: drain above canal."},
+{q:"Consumptive use =:",o:["Seepage loss","Stored water","Runoff","Evapotranspiration"],c:3,e:"Actual water consumed by crop."},
+{q:"Head regulator located at:",o:["Tail of canal","Middle","End","Head (offtake) of canal"],c:3,e:"Controls water entry from river into main canal."},
+{q:"Canal fall is provided when:",o:["Ground slope < bed slope","They are equal","Canal is horizontal","Ground slope > bed slope"],c:3,e:"Excess energy dissipated by falls/drops."},
+{q:"Lining reduces:",o:["Velocity","Evaporation","Discharge capacity","Seepage losses"],c:3,e:"Concrete lining reduces seepage by 50–70%."},
+{q:"Kharif crops grown in:",o:["Winter","Spring","Autumn","Summer monsoon (Jun–Oct)"],c:3,e:"Rice, maize, cotton. Rabi: wheat, barley (Oct–Mar)."},
+{q:"Kor period is:",o:["Total duration","Rest period","Harvesting","Critical max water need period"],c:3,e:"Crop needs maximum water during kor period."},
+{q:"Standard side slopes for earthen canal:",o:["1:1","2:1","0.5:1","1.5:1 (H:V)"],c:3,e:"Normal soil: 1.5H:1V. Rock: 1:1. Loose sand: 2:1."},
+{q:"Cross regulator is built across:",o:["River","Drain","Road","Canal to regulate water level"],c:3,e:"Controls water level and distribution to branches."},
+{q:"Free board = bank top − :",o:["Bed level","HFL","Bank toe","Full supply level"],c:3,e:"Safety against wave action and unexpected rise."},
+{q:"Escape channel takes away:",o:["Drain water","Flood water","Sewage","Surplus canal water"],c:3,e:"Safe disposal of excess water during emergencies."},
+{q:"Waterlogging caused by:",o:["Drought","Erosion","Siltation","Water table rise"],c:3,e:"Root zone waterlogged → reduced crop yield."},
+{q:"Drip irrigation is best for:",o:["Rice paddies","Large wheat fields","Sugarcane flooding","Orchard/garden crops"],c:3,e:"Water delivered directly to root zone through emitters."},
+{q:"Command area =:",o:["Canal cross-section","Catchment area","Reservoir area","Total irrigable area"],c:3,e:"Gross area within canal system boundaries."},
+{q:"Barrage differs from weir by having:",o:["No gates","Higher crest","Thicker body","Gates for discharge control"],c:3,e:"Adjustable gates for precise water level control."},
+{q:"Ogee spillway follows shape of:",o:["Upper nappe","Parabola","Circular arc","Lower nappe of sharp-crested weir"],c:3,e:"Minimises sub-atmospheric pressure and cavitation."},
+{q:"Sprinkler irrigation efficiency ≈:",o:["30–40%","60–70%","95–100%","80–85%"],c:3,e:"Sprinkler: 80–85%. Drip: 90–95%. Surface: 40–60%."},
+{q:"Arch dam resists load by:",o:["Gravity","Buttress action","Earth pressure","Arch action (horizontal rings)"],c:3,e:"Transfers load horizontally to abutments. Narrow gorges."},
+{q:"Rational formula Q = CIA/:",o:["100","36","3.6","360"],c:3,e:"Q(cumec)=CIA/360. C=runoff coeff, I=intensity mm/hr, A=hectares."},
+{q:"Earth dam suits:",o:["Strong rock foundation","Narrow gorge","High seismicity","Wide valley with weak foundation"],c:3,e:"Economical for wide valleys where concrete dams are impractical."},
+{q:"Field irrigation requirement considers:",o:["Only crop water need","Rainfall only","Evaporation only","Crop need + application losses"],c:3,e:"FIR = CU − effective rainfall + losses."},
+{q:"Uplift pressure below dam is maximum at:",o:["Downstream end","Centre","Toe","Upstream end (heel)"],c:3,e:"Full head at heel, reduces toward toe."},
+{q:"Gravity dam stability against overturning checked about:",o:["Centre","Heel","Crest","Toe (downstream end)"],c:3,e:"FOS = Σstabilising moments / Σoverturning moments ≥ 2."},
+{q:"Phreatic line in earth dam approximates:",o:["Horizontal line","Vertical line","Straight incline","Parabola"],c:3,e:"Must exit safely on downstream face."},
+{q:"Unit hydrograph assumes:",o:["Non-linear response","Constant base flow","Varying time base","Linear response (DRO ∝ effective rainfall)"],c:3,e:"Superposition and proportionality apply."},
+{q:"PMF is computed from:",o:["Normal irrigation need","Minimum flow","Sedimentation rate","PMP applied to unit hydrograph"],c:3,e:"Probable Maximum Flood for spillway design of major dams."}
+],
+medium:[
+{q:"Bligh's theory: safe hyd. gradient ≤:",o:["C/H","H/C","C×H","1/C"],c:3,e:"L≥C×H. So gradient≤H/L≤1/C. C depends on soil."},
+{q:"Lacey silt factor f =:",o:["1.76d²","0.55d","d/1.76","1.76√d"],c:3,e:"d in mm. Standard silt d=0.323mm, f=1.0."},
+{q:"Khosla's theory considers:",o:["Only horizontal creep","Total creep only","Uplift at toe only","Potential flow and exit gradient"],c:3,e:"Exit gradient must be < critical value."},
+{q:"Lacey regime velocity V =:",o:["0.55my^0.64","C√RS","Q/A","(Qf²/140)^(1/6)"],c:3,e:"P=4.75√Q. S=f^(5/3)/(3340Q^(1/6))."},
+{q:"Siphon aqueduct barrel velocity:",o:["<1 m/s","5–10 m/s","0.5 m/s","2–3 m/s"],c:3,e:"2 min (self-cleaning), 3 max (avoid scour/head loss)."},
+{q:"Flexibility of outlet =:",o:["dq/dQ","q/Q","Q×q","(dq/q)/(dQ/Q)"],c:3,e:"Semi-module: flexibility=0 (constant q)."},
+{q:"Critical exit gradient for sand ≈:",o:["0.50","0.85","1.50","1.00"],c:3,e:"(Gs−1)/(1+e)≈1.0. FOS 4–6 against piping."},
+{q:"Bligh's coefficient for fine sand ≈:",o:["5","9","18","15"],c:3,e:"Coarse sand 12; fine sand 15; clay 5–8."},
+{q:"Non-modular outlet discharge depends on:",o:["Canal level only","Fixed always","Zero","Head difference (canal−field)"],c:3,e:"Flexible but may deliver unequal shares."},
+{q:"Manning's n for unlined canal ≈:",o:["0.010","0.040","0.060","0.025"],c:3,e:"Earth: 0.025. Concrete-lined: 0.013–0.015."},
+{q:"Most economical lined section: P is minimum when section is:",o:["Circular","Rectangular","Triangular","Half-hexagon"],c:3,e:"Min P for given A → trapezoidal half-hexagon."},
+{q:"Lacey regime perimeter P =:",o:["2.67Q^(1/3)","πD","Q/V","4.75√Q"],c:3,e:"P=4.75√Q metres. Q in cumecs."},
+{q:"Filter criteria (Terzaghi): D₁₅F/D₁₅S ≥:",o:["2","10","15","4–5"],c:3,e:"Permeability criterion. Also D₁₅F/D₈₅S ≤ 4–5 (piping)."},
+{q:"Stilling basin dissipates energy by forming:",o:["Laminar flow","A weir","A siphon","Hydraulic jump"],c:3,e:"Contains hydraulic jump downstream of spillway."},
+{q:"Trap efficiency depends on:",o:["Dam height only","Spillway capacity","Gate size","Capacity/inflow ratio"],c:3,e:"Brune's curve: large ratio → ~100% trap efficiency."},
+{q:"Design flood for major dam spillway:",o:["25-year","50-year","100-year","PMF (Probable Maximum Flood)"],c:3,e:"Major dams: PMF or fraction thereof."},
+{q:"Drainage coefficient for field drains ≈:",o:["25 mm/day","50 mm/day","100 mm/day","1–5 mm/day"],c:3,e:"Depth of water removed per day. Higher for heavy rainfall areas."},
+{q:"Zoned earth dam: core is made of:",o:["Sand","Gravel","Rock","Impervious clay"],c:3,e:"Clay core prevents seepage. Shell: permeable material for stability."},
+{q:"Penman's formula estimates:",o:["Flood discharge","Runoff coefficient","Seepage loss","Evapotranspiration"],c:3,e:"Combines energy balance and mass transfer for ET."},
+{q:"Effective rainfall =:",o:["Total rainfall","Runoff only","Evaporation","Portion available in root zone"],c:3,e:"Total − runoff − deep percolation − non-crop evaporation."},
+{q:"Lacey regime slope S =:",o:["f/Q","Q/f","f²/Q","f^(5/3)/(3340Q^(1/6))"],c:3,e:"Flatter slope for larger canals."},
+{q:"Seepage through earth dam (Dupuit): q =:",o:["k×i×A","k×H constant","q=k×h²/(2L)","kH²/(2L)"],c:3,e:"Dupuit: q=k(h₁²−h₂²)/(2L). No tailwater: q=kH²/(2L)."},
+{q:"Anti-erosion lining on downstream floor protects against:",o:["Uplift","Overturning","Sliding","Scour from hydraulic jump"],c:3,e:"Turbulence → scour. Concrete blocks + inverted filters."},
+{q:"IS 7894 covers:",o:["Barrage design","Canal design","Concrete dam design","Earth dam stability analysis"],c:3,e:"Seepage, slope stability, settlement of earth dams."},
+{q:"Proportional outlet delivers:",o:["Equal Q always","Variable share","No discharge","Fixed proportion regardless of canal level"],c:3,e:"Modular outlet: constant proportion."},
+{q:"Min free board for major canal ≈:",o:["0.3 m","1.5 m","3.0 m","0.75 m"],c:3,e:"Main 0.75m; branch 0.5m; distributary 0.3m."},
+{q:"Cavitation in spillways prevented by:",o:["Increasing velocity","Reducing discharge","Closing gates","Aerating the flow"],c:3,e:"Aeration slots introduce air, preventing pressure drop."},
+{q:"Waterlogging controlled by:",o:["More irrigation","Higher canal velocity","Thicker lining","Subsurface drainage"],c:3,e:"Tile drains lower water table below root zone."},
+{q:"Base period differs from crop period:",o:["Always longer","Includes non-growing","Same","Counts only irrigation period"],c:3,e:"Base: first to last watering. Crop: sowing to harvest."},
+{q:"Lacey regime hydraulic radius R =:",o:["Q/(4.75√Q)","P/A","A+P","0.473(Q/f)^(1/3)"],c:3,e:"R=0.473(Q/f)^(1/3)."}
+],
+hard:[
+{q:"Khosla's pressure at key points uses:",o:["Bligh's coefficients","Empirical tables only","Lane's weighted creep","Potential theory (independent variables)"],c:3,e:"Pressure distribution depends on floor profile. Corrections for mutual interference and slope."},
+{q:"Exit gradient GE at downstream end of weir floor =:",o:["H/(π√(λd))","H/L","L/H","H×C"],c:0,e:"Khosla: GE=H/(π√(λd)), where d=depth of downstream cutoff, λ depends on floor length."},
+{q:"In Bligh's theory, horizontal and vertical creep are:",o:["Vertical counted double","Horizontal only","Weighted differently","Counted equally"],c:3,e:"Bligh: total creep = sum of all horizontal + vertical contacts equally."},
+{q:"Lane's weighted creep differs from Bligh by giving vertical creep:",o:["Same weight","Zero weight","Half weight","3× the weight of horizontal"],c:3,e:"Lane: vertical creep weighted 3× horizontal for more realistic analysis."},
+{q:"In canal design, Lacey's f for medium sand (d=0.5mm) =:",o:["0.5","0.75","1.0","1.24"],c:3,e:"f=1.76√0.5=1.76×0.707=1.24."},
+{q:"Kennedy's method does not give unique channel section because it doesn't fix:",o:["Velocity","Depth","Slope","Width or B/D ratio"],c:3,e:"Kennedy gives velocity for given depth but B/D must be assumed. Lacey gives unique section."},
+{q:"Sarda type fall is a:",o:["Siphon fall","Ogee fall","Stepped fall","Raised crest fall with curved glacis"],c:3,e:"Sarda fall: common in UP/UK irrigation. Concrete raised crest with vertical impact."},
+{q:"Drainage density of a catchment = total stream length /:",o:["Number of streams","Perimeter","Max stream length","Catchment area"],c:3,e:"Dd = ΣL/A. Higher Dd → quicker runoff response."},
+{q:"SCS curve number method gives:",o:["Only peak discharge","Only runoff volume","Only time of concentration","Direct runoff from rainfall"],c:3,e:"Q=(P−Ia)²/(P−Ia+S). S=(25400/CN)−254. CN from soil/land use."},
+{q:"Time of concentration Tc using Kirpich formula:",o:["Tc=0.01947L^0.77 S^(−0.385)","Tc=L/V","Tc=A/Q","Tc=L²/H"],c:0,e:"Tc in minutes, L in metres, S=H/L. Empirical formula for small catchments."},
+{q:"Muskingum method is used for:",o:["Reservoir routing","Channel/flood routing","Rainfall estimation","Groundwater analysis"],c:1,e:"S=K[xI+(1−x)O]. K=storage constant, x=weighting factor."},
+{q:"In gravity dam design, the resultant must fall within:",o:["Centre of base","Anywhere on base","First quarter","Middle third of base"],c:3,e:"No tension at heel if resultant is within middle third. Beyond → tension → crack → uplift."},
+{q:"Uplift intensity factor at the heel of a gravity dam without drainage =:",o:["0","0.5","1.0 (full hydrostatic)","0.33"],c:2,e:"Without drainage or gallery: full uplift at heel reducing to tailwater at toe."},
+{q:"In irrigation, duty and delta relation: Δ (cm) =:",o:["D/8.64B","8.64D/B","8.64BD","8.64B/D"],c:3,e:"Δ=8.64B/D. B=base period in days, D=duty in ha/cumec."},
+{q:"Storage capacity of reservoir determined by:",o:["Only rainfall data","Mass curve (Rippl diagram)","Spillway capacity","Dam height only"],c:1,e:"Mass curve of inflow vs demand → required storage = max positive departure."},
+{q:"Coefficient of rugosity n for brick-lined canal ≈:",o:["0.010","0.025","0.040","0.015–0.017"],c:3,e:"Brick: 0.015–0.017. Concrete: 0.013. Earth: 0.025."},
+{q:"Canal capacity factor =:",o:["Q_actual/Q_design","Q_design/Q_actual","Area/Q","Q/Area"],c:0,e:"Capacity factor = ratio of actual to designed discharge. Should be ~1.0."},
+{q:"In a lined canal, the velocity can be higher (up to 2.5 m/s) because:",o:["Lining is heavy","Lining prevents bed erosion","Water is cleaner","Lining reduces friction"],c:1,e:"Unlined canals limited to ~1 m/s to prevent scour. Lining allows higher velocity."},
+{q:"Silting in canals is analysed using:",o:["Bernoulli equation","Manning's formula","Lacey's regime theory","Darcy-Weisbach"],c:2,e:"Regime theory gives stable channel dimensions in alluvial soil."},
+{q:"In reservoir operation, rule curve defines:",o:["Dam height","Spillway discharge","Storage vs time for optimal operation","Foundation depth"],c:2,e:"Guide curve balances flood control, irrigation supply, and hydropower over seasons."},
+{q:"Blaney-Criddle method estimates:",o:["Flood peak","Runoff","Seepage","Crop water requirement (ET)"],c:3,e:"ET=k×p(0.46T+8.13). T=mean monthly temp, p=% daylight hours."},
+{q:"Inflow design flood (IDF) for intermediate dam is:",o:["25-year flood","SPF (Standard Project Flood)","50-year flood","PMF"],c:1,e:"IS 11223: Major→PMF; Intermediate→SPF; Minor→100-year or 50-year."},
+{q:"Talweg is the:",o:["Highest ridge","Canal alignment","Dam axis","Deepest line along river bed"],c:3,e:"Line connecting deepest points of successive cross-sections."},
+{q:"In canal irrigation, CCA stands for:",o:["Cubic Capacity Assessment","Canal Cross Area","Catchment Contributing Area","Culturable Command Area"],c:3,e:"CCA = area that can actually be cultivated within the command area."},
+{q:"Intensity of irrigation = area irrigated / CCA × 100. Typical value:",o:["10–20%","30–40%","95–100%","60–80%"],c:3,e:"Depends on water availability. Kharif and rabi seasons may have different intensities."},
+{q:"Outlet discharge factor q =:",o:["Q/A","A/Q","Duty","Discharge per unit CCA"],c:3,e:"q = outlet discharge per unit area of CCA it serves."},
+{q:"Kennedy's m (CVR) for coarse silt is approximately:",o:["0.7","0.8","1.0","1.2"],c:3,e:"Standard silt: m=1.0. Coarse: m=1.1–1.2. Fine: m=0.7–0.8."},
+{q:"Garret's diagram relates:",o:["Discharge and velocity","Precipitation and evaporation","Storage, yield, and demand","Slope and roughness"],c:2,e:"Used in reservoir planning to find safe yield for given storage."}
+]}},
+"tp":{n:"Transportation",ic:"🛣️",q:{
+easy:[
+{q:"CBR evaluates strength of:",o:["Steel","Concrete","Timber","Subgrade soil"],c:3,e:"Penetration resistance as % of standard on crushed stone."},
+{q:"Camber provides:",o:["Speed increase","Aesthetics","Smooth riding","Rainwater drainage"],c:3,e:"Cross slope drains water to edges."},
+{q:"Superelevation raises the:",o:["Inner edge","Both edges","Centre","Outer edge"],c:3,e:"Counteracts centrifugal force on curves."},
+{q:"Indian broad gauge =:",o:["1000mm","1435mm","762mm","1676mm"],c:3,e:"BG=1676mm. Standard=1435mm."},
+{q:"Bitumen tested by:",o:["CBR","Compression","Slump","Penetration test"],c:3,e:"Depth (0.1mm) needle sinks at 25°C/100g/5s."},
+{q:"Crown of road is the:",o:["Lowest point","Edge","Shoulder","Highest point of cross-section"],c:3,e:"Surface slopes down from crown to both edges."},
+{q:"Flexible pavement =:",o:["Only concrete","PCC slabs","Steel plates","Bituminous layers on granular base"],c:3,e:"Load distributed through grain-to-grain contact."},
+{q:"Rigid pavement =:",o:["Bitumen layers","Gravel only","Brick","Cement concrete slabs"],c:3,e:"Load distributed by slab bending action."},
+{q:"PCU stands for:",o:["Per Capita Usage","Pavement Construction Unit","Portland Cement Usage","Passenger Car Unit"],c:3,e:"Converts vehicles to equivalent cars."},
+{q:"IRC stands for:",o:["Indian Road Council","Indian Railway Commission","International Road Code","Indian Roads Congress"],c:3,e:"Apex body for highway standards in India."},
+{q:"WBM =:",o:["Wet Bituminous Mix","Wide Base Material","Wired Beam Method","Water Bound Macadam"],c:3,e:"Compacted crushed stone bound with screenings and water."},
+{q:"Ruling design speed on NH plain terrain:",o:["50 km/h","80 km/h","120 km/h","100 km/h"],c:3,e:"Ruling 100, minimum 80 km/h."},
+{q:"Shoulder provides:",o:["Traffic lanes","Water storage","Drainage only","Emergency stopping + lateral support"],c:3,e:"Stopped vehicles, structural support, recovery area."},
+{q:"Bitumen emulsion = bitumen +:",o:["Cement","Tar","Aggregate","Water with emulsifier"],c:3,e:"Droplets in water. Applied at ambient temperature."},
+{q:"Coning of railway wheels (1 in 20) helps:",o:["Braking","Speed","Load bearing","Stay centred on curves"],c:3,e:"Conical tread facilitates smooth movement."},
+{q:"Sight distance = road visible to:",o:["Pedestrian","Police","Passenger","Driver"],c:3,e:"Governs safe stopping, overtaking, intersection design."},
+{q:"Gradient for starting on slope:",o:["Ruling","Limiting","Gradient for starting","Exceptional"],c:3,e:"Steepest allowed in unavoidable situations, short stretches."},
+{q:"Prime coat applied on:",o:["Bituminous layer","Concrete surface","Subgrade","Granular base before bituminous layer"],c:3,e:"Low-viscosity bitumen for bond with overlying layer."},
+{q:"Tack coat applied between:",o:["Subgrade and sub-base","Base and subgrade","Concrete layers","Two bituminous layers"],c:3,e:"Thin emulsion for bonding between layers."},
+{q:"Sleeper density on Indian Railways:",o:["M+4","M+2","M only","M+7 per rail length"],c:3,e:"BG main lines: M+7 (13m rail: 20 sleepers)."},
+{q:"Ductility test at:",o:["25°C","60°C","0°C","27°C"],c:3,e:"Distance (cm) bitumen pulled before breaking at 27°C, 50mm/min."},
+{q:"Softening point by:",o:["Penetration test","Ductility test","Viscosity test","Ring and ball test"],c:3,e:"Temperature where bitumen softens enough for ball to fall."},
+{q:"Single lane road capacity ≈:",o:["500 PCU/hr","1500 PCU/hr","3000 PCU/hr","1000 PCU/hr"],c:3,e:"Two-lane: ~1500. Multi-lane: 1500–2000/lane."},
+{q:"Traffic volume expressed as:",o:["Speed km/h","Weight tonnes","Area m²","Vehicles per hour/day"],c:3,e:"PCU/hr, ADT, AADT."},
+{q:"IRC 37 deals with:",o:["Geometric design","Bridge design","Rigid pavement","Flexible pavement design"],c:3,e:"IRC 58: rigid. IRC 73: geometric."},
+{q:"Cul-de-sac is a:",o:["Intersection","Flyover","Roundabout","Dead-end road with turning space"],c:3,e:"Closed end with turning area."},
+{q:"Creep in railway =:",o:["Settlement","Lateral shift","Vertical deflection","Longitudinal rail movement"],c:3,e:"Gradual movement of rails over sleepers under wave action."},
+{q:"Kerb stones provided at:",o:["Centre of road","Below surface","On top of bridge","Pavement edges and medians"],c:3,e:"Define edges, separate carriageway from footpath."},
+{q:"Marshall test is at:",o:["25°C","27°C","0°C","60°C"],c:3,e:"Stability and flow of compacted bituminous specimens."}
+],
+medium:[
+{q:"Max superelevation (IRC) plain terrain:",o:["1 in 10","1 in 15","10%","7%"],c:3,e:"Hilly (no snow): up to 10%."},
+{q:"SSD = lag + braking =:",o:["vt only","v²/(2gf) only","vt−v²/(2gf)","vt+v²/(2gf)"],c:3,e:"v=speed, t=2.5s, f=friction."},
+{q:"Min radius R =:",o:["V/R","e+f","127V²","V²/(127(e+f))"],c:3,e:"V in km/h, e=superelevation, f=lateral friction."},
+{q:"Extra widening We =:",o:["V²/R","nl/R","n+l/R","nl²/(2R)+V/(9.5√R)"],c:3,e:"Mechanical + psychological widening."},
+{q:"Standard axle load India:",o:["10000 kg","12000 kg","6000 kg","8160 kg (80 kN)"],c:3,e:"Equivalency factor = (P/8160)⁴."},
+{q:"Sag curve governed by:",o:["OSD","Comfort only","Grade change only","SSD + headlight illumination"],c:3,e:"Night visibility + comfort (≤0.6 m/s³)."},
+{q:"OSD considers:",o:["Only braking","Only reaction time","Curve geometry","Overtaking + opposing vehicle"],c:3,e:"d₁+d₂+d₃: lag + overtaking + opposing."},
+{q:"Transition curve length ∝:",o:["V² only","V/R","R only","V³/R"],c:3,e:"L=V³/(CR), C=rate of change of acceleration."},
+{q:"GI for subgrade ranges:",o:["0 to 100","1 to 10","20 to 50","0 to 20"],c:3,e:"GI=0 excellent; 20 very poor."},
+{q:"Modulus of subgrade reaction k from:",o:["CBR test","Marshall test","Triaxial test","Plate load test"],c:3,e:"k=p/δ using 75cm plate."},
+{q:"Webster's optimum cycle C₀ =:",o:["L/Y","1.5L","5Y+L","(1.5L+5)/(1−Y)"],c:3,e:"L=lost time, Y=sum of critical flow ratios."},
+{q:"Speed-flow: at jam density, flow =:",o:["Maximum","Moderate","Infinite","Zero"],c:3,e:"Vehicles stopped. Max flow at optimum density."},
+{q:"Ductility of bitumen min:",o:["25 cm","50 cm","100 cm","75 cm"],c:3,e:"At 27°C, 50mm/min. Min 75cm for paving grades."},
+{q:"CBR value for good subgrade ≈:",o:["1–2%","3–5%","20–30%","7–10%"],c:3,e:"Poor: <3%. Fair: 3–7%. Good: 7–15%."},
+{q:"VDF converts commercial vehicles to:",o:["PCU","Standard cars","Motorcycles","Standard axle loads (4th power)"],c:3,e:"VDF=Σ(axle load/standard)⁴."},
+{q:"Dowel bars provided at:",o:["Longitudinal joints","Only contraction joints","Only construction joints","Transverse joints"],c:3,e:"Transfer load across transverse joints allowing horizontal movement."},
+{q:"Tie bars at:",o:["Transverse joints","Expansion joints","Corner joints","Longitudinal joints"],c:3,e:"Hold adjacent lanes together. Deformed bars (not smooth)."},
+{q:"IRC 58 =:",o:["Flexible pavement","Bridges","Tunnels","Rigid pavement design"],c:3,e:"Plain jointed rigid pavements for highways."},
+{q:"Fatigue cracking originates at:",o:["Surface","Subgrade","Sub-base","Bottom of bituminous layer"],c:3,e:"Tensile strain at bottom → alligator cracking under repeated loads."},
+{q:"Rutting caused by:",o:["Fatigue","Thermal stress","Frost heave","Permanent deformation"],c:3,e:"Longitudinal depressions in wheel paths from cumulative plastic strain."},
+{q:"Radius of relative stiffness l =:",o:["E/k","h/k","√(Ek)","[Eh³/(12(1−μ²)k)]^0.25"],c:3,e:"Used in Westergaard analysis for rigid pavement."},
+{q:"DLC sub-base min strength:",o:["5 MPa 7d","7 MPa 7d","15 MPa 28d","10 MPa 28d"],c:3,e:"Dry Lean Concrete: uniform support for rigid pavement."},
+{q:"Critical rigid pavement stress: load + warping occurs at:",o:["Interior only","Corner only","Random","Edge during daytime"],c:3,e:"Day curling up at edges + wheel at edge = max stress."},
+{q:"Summit curve length depends on:",o:["Speed only","Grade only","Pavement width","Eye height + object height"],c:3,e:"L=NS²/(√(2H)+√(2h))². H=1.2m, h=0.15m."},
+{q:"CSA considers:",o:["Only present traffic","Only heavy vehicles","Only buses","Present + future with growth rate"],c:3,e:"CSA=365×A×[(1+r)ⁿ−1]/r×VDF×LDF."},
+{q:"Signal lost time per phase ≈:",o:["5–10 s","15 s","30 s","1–2 s"],c:3,e:"Start-up + clearance lost time. Total cycle lost time = sum for all phases."},
+{q:"Resilient modulus MR is:",o:["Static elastic modulus","Shear modulus","Bulk modulus","Dynamic modulus under repeated loading"],c:3,e:"MR=deviator stress/recoverable strain. Replaces CBR in mechanistic design."},
+{q:"Shock wave speed in traffic =:",o:["v₁+v₂","v₁−v₂","q₁×q₂","(q₂−q₁)/(k₂−k₁)"],c:3,e:"Change in flow / change in density."},
+{q:"ESWL used in design of:",o:["Highway pavements only","Railway tracks","Bridges","Runway pavements"],c:3,e:"Converts dual/multiple wheels to equivalent single wheel."},
+{q:"AASHTO rigid pavement uses:",o:["CBR only","Marshall stability","Group index","PSI (Present Serviceability Index)"],c:3,e:"PSI drops from 4.2–4.5 to 2.0–2.5 over design life."}
+],
+hard:[
+{q:"Valley curve L = NS²/(1.5+0.035S) when:",o:["L<S","S=0","L=S","L>S"],c:3,e:"1.5=headlight height, 0.035=beam angle tangent."},
+{q:"Westergaard assumes slab on:",o:["Rigid base","Elastic half-space","Spring system","Winkler (dense liquid) foundation"],c:3,e:"p=kΔ. Stresses at edge, corner, interior."},
+{q:"Critical pavement stress combination:",o:["Load+warping−friction","Only load","Only temperature","Load+warping (day,edge)"],c:3,e:"Maximum at edge during daytime curling."},
+{q:"Fourth power law means doubling axle load increases damage by:",o:["2×","4×","8×","16×"],c:3,e:"Damage factor=(P/Ps)⁴. 2⁴=16× damage."},
+{q:"Cumulative fatigue damage (Miner's hypothesis): Σ(ni/Ni):",o:[">1","=0.5","=2","≤1"],c:3,e:"Failure when sum of damage ratios reaches 1.0."},
+{q:"In flexible pavement, vertical compressive strain at top of subgrade controls:",o:["Fatigue cracking","Thermal cracking","Reflective cracking","Rutting"],c:3,e:"Subgrade strain → rutting. Bottom tensile strain in bituminous → fatigue."},
+{q:"Warping stress in rigid pavement by Bradbury =:",o:["CW×E×α×Δt/2","EαΔt/3","σ=P/(bh)","Mc/I"],c:0,e:"CW=warping stress coefficient, E=elastic modulus, α=thermal coefficient, Δt=temperature differential."},
+{q:"California Bearing Ratio at 2.5mm penetration if higher than at 5mm:",o:["Test invalid","Use 5mm value","Report both","Repeat test; if confirmed, 2.5mm value governs"],c:3,e:"Standard practice: repeat test. If 2.5mm still higher, that value is reported as CBR."},
+{q:"In IRC method, bituminous layer modulus at 35°C ≈:",o:["500 MPa","1000 MPa","3000 MPa","1700 MPa"],c:3,e:"VG-30 bitumen at 35°C: resilient modulus ≈ 1700 MPa for well-designed mix."},
+{q:"Skid resistance is measured by:",o:["Benkelman beam","Marshall apparatus","Core cutter","British Pendulum Tester"],c:3,e:"BPN (British Pendulum Number). Also: locked wheel skid trailer."},
+{q:"Benkelman beam measures:",o:["Skid resistance","Roughness","Thickness","Pavement deflection"],c:3,e:"Rebound deflection under standard axle load. Used for overlay design."},
+{q:"International Roughness Index (IRI) is measured in:",o:["mm","cm","%","m/km"],c:3,e:"IRI in m/km. Good road: <2. Fair: 2–4. Poor: >4."},
+{q:"In falling weight deflectometer (FWD), load pulse simulates:",o:["Static wheel load","Earthquake","Wind load","Moving wheel load"],c:3,e:"FWD applies impulse load and measures deflection bowl for pavement evaluation."},
+{q:"Geometric design of highways is covered by:",o:["IRC 37","IRC 58","IRC 6","IRC 73"],c:3,e:"IRC 73: geometric design of NH. IRC 37: flexible pavement. IRC 58: rigid."},
+{q:"In traffic engineering, PCE of a truck on level road ≈:",o:["0.5","1.0","1.5","3.0"],c:3,e:"Truck/bus ≈ 3 PCU. Two-wheeler ≈ 0.5. Auto-rickshaw ≈ 1.2."},
+{q:"Level of service (LOS) A means:",o:["Forced flow","Unstable","Near capacity","Free flow"],c:3,e:"LOS A: free flow, low density. F: forced/breakdown flow."},
+{q:"Greenshields model: speed-density relationship is:",o:["Exponential","Logarithmic","Parabolic","Linear"],c:3,e:"V=Vf(1−k/kj). Linear relationship. Q=kV gives parabolic Q-k curve."},
+{q:"In overlay design, effective thickness of existing pavement is:",o:["Full thickness","Zero","Half thickness","Reduced by a factor based on condition"],c:3,e:"Condition factor applied: good=0.9, fair=0.7, poor=0.5 of existing thickness."},
+{q:"In roundabout design, the practical capacity formula is by:",o:["Webster","Greenshields","Poisson","Wardrop"],c:0,e:"Wardrop/TRL formula gives capacity based on entry width, inscribed circle diameter, approach conditions."},
+{q:"For vertical curves, the rate of change of grade is expressed as N =:",o:["Grade sum","Grade difference","Grade product","Algebraic difference of grades"],c:3,e:"N = |g₁−g₂| for summit curves (both grades +/−). Determines curve length."},
+{q:"Minimum sight distance at uncontrolled intersection depends on:",o:["Only speed on main road","Only speed on minor road","Pedestrian speed","Speed on both roads"],c:3,e:"Sight triangle: driver on minor road must see far enough on main road to cross/turn safely."},
+{q:"In cement concrete roads, the expansion joint gap is typically:",o:["5 mm","10 mm","20–25 mm","50 mm"],c:2,e:"Expansion joints: 20–25 mm gap filled with compressible filler + sealant. Spacing: 50–200 m."},
+{q:"Construction joint in rigid pavement is provided at:",o:["Regular intervals planned in design","Random locations","Only at intersections","End of day's work"],c:3,e:"Where consecutive concrete placements meet. Requires tie bars or dowels."},
+{q:"Continuously reinforced concrete pavement (CRCP) has:",o:["No reinforcement","Transverse joints at 4.5m","Only dowels","Continuous longitudinal steel, no transverse joints"],c:3,e:"Steel controls cracking. Tight transverse cracks develop but are held together."},
+{q:"In highway drainage, time of concentration Tc =:",o:["Time for peak rainfall","Duration of storm","Storage time","Time for water from farthest point to reach inlet"],c:3,e:"Tc determines design rainfall intensity. Longer Tc → lower intensity for given return period."},
+{q:"Sub-base in flexible pavement serves as:",o:["Wearing surface","Structural layer + drainage + filter","Only aesthetics","Only waterproofing"],c:1,e:"Distributes load, provides drainage, prevents pumping of fines from subgrade."},
+{q:"In traffic signal coordination, bandwidth is:",o:["Signal phase duration","Cycle length","Lost time","Width of green wave through consecutive signals"],c:3,e:"Maximised for platoon progression. Depends on offset, cycle, speed."},
+{q:"Superpave mix design method developed by:",o:["Marshall","Hveem","Asphalt Institute","SHRP (Strategic Highway Research Program)"],c:3,e:"Superpave: Superior Performing Asphalt Pavements. Performance-graded binder system."}
+]}},
+"en":{n:"Environmental Engg",ic:"🚰",q:{
+easy:[
+{q:"Standard BOD test is at:",o:["20°C for 5 days","25°C for 3 days","37°C for 5 days","20°C for 3 days"],c:0,e:"BOD₅ at 20°C: ~68% of ultimate BOD. Incubated in darkness to prevent algal oxygen production."},
+{q:"Acceptable turbidity in drinking water (IS 10500):",o:["1 NTU","5 NTU","10 NTU","25 NTU"],c:0,e:"IS 10500: acceptable 1 NTU, permissible (no alternative) 5 NTU."},
+{q:"Chlorination is done for:",o:["Removing hardness","Disinfection","Removing colour","Reducing turbidity"],c:1,e:"Chlorine kills pathogens. Break-point chlorination ensures free residual chlorine in distribution."},
+{q:"Self-purification of stream is due to:",o:["Dilution and re-aeration","Sedimentation only","Chemical reaction only","Filtration"],c:0,e:"Dilution, re-aeration, oxidation by bacteria, sedimentation, and sunlight contribute to self-purification."},
+{q:"Per capita water demand in Indian cities ≈",o:["70 lpcd","135 lpcd","200 lpcd","350 lpcd"],c:1,e:"CPHEEO: ~135 lpcd domestic. Total with losses and industrial: 200+ lpcd."},
+{q:"Hardness in water is caused by:",o:["Suspended solids","Ca²⁺ and Mg²⁺ ions","Iron","Chlorides"],c:1,e:"Temporary hardness: Ca/Mg bicarbonates (removed by boiling). Permanent: Ca/Mg sulphates/chlorides (removed by chemical treatment)."},
+{q:"pH of potable water should be:",o:["3–5","6.5–8.5","9–11","12–14"],c:1,e:"IS 10500: acceptable pH 6.5–8.5. Acidic water corrodes pipes; alkaline water tastes bitter and forms scale."},
+{q:"Sedimentation removes particles by:",o:["Chemical reaction","Gravity settling","Filtration","Evaporation"],c:1,e:"Particles heavier than water settle under gravity. Stokes' law governs settling velocity for discrete particles."},
+{q:"Coagulant commonly used in water treatment:",o:["Lime only","Alum (Al₂(SO₄)₃)","Bleaching powder","Chlorine"],c:1,e:"Alum destabilises colloidal particles, forming flocs that settle. Dose: 5–40 mg/L. PACl is also widely used."},
+{q:"Rapid sand filter rate is approximately:",o:["100–200 L/m²/hr","3000–6000 L/m²/hr","50 L/m²/hr","10000 L/m²/hr"],c:1,e:"Rapid sand filter: 3000–6000 L/m²/hr. Slow sand filter: 100–200 L/m²/hr (biological treatment)."},
+{q:"A septic tank provides:",o:["Complete treatment","Primary (anaerobic) treatment","Tertiary treatment","Disinfection only"],c:1,e:"Septic tank: anaerobic digestion of solids + sedimentation. Effluent needs further treatment (soak pit/filter bed)."},
+{q:"MPN test determines:",o:["Turbidity","Coliform bacteria count","BOD","Hardness"],c:1,e:"Most Probable Number: statistical estimate of coliform density. Indicates faecal contamination of water."},
+{q:"Fire demand in a city is calculated by:",o:["Kuichling's formula: Q = 3182√P","Only by population","Only by area","Only by building height"],c:0,e:"Kuichling: Q = 3182√P (L/min), P in thousands. National Board formula also used. Fire demand affects peak demand."},
+{q:"The minimum residual chlorine in distribution system should be:",o:["0.2 mg/L","1.0 mg/L","5.0 mg/L","0.01 mg/L"],c:0,e:"Free residual chlorine of 0.2 mg/L at the consumer end ensures safety against recontamination."},
+{q:"Sewage is 99.9% water and 0.1%:",o:["Minerals","Solids (organic + inorganic)","Chemicals","Gases"],c:1,e:"The 0.1% includes organic solids (65%) and inorganic solids (35%). Treatment targets this small fraction."},
+{q:"Manhole spacing in sewers is typically:",o:["15 m","30–45 m for small sewers, 90–300 m for large","500 m","1000 m"],c:1,e:"Manholes at changes in direction, gradient, diameter, and at regular intervals (30 m for <300mm; up to 300 m for large sewers)."},
+{q:"Grit chamber removes:",o:["Organic matter","Inorganic grit and sand","Dissolved solids","Colloidal particles"],c:1,e:"Grit chambers remove heavy inorganic particles (sand, gravel, cinders) to protect downstream equipment."},
+{q:"Aerobic treatment requires:",o:["No oxygen","Dissolved oxygen","Only chemicals","UV light"],c:1,e:"Aerobic bacteria need DO to decompose organic matter: C₅H₇NO₂ + O₂ → CO₂ + H₂O + NH₃ + energy."},
+{q:"Fluoride content in drinking water should be less than:",o:["0.5 mg/L","1.0–1.5 mg/L","5 mg/L","10 mg/L"],c:1,e:"IS 10500: acceptable 1.0 mg/L, permissible 1.5 mg/L. Excess causes fluorosis (dental/skeletal)."},
+{q:"COD test uses which oxidant?",o:["Bacteria","Potassium dichromate (K₂Cr₂O₇)","Chlorine","Ozone"],c:1,e:"COD uses a strong chemical oxidant (K₂Cr₂O₇) in acidic medium. COD > BOD as it oxidises both biodegradable and non-biodegradable matter."}
+],
+medium:[
+{q:"Settling velocity (Stokes' law): Vs =",o:["(ρs−ρ)gd²/18μ","ρgd/μ","μ/ρgd²","g/18μ"],c:0,e:"For Re < 1 (laminar): Vs = (ρs−ρ)gd²/(18μ). Basis for sedimentation tank design."},
+{q:"Trickling filter is a:",o:["Anaerobic","Aerobic attached-growth treatment","Chemical","Primary treatment"],c:1,e:"Wastewater trickles over media with biofilm. Organisms oxidise organic matter aerobically."},
+{q:"Detention time in clarifier (coagulated water):",o:["30 min","2–4 hours","8–12 hours","24 hours"],c:1,e:"After coagulation: 2–4 hrs. Plain sedimentation: 4–8 hrs. Surface loading is the critical parameter."},
+{q:"Minimum DO to sustain fish life:",o:["2 mg/L","4 mg/L","6 mg/L","8 mg/L"],c:1,e:"Min 4–5 mg/L for fish. DO saturation at 20°C ≈ 9.2 mg/L."},
+{q:"Activated sludge process requires:",o:["Only clarifier","Aeration tank + secondary clarifier + sludge return","Trickling filter + sand filter","Septic tank"],c:1,e:"ASP: aeration tank (bio-oxidation by suspended microbes) → secondary clarifier → return sludge to maintain MLSS."},
+{q:"BOD rate constant temperature correction: kT =",o:["k₂₀ × 1.047^(T−20)","k₂₀ × T/20","k₂₀ + 0.047T","k₂₀/1.047"],c:0,e:"Van't Hoff-Arrhenius: kT = k₂₀ × θ^(T−20), θ = 1.047 for BOD."},
+{q:"SVI (Sludge Volume Index) for good settling:",o:["50–150 mL/g","200–300","400–500","<20"],c:0,e:"SVI = settled sludge volume (mL/L)/MLSS (g/L). 50–150 = good; >150 = bulking."},
+{q:"F/M ratio in conventional ASP:",o:["0.2–0.5 kg BOD/kg MLSS/day","2–5","10–20","0.01"],c:0,e:"F/M = Q×S₀/(V×X). Conventional: 0.2–0.5; Extended aeration: 0.05–0.15; High rate: >1.0."},
+{q:"Oxidation pond (waste stabilisation pond) is a:",o:["Mechanical treatment","Natural biological treatment using sunlight and algae","Chemical treatment","Filtration"],c:1,e:"Oxidation ponds use algae (produce O₂ via photosynthesis) and bacteria (consume O₂ decomposing organic matter)."},
+{q:"Detention time in grit chamber is approximately:",o:["1 minute","3–5 minutes","30 minutes","2 hours"],c:0,e:"~1 minute at peak flow. Velocity maintained at 0.15–0.30 m/s to settle grit but keep organics in suspension."},
+{q:"Zeolite process is used for:",o:["Disinfection","Water softening","Fluoride removal","Iron removal"],c:1,e:"Zeolite (ion exchange) softening: Ca²⁺/Mg²⁺ exchanged for Na⁺. Regenerated with NaCl (brine)."},
+{q:"Minimum velocity in a sewer to prevent deposition is:",o:["0.3 m/s","0.6–0.8 m/s","2 m/s","5 m/s"],c:1,e:"Self-cleansing velocity ≈ 0.6–0.8 m/s at peak flow. Prevents settling of solids in the sewer."},
+{q:"Combined sewer carries:",o:["Only sewage","Both sewage and stormwater","Only stormwater","Only industrial waste"],c:1,e:"Combined system: one sewer for both. Separate system: separate sewers for sewage and stormwater. Separate is preferred."},
+{q:"Sludge digestion is:",o:["Aerobic oxidation","Anaerobic decomposition of organic matter in sludge","Filtration","Chlorination"],c:1,e:"Anaerobic digestion at 35°C (mesophilic) breaks down organic sludge, producing biogas (CH₄ + CO₂) and stable residue."},
+{q:"The ratio BOD₅/Ultimate BOD at 20°C is approximately:",o:["0.32","0.68","0.90","1.00"],c:1,e:"At 20°C, k ≈ 0.23/day (base e). BOD₅/BODu = 1−e^(−0.23×5) ≈ 0.68."},
+{q:"Residual chlorine after break-point chlorination is:",o:["Combined chlorine","Free chlorine","Total chlorine","No chlorine"],c:1,e:"Beyond break point: all chloramines destroyed, only free residual Cl₂ remains. Most effective disinfection."},
+{q:"Aeration in activated sludge provides:",o:["Only mixing","Dissolved oxygen + mixing","Only oxygen","Temperature control"],c:1,e:"Aeration serves dual purpose: supplies DO for aerobic decomposition and keeps MLSS in suspension."},
+{q:"UASB reactor is used for:",o:["Water treatment","Anaerobic wastewater treatment","Air purification","Sludge dewatering"],c:1,e:"Upflow Anaerobic Sludge Blanket: high-rate anaerobic treatment. Wastewater flows up through a granular sludge bed."},
+{q:"Equalisation tank in STP serves to:",o:["Disinfect","Equalise flow and organic load fluctuations","Store treated water","Aerate"],c:1,e:"Equalisation tanks smooth out variations in flow rate and pollutant concentration, improving downstream treatment efficiency."},
+{q:"Dissolved Air Flotation (DAF) is used to remove:",o:["Heavy particles","Light particles, oils, and greases","Dissolved salts","Bacteria only"],c:1,e:"DAF: air bubbles attach to particles, making them float. Effective for oils, greases, algae, and low-density suspended solids."}
+],
+hard:[
+{q:"Population forecast by logistic curve assumes:",o:["Linear growth","Geometric growth","S-curve with saturation limit","Exponential forever"],c:2,e:"Logistic: P = Ps/(1+e^(a+bt)). Population approaches saturation (Ps) asymptotically."},
+{q:"Hardy Cross method for pipe networks balances:",o:["Head losses in each loop","Flow at each node","Both head losses in loops and flow at nodes","Velocity everywhere"],c:0,e:"Hardy Cross: iterative corrections to assumed flows so ΣhL = 0 in each closed loop."},
+{q:"Streeter-Phelps equation models:",o:["Flow in pipes","Dissolved oxygen sag curve in a stream","Sludge volume","Coagulant dose"],c:1,e:"D = (kd L₀/(kr−kd))(e^(−kd t) − e^(−kr t)) + D₀ e^(−kr t). D = DO deficit, kd = deoxygenation, kr = reaeration."},
+{q:"Hydraulic loading rate for a rapid sand filter:",o:["100–200 L/m²/hr","3000–6000 L/m²/hr","10000 L/m²/hr","500 L/m²/hr"],c:1,e:"RSF: 3000–6000 L/m²/hr (120–150 m³/m²/day). SSF: 100–200 L/m²/hr. RSF needs coagulation pretreatment."},
+{q:"MLSS in conventional activated sludge process is maintained at:",o:["500–1000 mg/L","1500–3000 mg/L","5000–10000 mg/L","100 mg/L"],c:1,e:"MLSS 1500–3000 mg/L in conventional ASP. Extended aeration: 3000–6000 mg/L."},
+{q:"Thickening of sludge aims to:",o:["Disinfect sludge","Increase solid content by removing water","Dry sludge completely","Digest organics"],c:1,e:"Thickening reduces sludge volume by gravity or flotation, increasing solids from ~1% to 3–6% before digestion."},
+{q:"MBR (Membrane Bioreactor) combines:",o:["Sedimentation + filtration","Biological treatment + membrane filtration","Chemical treatment + UV","Anaerobic + aerobic"],c:1,e:"MBR: activated sludge process + membrane (micro/ultrafiltration) replaces secondary clarifier. Produces high-quality effluent."},
+{q:"RO (Reverse Osmosis) is used for:",o:["Removing turbidity","Desalination and TDS removal","Disinfection only","Removing colour only"],c:1,e:"RO forces water through semi-permeable membrane under pressure > osmotic pressure, removing dissolved salts, ions, and organics."},
+{q:"Oxygen transfer efficiency in fine bubble diffused aeration is approximately:",o:["5–10%","15–30%","50–60%","90%"],c:1,e:"Fine bubble diffusers: 15–30% OTE. Coarse bubble: 6–12%. Mechanical surface aerators: 10–20%."},
+{q:"The critical point on the DO sag curve occurs when:",o:["Deoxygenation rate = reaeration rate","DO is maximum","BOD is zero","Time is zero"],c:0,e:"At critical point: rate of oxygen consumption = rate of reaeration. DO deficit is maximum. tc = (1/(kr−kd)) ln[(kr/kd)(1−D₀(kr−kd)/(kdL₀))]."},
+{q:"SBR (Sequencing Batch Reactor) operates in:",o:["Continuous flow","Batch mode (fill, react, settle, draw, idle)","Only anaerobic mode","Only filtration"],c:1,e:"SBR: batch cycles in a single tank — fill → react (aerate) → settle → decant → idle. All steps in one reactor."},
+{q:"The permissible BOD of treated sewage for discharge into inland water is:",o:["10 mg/L","30 mg/L","100 mg/L","250 mg/L"],c:1,e:"CPCB standards: BOD ≤ 30 mg/L for discharge into inland surface waters. TSS ≤ 100 mg/L."},
+{q:"Jar test is used to determine:",o:["Settling velocity","Optimum coagulant dose","BOD","MPN"],c:1,e:"Jar test simulates coagulation-flocculation at different doses. The dose giving best floc formation and clarity is the optimum."},
+{q:"Recirculation ratio in trickling filter is:",o:["Flow returned / inflow","Inflow / outflow","Sludge / inflow","Zero always"],c:0,e:"R = Qr/Q. Recirculation dilutes influent, increases flow over media, improves performance for high-strength waste."},
+{q:"Biochemical oxidation follows:",o:["Zero-order kinetics","First-order kinetics","Second-order kinetics","Third-order"],c:1,e:"BOD exertion: dL/dt = −kL → L = L₀e^(−kt). First-order decay. BODt = L₀(1−e^(−kt))."},
+{q:"Landfill leachate treatment typically requires:",o:["Only sedimentation","Biological + chemical/physical treatment","Only chlorination","Only dilution"],c:1,e:"Leachate has high BOD, COD, ammonia, heavy metals. Needs biological treatment + RO/NF or chemical precipitation."},
+{q:"Noise pollution limit for residential areas at night (CPCB) is:",o:["45 dB(A)","55 dB(A)","65 dB(A)","75 dB(A)"],c:0,e:"CPCB noise standards: residential day 55 dB(A), night 45 dB(A). Industrial: day 75, night 70. Commercial: day 65, night 55."},
+{q:"Hazen's formula for surface overflow rate in sedimentation:",o:["Q/A (discharge/surface area)","Q/P","V × A","A/Q"],c:0,e:"SOR = Q/A (m³/m²/day). The critical design parameter: particles with settling velocity ≥ SOR will be removed."},
+{q:"The hydraulic retention time in an oxidation ditch is approximately:",o:["1–2 hours","12–24 hours","5–7 days","30 days"],c:1,e:"Oxidation ditch (extended aeration variant): HRT 12–24 hrs, SRT 20–30 days, F/M 0.05–0.1. Low sludge production."},
+{q:"Chlorine demand = Applied chlorine −",o:["Residual chlorine","BOD","Turbidity","Hardness"],c:0,e:"Cl demand = dose − residual. The demand is consumed by organic matter, ammonia, and reducing substances."}
+]}},
+"sa":{n:"Structural Analysis",ic:"🏗️",q:{
+easy:[
+{q:"Simply supported beam with UDL w: max BM at mid-span =",o:["wL²/8","wL²/12","wL²/2","wL/8"],c:0,e:"Max BM at mid-span = wL²/8. Max SF at support = wL/2."},
+{q:"Degree of static indeterminacy of a propped cantilever:",o:["0","1","2","3"],c:1,e:"4 reactions − 3 equilibrium equations = 1."},
+{q:"Point of contraflexure is where:",o:["SF is max","BM changes sign (BM = 0)","Deflection is zero","Slope is max"],c:1,e:"Inflection point: BM passes through zero, changing from sagging to hogging or vice versa."},
+{q:"Cantilever with point load P at free end: max deflection =",o:["PL³/3EI","PL³/48EI","5wL⁴/384EI","PL²/2EI"],c:0,e:"δmax = PL³/3EI at free end. θmax = PL²/2EI at free end."},
+{q:"A truss is a structure of members connected at:",o:["Rigid joints","Pin joints (hinged)","Welded joints","Riveted joints"],c:1,e:"Ideal truss: pin-jointed → members carry only axial forces (tension or compression), no bending."},
+{q:"Bending stress formula: σ = M/I × y, or σ =",o:["M/Z","M × Z","M/A","M/P"],c:0,e:"σ = M/Z where Z = I/y = section modulus. Max stress at extreme fibre (max y)."},
+{q:"For a fixed beam with central point load P, max BM =",o:["PL/4","PL/8","PL/2","PL/12"],c:1,e:"Fixed beam central load: max BM at supports and mid-span = PL/8 (at supports: −PL/8; at centre: +PL/8)."},
+{q:"Shear force diagram for a cantilever with point load at free end is:",o:["Parabolic","Constant (rectangular)","Triangular","Zero"],c:1,e:"SF is constant = P along the entire length. BM varies linearly from 0 at free end to −PL at fixed end."},
+{q:"A roller support provides:",o:["Three reactions","One vertical reaction","Two reactions","No reaction"],c:1,e:"Roller: 1 reaction (⊥ to surface). Hinge: 2 reactions (H + V). Fixed: 3 reactions (H + V + M)."},
+{q:"Principle of superposition applies to:",o:["Non-linear structures","Linear elastic structures","Plastic structures","Buckling problems"],c:1,e:"Superposition: response to combined loads = sum of individual load responses. Valid only for linear elastic behaviour."},
+{q:"SSB with central point load P: max BM =",o:["PL/4","PL/8","PL/2","PL/6"],c:0,e:"Max BM at mid-span = PL/4. Reactions = P/2 each."},
+{q:"A member in tension is called a:",o:["Strut","Tie","Beam","Column"],c:1,e:"Tie = tension member. Strut = compression member. In trusses, upper chord often compresses, lower chord often tensions."},
+{q:"Hooke's law: stress ∝ strain is valid up to:",o:["Ultimate stress","Yield stress","Proportional limit","Rupture"],c:2,e:"σ = Eε only within the proportional limit. Beyond it, the material may still be elastic (up to elastic limit) but non-linear."},
+{q:"Young's modulus of steel ≈",o:["100 GPa","200 GPa","300 GPa","50 GPa"],c:1,e:"E_steel ≈ 200 GPa (2 × 10⁵ MPa). E_concrete ≈ 25 GPa (for M25). Steel is ~8× stiffer."},
+{q:"Moment of inertia of a rectangle (bh³/12) is about the:",o:["Vertical axis","Centroidal axis parallel to base","Any axis","Polar axis"],c:1,e:"Ixx = bh³/12 about the centroidal axis parallel to base b. Iyy = hb³/12 about the other centroidal axis."},
+{q:"Simply supported beam with UDL w: deflection at mid-span =",o:["5wL⁴/(384EI)","wL⁴/(384EI)","wL³/3EI","PL³/48EI"],c:0,e:"δmax = 5wL⁴/(384EI) for UDL on SSB. For central point load: PL³/(48EI)."},
+{q:"A column is a vertical member primarily under:",o:["Bending","Axial compression","Shear","Torsion"],c:1,e:"Columns carry axial compressive loads. Slender columns may fail by buckling before material yielding."},
+{q:"Euler's critical buckling load: Pcr =",o:["π²EI/L²","EI/L","σ×A","π²EA/L²"],c:0,e:"Pcr = π²EI/Le² where Le = effective length. For both ends pinned: Le = L. Applies to long/slender columns."},
+{q:"The shape of BMD for a cantilever with UDL is:",o:["Linear","Parabolic","Cubic","Rectangular"],c:1,e:"SF is linear (triangular); BM is parabolic (second degree) for a cantilever with UDL."},
+{q:"Free body diagram is used to show:",o:["Deformed shape","All forces acting on an isolated body","Stress distribution","Temperature distribution"],c:1,e:"FBD isolates a body and shows all external forces, reactions, and moments acting on it."}
+],
+medium:[
+{q:"Three-moment equation (Clapeyron) analyses:",o:["Trusses","Continuous beams","Arches","Columns"],c:1,e:"Relates BM at three consecutive supports of a continuous beam. Used to find unknown support moments."},
+{q:"Fixed-end moment for beam with UDL w over span L:",o:["wL²/8","wL²/12","wL²/24","wL²/6"],c:1,e:"FEM = ±wL²/12 (both ends fixed). For central point load: ±PL/8."},
+{q:"Muller-Breslau principle draws:",o:["BMD","Influence line diagrams","SFD","Deflection curves"],c:1,e:"ILD for any function = deflected shape when restraint for that function is removed and unit deformation applied."},
+{q:"Moment distribution factor ∝",o:["Span length","Relative stiffness (k=4EI/L)","Load","Depth"],c:1,e:"DF = member stiffness / Σstiffness at joint. Unbalanced moment distributed in proportion to DFs."},
+{q:"Castigliano's I: ∂U/∂P =",o:["Stress","Strain","Deflection in direction of P","Rotation"],c:2,e:"Partial derivative of strain energy U w.r.t. force P gives deflection in direction of P."},
+{q:"Carry-over factor for prismatic member (far end fixed) =",o:["0","0.5","1.0","0.67"],c:1,e:"COF = 0.5 (half the applied moment is carried over to far end). If far end pinned: COF = 0."},
+{q:"Shape factor for rectangular section:",o:["1.0","1.14","1.5","1.7"],c:2,e:"SF = Zp/Ze. Rectangle: (bd²/4)/(bd²/6) = 1.5. I-section ≈ 1.14."},
+{q:"Unit load method for deflection uses:",o:["Real loads only","Virtual unit load","Temperature loads","Wind loads"],c:1,e:"Apply virtual unit load at the point where deflection is needed. δ = ∫(Mm/EI)dx where m = virtual BM, M = real BM."},
+{q:"Degree of kinematic indeterminacy of a rigid frame =",o:["Number of unknown reactions","Number of independent joint displacements","Number of members","Number of loads"],c:1,e:"DOF = rotations + translations − constraints. For a frame: 3j − c (j = joints, c = constraints)."},
+{q:"Conjugate beam method converts:",o:["Loads to reactions","M/EI diagram to loads for computing deflection/slope","SFD to BMD","Stress to strain"],c:1,e:"Load the conjugate beam with M/EI as loading. Shear in conjugate = slope in real. BM in conjugate = deflection in real."},
+{q:"In portal method of approximate analysis, hinges are assumed at:",o:["Supports only","Mid-height of columns and mid-span of beams","Quarter points","All joints"],c:1,e:"Portal method: for lateral loads. Points of inflection at mid-height of columns and mid-span of beams."},
+{q:"A propped cantilever is:",o:["Statically determinate","Indeterminate to 1st degree","Indeterminate to 2nd degree","Unstable"],c:1,e:"4 reactions − 3 equations = 1 degree of indeterminacy."},
+{q:"Three-hinged arch: horizontal thrust for UDL on entire span H =",o:["wL²/(8h)","PL/(4h)","wL/2","wL²/(4h)"],c:0,e:"For parabolic arch with UDL: H = wL²/(8h), same as cable. BM throughout = 0."},
+{q:"Virtual work principle states that for equilibrium:",o:["Real work = potential energy","Virtual work of external forces = virtual strain energy","Kinetic energy = potential energy","Work done = 0"],c:1,e:"For a system in equilibrium, the virtual work of external forces equals the virtual internal work for any virtual displacement."},
+{q:"Slope-deflection equation: Mij =",o:["2EI/L(2θi+θj−3Δ/L)+FEMij","EI/L","P×L","wL²/8"],c:0,e:"Standard form: Mij = (2EI/L)(2θi+θj−3ψ) + FEMij where ψ = sway angle Δ/L."},
+{q:"Influence line for reaction at a support of SSB is:",o:["Parabolic","Triangular (linear)","Rectangular","Curved"],c:1,e:"ILD for reaction at A of SSB: triangle from 1 at A to 0 at B (linearly decreasing)."},
+{q:"Maxwell's reciprocal theorem states:",o:["Deflection at A due to load at B = deflection at B due to load at A","Forces are equal and opposite","Stresses equal strains","Energy is conserved"],c:0,e:"δAB = δBA (deflection at A due to unit load at B equals deflection at B due to unit load at A)."},
+{q:"A cable carrying UDL takes the shape of a:",o:["Catenary","Parabola","Circular arc","Straight line"],c:1,e:"UDL along horizontal span → parabola. Self-weight (UDL along cable length) → catenary."},
+{q:"Stiffness of a fixed-fixed beam =",o:["3EI/L","4EI/L","2EI/L","12EI/L³"],c:1,e:"Rotational stiffness: fixed-fixed = 4EI/L. Fixed-pinned = 3EI/L. These are moment per unit rotation at the near end."},
+{q:"In moment distribution, the distribution factor at a fixed support is:",o:["0","0.5","1.0","Infinity"],c:0,e:"A fixed end has infinite stiffness relative to the member → DF = 0 (absorbs no unbalanced moment from distribution)."}
+],
+hard:[
+{q:"Stiffness matrix of a 2D beam element (2 DOF/node) is:",o:["2×2","4×4","6×6","3×3"],c:1,e:"2 DOFs (lateral displacement + rotation) × 2 nodes = 4×4. Including axial: 6×6."},
+{q:"Independent sway modes in a regular portal frame =",o:["Number of joints","Number of storeys","Number of members","Number of fixed supports"],c:1,e:"Each storey can sway independently. Single-storey single-bay: 1 sway mode."},
+{q:"Three-hinged parabolic arch with UDL over full span has:",o:["BM and SF","Zero BM throughout (only axial thrust)","Only BM","Only SF"],c:1,e:"The parabolic shape is the funicular of UDL → only axial compression, no BM or SF anywhere."},
+{q:"Degree of static indeterminacy of a closed ring:",o:["0","3","6","1"],c:1,e:"Cut the ring → 3 internal forces (M, N, V) released → DSI = 3."},
+{q:"Flexibility matrix is the inverse of:",o:["Mass matrix","Stiffness matrix","Damping matrix","Load matrix"],c:1,e:"[F] = [K]⁻¹. Flexibility: displacement per unit load. Stiffness: load per unit displacement."},
+{q:"Column analogy method is used for:",o:["Design of columns","Analysis of fixed arches and beams","Truss analysis","Cable analysis"],c:1,e:"Column analogy (developed by Hardy Cross) treats the elastic curve problem as analogous to stresses in a short column."},
+{q:"In stiffness method, primary unknowns are:",o:["Forces","Displacements (joint DOFs)","Reactions","Stresses"],c:1,e:"Stiffness (displacement) method: unknown displacements. Flexibility (force) method: unknown redundant forces."},
+{q:"For portal frame sway analysis by moment distribution, correction factor =",o:["Sway moment / sum of DFs","Ratio of sway moments for arbitrary and actual sway","DF × COF","1.0 always"],c:1,e:"Perform non-sway analysis → find propping force. Then sway analysis with arbitrary sway → scale to actual propping force."},
+{q:"The theorem of least work (Castigliano's II for indeterminate structures) states:",o:["Strain energy is maximum","∂U/∂R = 0 for redundant force R","Deflection is minimum","Reactions are maximum"],c:1,e:"For compatibility: ∂U/∂X = 0 where X = redundant force. Strain energy is minimum for the actual values of redundants."},
+{q:"Influence line for BM at any section of SSB is:",o:["Rectangular","Triangular (peak under the section)","Parabolic","Circular"],c:1,e:"ILD for BM at section C (a from A, b from B): triangle with peak = ab/L at C."},
+{q:"Williot diagram is used for:",o:["BM in beams","Joint displacements in a truss","Reactions in frames","Stress analysis"],c:1,e:"Williot (and Williot-Mohr) diagram graphically finds joint displacements in trusses from member deformations."},
+{q:"Plastic moment Mp = σy ×",o:["Ze (elastic section modulus)","Zp (plastic section modulus)","I/y","A"],c:1,e:"Mp = σy × Zp. For rectangle: Zp = bd²/4. Shape factor = Zp/Ze = Mp/My."},
+{q:"Number of plastic hinges needed for complete collapse of a fixed beam with central load:",o:["1","2","3","4"],c:2,e:"3 hinges: one at each fixed support + one at mid-span → mechanism. Mu = PL/8 for this case; collapse load = 8Mp/L."},
+{q:"In matrix stiffness method, the global stiffness matrix is:",o:["Diagonal","Symmetric and banded","Asymmetric","Triangular"],c:1,e:"[K] is symmetric, positive semi-definite, and banded (non-zero entries near diagonal) for efficiency."},
+{q:"The reduced stiffness of a member with far end hinged =",o:["4EI/L","3EI/L","2EI/L","EI/L"],c:1,e:"Modified stiffness for far end pinned: 3EI/4 × (4/L) = 3EI/L. No carry-over moment."},
+{q:"Collapse load factor in plastic analysis is the ratio of:",o:["Elastic load to working load","Collapse load to working load","Working load to ultimate load","Dead load to live load"],c:1,e:"Load factor λ = collapse load / working load. For steel: minimum load factor typically 1.7 for DL+LL."},
+{q:"Kinematic indeterminacy = number of possible independent:",o:["Forces","Joint displacements","Reactions","Members"],c:1,e:"Kinematic DOF = 3j − r (for plane frames). j = joints, r = total reactions. Each DOF is an unknown displacement."},
+{q:"In flexibility method, the structure is made determinate by removing:",o:["Members","Redundant forces/moments","Loads","Supports entirely"],c:1,e:"Remove redundants → determinate primary structure. Apply compatibility to solve for removed redundants."},
+{q:"Betti's theorem is a generalisation of:",o:["Castigliano's theorem","Maxwell's reciprocal theorem","Clapeyron's theorem","Superposition"],c:1,e:"Betti: work done by system 1 forces through system 2 displacements = work done by system 2 forces through system 1 displacements."},
+{q:"ILD for SF at a section of SSB has:",o:["A single triangle","Two triangles with a vertical step at the section","A parabola","A rectangle"],c:1,e:"ILD for SF at section C has a step: +b/L to the left, −a/L to the right (discontinuity at C)."}
+]}},
+"rc":{n:"RCC Design",ic:"🏢",q:{
+easy:[
+{q:"Min grade of concrete for RCC (IS 456):",o:["M10","M15","M20","M25"],c:2,e:"IS 456 cl. 6.1.1: min M20 for RCC, M30 for prestressed."},
+{q:"Nominal cover for moderate exposure:",o:["15 mm","20 mm","30 mm","50 mm"],c:2,e:"IS 456 Table 16: Mild 20, Moderate 30, Severe 45, Very severe 50, Extreme 75 mm."},
+{q:"Modular ratio for M20 concrete ≈",o:["7","10","13","15"],c:2,e:"m = 280/(3σcbc). M20: σcbc = 7, m = 280/21 ≈ 13."},
+{q:"Development length ensures:",o:["Shear strength","Adequate bond between steel and concrete","Min deflection","Crack control"],c:1,e:"Ld = φσs/(4τbd). Bar embedded enough to develop full design stress via bond."},
+{q:"In a singly reinforced beam, lever arm z = d −",o:["0.42xu","0.5xu","xu","0.25xu"],c:0,e:"Lever arm = d − 0.42xu (limit state method). 0.42xu is the distance of resultant compressive force from top."},
+{q:"Minimum reinforcement in a slab per IS 456:",o:["0.12% for Fe 415/500","0.15% for Fe 250","Both A and B","0.20%"],c:2,e:"IS 456 cl. 26.5.2.1: 0.12% of Ag for HYSD bars, 0.15% for mild steel."},
+{q:"Clear cover for a slab ≥",o:["15 mm or φ, whichever is greater","20 mm","25 mm","30 mm"],c:0,e:"IS 456 cl. 26.4.1: for slab, min cover = 15 mm or bar diameter, whichever is greater (for mild exposure)."},
+{q:"The effective depth of a beam is measured from:",o:["Top to bottom","Compression face to centroid of tension steel","Top to bottom steel surface","Neutral axis to bottom"],c:1,e:"d = D − cover − φ/2 (for single layer). D = overall depth."},
+{q:"A balanced section fails by:",o:["Steel yielding first","Concrete crushing first","Simultaneous yielding of steel and crushing of concrete","Bond failure"],c:2,e:"Balanced: steel reaches yield strain (0.87fy/Es + 0.002) and concrete reaches 0.0035 simultaneously."},
+{q:"IS 456 specifies partial safety factor for concrete strength as:",o:["1.0","1.5","1.15","2.0"],c:1,e:"γc = 1.5 for concrete; γs = 1.15 for steel. Design strength = fck/1.5 or fy/1.15."},
+{q:"Two-way slab is one where Ly/Lx ≤",o:["1.0","1.5","2.0","3.0"],c:2,e:"Ly/Lx ≤ 2 → two-way slab. > 2 → one-way slab (bending mainly in shorter direction)."},
+{q:"Shear reinforcement in beams is provided as:",o:["Main bars","Stirrups (vertical or inclined)","Distribution bars","Chairs"],c:1,e:"Stirrups resist diagonal tension from shear. Vertical stirrups most common; bent-up bars also used."},
+{q:"The characteristic strength fck means:",o:["Average strength","Strength below which not more than 5% results fall","Maximum strength","Minimum strength"],c:1,e:"fck = 28-day cube strength with 95% probability of being exceeded. 5% allowed to fall below."},
+{q:"Maximum spacing of shear stirrups ≤",o:["0.75d or 300 mm","d or 600 mm","0.5d or 200 mm","0.25d or 100 mm"],c:0,e:"IS 456 cl. 26.5.1.5: max spacing = 0.75d or 300 mm whichever is less."},
+{q:"Hooks at ends of stirrups should be bent through:",o:["45°","90° or 135°","180°","360°"],c:1,e:"IS 456: stirrup hooks at 135° (preferred for seismic) or 90° into the core of the member."},
+{q:"A column with Le/D < 12 is classified as:",o:["Long column","Short column","Slender column","Intermediate"],c:1,e:"Short column: Le/D < 12 (or Le/b < 12). Long/slender otherwise. Short columns fail by material failure; long by buckling."},
+{q:"Effective span of a cantilever =",o:["L + d/2","L + d","L only","L + 2d"],c:0,e:"IS 456 cl. 22.2: cantilever effective span = L + d/2 (L = clear overhang from face of support, d = effective depth)."},
+{q:"Standard hook for main bars: bar bent through 180° with extension of:",o:["4φ","6φ","8φ","12φ"],c:0,e:"IS 456: 180° hook with 4φ extension. 90° bend: 12φ extension (for Fe 250) or 8φ (for HYSD)."},
+{q:"Distribution steel in a one-way slab is placed:",o:["Parallel to span","Perpendicular to main steel","At 45°","Only at supports"],c:1,e:"Distribution steel controls shrinkage/temperature cracks and distributes concentrated loads. Perpendicular to main steel."},
+{q:"The limiting neutral axis depth xu,max/d for Fe 415 =",o:["0.53","0.48","0.46","0.36"],c:1,e:"Fe 250: 0.53; Fe 415: 0.48; Fe 500: 0.46. These ensure ductile (under-reinforced) failure."}
+],
+medium:[
+{q:"Max tension steel in a beam (IS 456):",o:["1%","2%","4%","6%"],c:2,e:"Max 4% of bD (gross area). Min ≈ 0.85bd/fy."},
+{q:"Under-reinforced beam fails by:",o:["Concrete crushing","Steel yielding then concrete crushing","Shear","Bond failure"],c:1,e:"Ductile: steel yields (warning: large deflections) before concrete ultimately crushes. Preferred design."},
+{q:"Doubly reinforced beam is needed when:",o:["Shear is high","Mu > Mu,lim for given section size","Only axial load","Deflection control"],c:1,e:"When the section is restricted and moment exceeds the singly-reinforced limit, compression steel is added."},
+{q:"Effective span of SSB (IS 456):",o:["Clear span + d, or c/c of supports (lesser)","c/c only","Clear span only","Clear span + 2d"],c:0,e:"IS 456 cl. 22.2: min of (clear span + d) or (c/c of supports)."},
+{q:"Parabolic-rectangular stress block for concrete in IS 456:",o:["Parabolic to ε=0.002, rectangular to ε=0.0035","Fully rectangular","Fully triangular","Linear"],c:0,e:"Parabolic up to 0.002 strain (stress = 0.446fck), then constant to 0.0035 at extreme fibre."},
+{q:"Critical section for punching shear in flat slab: at d/2 from:",o:["Centre of column","Face of column","Edge of slab","d from face"],c:1,e:"IS 456 cl. 31.6.2: perimeter at d/2 from column face. Punching shear stress = Vu/(perimeter × d)."},
+{q:"Min eccentricity for short column (IS 456):",o:["L/500+D/30 ≥ 20mm","L/300+D/20","L/500 only","25 mm always"],c:0,e:"IS 456 cl. 25.4: emin = L/500 + D/30, minimum 20 mm. Accounts for construction imperfections."},
+{q:"Effective length factor for column: both ends fixed =",o:["1.0","0.65","0.80","2.0"],c:1,e:"IS 456 Table 28: Fixed-fixed 0.65; Fixed-hinged 0.80; Hinged-hinged 1.0; Cantilever 2.0."},
+{q:"Deflection limit for beams (IS 456): span/effective depth ≤",o:["20 for SSB, 26 for continuous, 7 for cantilever","10, 12, 5","30, 40, 15","15, 20, 8"],c:0,e:"Basic L/d ratios: SS 20, Continuous 26, Cantilever 7. Modified by tension/compression steel and web width."},
+{q:"Torsion in RCC is resisted by:",o:["Main bars only","Longitudinal bars + closed stirrups","Stirrups only","Concrete alone"],c:1,e:"IS 456 cl. 41: torsion requires both additional longitudinal steel and closed rectangular stirrups."},
+{q:"An isolated footing is designed for:",o:["Overturning only","Bending, shear (one-way and punching), and bearing pressure","Axial load only","Torsion"],c:1,e:"Check: bearing pressure ≤ SBC; one-way shear at d from face; punching at d/2; BM at face of column."},
+{q:"One-way shear in a footing is checked at:",o:["Face of column","d from face of column","2d from face","Centre of footing"],c:1,e:"IS 456 cl. 34.2.4: critical section for one-way shear at distance d from the face of the column."},
+{q:"Spiral reinforcement in columns provides:",o:["Torsion resistance","Confinement, increasing ductility","Bending resistance","Bond improvement"],c:1,e:"Spiral confinement of core concrete increases ductility significantly. IS 456 allows 5% extra load capacity for spiral columns."},
+{q:"Minimum diameter of longitudinal bar in column:",o:["8 mm","12 mm","16 mm","20 mm"],c:1,e:"IS 456 cl. 26.5.3.1: min 12 mm diameter. Min 4 bars in rectangular, 6 in circular column."},
+{q:"Max steel in a column:",o:["2% of Ag","4% of Ag","6% of Ag","8% of Ag"],c:2,e:"IS 456: max 6% of Ag (at laps, effectively 4% outside lap regions)."},
+{q:"Design of staircase: effective span for a waist slab staircase =",o:["Going only","Going + one landing width each side (or c/c of supports)","Total height","Only the horizontal projection"],c:1,e:"Effective span = c/c of supports or clear span + effective depth, whichever is less."},
+{q:"Bond stress in limit state design τbd for M20 with Fe 415:",o:["0.8 MPa","1.2 MPa","1.4 MPa","1.92 MPa"],c:1,e:"IS 456 Table 26.2.1.1: M20: τbd = 1.2 MPa for plain bars. For deformed bars: 60% increase → 1.92 MPa."},
+{q:"Curtailment of tension bars: extend at least _____ beyond the point where no longer needed:",o:["d or 12φ","d","12φ","Both d and 12φ (whichever greater)"],c:0,e:"IS 456 cl. 26.2.3.1: bars extended beyond theoretical cut-off by at least d or 12φ whichever is greater."},
+{q:"In a continuous beam, hogging moment occurs at:",o:["Mid-span","Supports","Quarter points","Free end"],c:1,e:"Continuous beams have negative (hogging) moments at interior supports and positive (sagging) at mid-spans."},
+{q:"IS 13920 deals with:",o:["General RCC design","Ductile detailing for seismic resistance","Prestressed concrete","Steel structures"],c:1,e:"IS 13920: ductile detailing of RCC structures in seismic zones. Requires 135° hooks, close stirrup spacing, etc."}
+],
+hard:[
+{q:"For Fe 500 steel, xu,max/d =",o:["0.53","0.48","0.46","0.36"],c:2,e:"xu,max/d = 0.0035/(0.0035+0.87fy/Es+0.002). Fe500: 0.46. Fe415: 0.48. Fe250: 0.53."},
+{q:"Moment of resistance Mu,lim for Fe415, M20 (singly reinforced):",o:["0.138 fck bd²","0.167 fck bd²","0.149 fck bd²","0.133 fck bd²"],c:2,e:"Mu,lim = 0.36×xu,max/d×(1−0.42xu,max/d)×fck×bd². For Fe415: 0.36×0.48×(1−0.42×0.48)×fck×bd² = 0.138×fck×bd². Actually for Fe415: coefficient ≈ 0.138. For Fe500: 0.133."},
+{q:"Shear strength of concrete τc depends on:",o:["Grade of concrete and % tension steel","Only concrete grade","Only steel grade","Cover depth"],c:0,e:"IS 456 Table 19: τc varies with fck and percentage of tension steel (pt = 100Ast/bd). Higher pt → higher τc."},
+{q:"Nominal shear stress τv = Vu/(bd). If τv > τc,max, the section must be:",o:["Redesigned (enlarged)","Provided with more stirrups","Left as is","Given more cover"],c:0,e:"IS 456: if τv > τc,max (Table 20), no amount of shear reinforcement suffices—must increase b or d."},
+{q:"Span/depth ratio for flanged beam (IS 456) uses modification factor based on:",o:["Width of flange","Percentage of tension steel and fst","Concrete grade only","Shear force"],c:1,e:"Modification factor from Fig. 4 of IS 456 depends on pt and service stress fst = 0.58fy×Ast,req/Ast,prov."},
+{q:"In two-way slabs (IS 456 Table 26), moment coefficients depend on:",o:["Ly/Lx and edge conditions","Only span","Only load","Only concrete grade"],c:0,e:"αx and αy coefficients depend on Ly/Lx ratio and boundary conditions (all edges fixed, one/two edges discontinuous, etc.)."},
+{q:"Design of combined footing: critical section for BM is at:",o:["Centre of footing","Face of each column","Edge of footing","Quarter span"],c:1,e:"BM is maximum at the faces of the columns. The footing is designed as an inverted beam loaded by soil pressure."},
+{q:"Limit state of collapse for compression members uses:",o:["Interaction (P-M) diagram","Only axial capacity","Only moment capacity","Only shear"],c:0,e:"Columns under P + M are designed using interaction diagrams (SP-16 charts) that show safe combinations of axial load and moment."},
+{q:"Deep beam (IS 456): span/depth < _____ for SSB:",o:["2.0","2.5","5.0","10.0"],c:0,e:"IS 456 cl. 29: simply supported span/D < 2.0, continuous span/D < 2.5 → deep beam. Special design needed (strut-and-tie)."},
+{q:"Minimum eccentricity in IS 456 ensures that the column design accounts for:",o:["Earthquake forces","Accidental eccentricity and construction imperfections","Temperature effects","Creep"],c:1,e:"emin covers imperfections in construction alignment, load placement, and member geometry."},
+{q:"In flanged beams (T-beam), effective flange width bf =",o:["Lo/6 + bw + 6Df","Actual width","bw + 16Df","All of the above depending on conditions"],c:0,e:"IS 456 cl. 23.1.2: bf = Lo/6 + bw + 6Df (for T-beam) where Lo = distance between points of zero moment."},
+{q:"Lap length for bars in compression =",o:["Ld","Ld or 24φ (whichever greater)","12φ","36φ"],c:1,e:"IS 456 cl. 26.2.5.1: compression lap = Ld (in compression). For tension: Ld or 30φ whichever greater."},
+{q:"Punching shear stress in flat slab = Vu/(b₀d), where b₀ =",o:["Perimeter of column","Perimeter at d/2 from column face","Area of column","Depth of slab"],c:1,e:"b₀ = critical perimeter at d/2 from column face. For square column (a×a): b₀ = 4(a+d)."},
+{q:"Limit state of serviceability checks for:",o:["Ultimate strength","Deflection, cracking, and vibration","Collapse only","Fire resistance only"],c:1,e:"SLS ensures comfort and durability: deflection within limits, crack widths acceptable, no excessive vibration."},
+{q:"In IS 456, the stress-strain curve for steel in limit state design is:",o:["Linear","Bilinear (linear elastic + plastic plateau)","Parabolic","Hyperbolic"],c:1,e:"For HYSD bars: linear up to 0.8fy (with inelastic strain of 0.002 at fy/1.15). IS 456 Fig. 23B."},
+{q:"Anchorage value of a 90° bend in steel =",o:["4φ","8φ","12φ","16φ"],c:1,e:"IS 456 cl. 26.2.2.1: 90° bend → anchorage = 8φ. 135° bend = 12φ. 180° hook = 16φ."},
+{q:"SP-16 is used for:",o:["Concrete mix design","Design aids for reinforced concrete (IS 456)","Seismic design","Steel structure design"],c:1,e:"SP-16: design charts and tables for IS 456. Includes interaction diagrams for columns, moment capacity tables, etc."},
+{q:"In a retaining wall, the stem is designed as a:",o:["Column","Cantilever slab","Simply supported beam","Two-way slab"],c:1,e:"The stem acts as a vertical cantilever fixed at the base, carrying lateral earth pressure."},
+{q:"Shrinkage and temperature reinforcement in slabs per IS 456:",o:["Same as minimum steel requirements","Additional to main steel","Not required","Only in one direction"],c:0,e:"The minimum reinforcement (0.12% for HYSD, 0.15% for MS) serves as shrinkage/temperature steel in the secondary direction."},
+{q:"For seismic design, the response reduction factor R accounts for:",o:["Only ductility","Ductility, overstrength, and redundancy","Only overstrength","Damping only"],c:1,e:"R reduces the elastic seismic force. Higher R for ductile frames (SMRF: R=5). Lower R for less ductile systems."}
+]}},
+"es":{n:"Estimation & Costing",ic:"📊",q:{
+easy:[
+{q:"Plinth area is measured at:",o:["Floor level","Plinth level (outer dimensions)","Roof level","Foundation"],c:1,e:"Built-up covered area at plinth level, measured at outer face of external walls."},
+{q:"One bag of cement =",o:["40 kg","50 kg","25 kg","100 kg"],c:1,e:"1 bag = 50 kg. Volume ≈ 0.0347 m³. About 28.8 bags per m³."},
+{q:"Earthwork is measured in:",o:["m²","Running m","m³","kg"],c:2,e:"Volume = L × B × D. IS 1200 specifies measurement rules for earthwork."},
+{q:"Contingency provision is typically:",o:["1–2%","3–5%","10–15%","20–25%"],c:1,e:"3–5% added for unforeseen items, price variations, and minor extras."},
+{q:"Long wall–short wall method: long wall =",o:["Out to out","Centre to centre","In to in","Face to face"],c:1,e:"Long wall = centre-to-centre length. Short wall = in-to-in. Avoids double counting at junctions."},
+{q:"Unit of measurement for painting is:",o:["m³","m²","Running m","kg"],c:1,e:"Painting, plastering, flooring, and similar surface works are measured in square metres."},
+{q:"Abstract of cost in estimation summarises:",o:["Material list","Total cost of all items","Only labour rates","Only material rates"],c:1,e:"Abstract = summary table of all estimated items with their quantities, rates, and amounts. Grand total at bottom."},
+{q:"Standard height of a room for estimation purposes is:",o:["2.5 m","3.0 m","3.5 m","4.0 m"],c:1,e:"Standard room height: 3.0 m (floor to ceiling). Plinth height: 0.3–0.6 m above ground level."},
+{q:"Centre-line method is best when:",o:["All walls have different thicknesses","All walls have the same cross-section","Building is multi-storeyed","Walls are curved"],c:1,e:"Centre-line method: total centre-line length × cross-section area. Efficient when all walls are identical."},
+{q:"The item 'PCC 1:4:8' means:",o:["1 cement: 4 sand: 8 aggregate","1 cement: 4 aggregate: 8 sand","1 sand: 4 cement: 8 aggregate","1 aggregate: 4 cement: 8 sand"],c:0,e:"PCC/concrete proportions: cement : fine aggregate (sand) : coarse aggregate. 1:4:8 is lean concrete for bedding."},
+{q:"Lead and lift in estimation refer to:",o:["Horizontal and vertical transport distance of materials","Only horizontal distance","Only vertical height","Weight of materials"],c:0,e:"Lead = horizontal distance of material transport. Lift = vertical height of lifting material. Both affect labour rates."},
+{q:"Measurement book (MB) is a:",o:["Design document","Official record of measurements taken at site","Rate analysis book","Specification book"],c:1,e:"MB is the primary document recording all field measurements. It is a legal document for payment certification."},
+{q:"The carpet area of a room excludes:",o:["Window area","Wall thickness","Furniture area","Floor finish"],c:1,e:"Carpet area = area within walls (usable floor area). Excludes walls, columns, and balconies."},
+{q:"Plastering is measured in:",o:["m³","m²","Running m","Numbers"],c:1,e:"Plastering = surface area in m². Deductions for openings > 0.5 m² (varies by practice)."},
+{q:"WBM (Water Bound Macadam) in estimation is measured by:",o:["Weight","Volume after compaction (m³)","Length","Area"],c:2,e:"WBM is measured in cubic metres of compacted work. Loose volume is greater due to voids."},
+{q:"First and final bill in a contract is issued when:",o:["Work is halfway done","Work is fully completed","Before work starts","After every month"],c:1,e:"Running/interim bills during work; final bill after completion and measurement verification."},
+{q:"In estimation, 'specification' describes:",o:["Quantities","Quality, proportions, and workmanship of each item","Only cost","Only materials"],c:1,e:"Specifications detail the materials, mix ratios, methods of construction, and quality standards for each work item."},
+{q:"The purpose of a detailed estimate is to:",o:["Give a rough idea of cost","Determine accurate cost based on detailed drawings and specifications","Estimate only labour","Estimate only materials"],c:1,e:"Detailed estimate: item-wise quantities from drawings × rates = accurate total cost. Basis for tendering."},
+{q:"A running account bill is issued:",o:["At project end","Periodically during construction for interim payment","Before work starts","Only once"],c:1,e:"Running bills (RA bills) are periodic valuations of work done, enabling interim payments to the contractor."},
+{q:"The plinth area of a building includes:",o:["Open courtyards","Built-up area including walls within outer walls","Only room area","Only corridor area"],c:1,e:"Plinth area includes walls, columns, corridors, verandahs (covered), but excludes open courtyards and uncovered areas."}
+],
+medium:[
+{q:"M20 nominal mix ratio is:",o:["1:1:2","1:1.5:3","1:2:4","1:3:6"],c:1,e:"IS 456 Table 9: M20=1:1.5:3, M15=1:2:4, M10=1:3:6."},
+{q:"Dry volume of mortar ≈ ____ × wet volume:",o:["1.10","1.25","1.33","1.50"],c:2,e:"33% more dry materials needed to produce 1 m³ wet mortar (voids are filled during mixing)."},
+{q:"Rate analysis includes:",o:["Material only","Labour + material + overhead + profit","Labour only","Machinery only"],c:1,e:"Rate = material cost (with wastage) + labour + T&P + water + overhead + contractor's profit."},
+{q:"Sinking fund method calculates:",o:["Estimated cost","Depreciation (annual installment for replacement)","Market value","Rental income"],c:1,e:"Annual sinking fund = (cost − scrap) × i/[(1+i)ⁿ − 1]. Accumulates to replacement cost at end of life."},
+{q:"Standard deductions for openings in wall estimation:",o:["Only for openings > 1 m²","All openings deducted","Only doors","Only windows > 2 m²"],c:1,e:"Per IS 1200, all openings (doors, windows) are deducted. Lintels, sills, jambs added separately."},
+{q:"Capitalised value =",o:["Annual rent × Years purchase","Annual rent / Rate of return","Construction cost + land","Scrap + depreciation"],c:0,e:"CV = net annual income × (100/r) = net income × years purchase. At 5%: YP = 20."},
+{q:"Work-charged establishment cost ≈",o:["1–1.5% of estimate","5–7%","10–15%","20%"],c:0,e:"Salaries of staff directly on the work (overseers, watchmen). Centage charges (admin) are additional 2–5%."},
+{q:"Annual repair cost for a well-maintained building ≈",o:["0.5–1.5% of cost","5–7%","10%","15%"],c:0,e:"0.5–1.5% for well-maintained; up to 2–5% for old/poorly maintained buildings."},
+{q:"In earthwork, prismoidal formula gives more accurate results than:",o:["Simpson's rule","End area method when ground is irregular","Centre-line method","Trapezoidal rule"],c:1,e:"Prismoidal: V = L/6(A₁+4Am+A₂). Better than average end area V=(A₁+A₂)L/2 for irregular ground."},
+{q:"Depreciation by straight-line method: annual depreciation =",o:["(Cost − Scrap) / Life","Cost / Life","Scrap / Life","(Cost + Scrap) / Life"],c:0,e:"Simplest method: equal amount each year = (Original cost − Salvage value) / Useful life in years."},
+{q:"For brick masonry, the quantity of cement per m³ in CM 1:6 ≈",o:["0.105 m³ (3 bags)","0.20 m³ (6 bags)","0.50 m³ (15 bags)","1 m³"],c:0,e:"Mortar quantity ≈ 30% of masonry volume. In 1:6 ratio, cement = (1/7)×0.30×1.33 ≈ 0.057 m³ per m³. With wastage ≈ 3 bags."},
+{q:"Rent fixation uses which method?",o:["Only market comparison","Percentage of cost of construction","Sinking fund only","Depreciation only"],c:1,e:"Rent = % return on capital (6–10%) + taxes + insurance + repairs + depreciation. Typically 8–12% of total cost."},
+{q:"IS 1200 deals with:",o:["Concrete design","Method of measurement of building works","Steel structures","Soil testing"],c:1,e:"IS 1200 (various parts) specifies standard methods of measurement for different construction items."},
+{q:"Revised estimate is prepared when:",o:["Cost exceeds 5% of original estimate","Cost exceeds sanctioned amount by more than 5–10%","Any change occurs","Every year"],c:1,e:"When actual cost is likely to exceed the sanctioned estimate by > 5% (or 10% in some departments), a revised estimate is needed."},
+{q:"Supplementary estimate is for:",o:["Original work","Additional/new items not in the original scope","Reduced scope","Defect repairs"],c:1,e:"Supplementary estimate covers new items of work arising during construction that were not part of the original estimate."},
+{q:"PWD (Public Works Department) rates are published as:",o:["District Schedule of Rates (DSR)","Only material rates","Market rates","Contract rates"],c:0,e:"DSR is the standard schedule of rates published by PWD for each district, used for government works."},
+{q:"In valuation, salvage value is the:",o:["Original cost","Value at the end of useful life","Insurance value","Market value"],c:1,e:"Salvage (scrap) value: residual value of the structure at the end of its useful life, typically 10% of original cost."},
+{q:"For RCC work, the quantity of steel per m³ is approximately:",o:["40–60 kg (slabs)","78.5 kg","200 kg","10 kg"],c:0,e:"Thumb rules: slabs 40–60 kg/m³, beams 100–150 kg/m³, columns 150–250 kg/m³, footings 50–80 kg/m³."},
+{q:"Preliminary estimate is prepared from:",o:["Detailed drawings","Plinth area or unit rates of similar projects","Actual field measurements","Tenders received"],c:1,e:"Preliminary/approximate estimate uses plinth area rates or cost per unit of accommodation from similar past projects."},
+{q:"The cost index is used to:",o:["Measure quality","Update old estimates to current price levels","Calculate labour hours","Find material quantities"],c:1,e:"Cost index = (current cost / base year cost) × 100. Multiplied by old estimate to get updated cost."}
+],
+hard:[
+{q:"In earthwork, the mean area method: V =",o:["(A₁+A₂)/2 × L","L/6(A₁+4Am+A₂)","A₁×L","(A₁−A₂)×L"],c:0,e:"Average end area method: V = (A₁+A₂)/2 × L. Overestimates when sections vary. Prismoidal is more accurate."},
+{q:"Under-bridge clearance for national highway (NH) with river:",o:["1.5 m above HFL","Minimum 1.2 m above HFL","0.5 m above HFL","3 m above HFL"],c:0,e:"Minimum vertical clearance above HFL: 1.5 m for NH. This accounts for floating debris and wave action."},
+{q:"Profit and overhead in rate analysis is typically:",o:["5% + 10%","10% profit + 5% overhead","15% combined","25% combined"],c:2,e:"Contractor's overhead ≈ 5% and profit ≈ 10%, combined ~15% of prime cost (materials + labour)."},
+{q:"Standard output of a mason per day for brick masonry in CM 1:6 ≈",o:["1.0–1.5 m³","0.4–0.5 m³","5 m³","10 m³"],c:0,e:"One mason + 1 labourer ≈ 1.0–1.5 m³/day for brick masonry. Output varies with complexity and skill."},
+{q:"Life of an RCC building for depreciation purposes ≈",o:["20 years","50–60 years","100 years","200 years"],c:1,e:"RCC buildings: 50–80 years. Load-bearing masonry: 40–60 years. Timber: 20–40 years."},
+{q:"In valuation, the net annual income =",o:["Gross rent − outgoings","Gross rent only","Gross rent + repairs","Gross rent × years"],c:0,e:"Outgoings include: taxes, insurance, repairs, collection charges, vacancy allowance (≈ 10% of gross rent)."},
+{q:"Escalation clause in a contract provides for:",o:["Fixed price always","Adjustment for price rise in materials/labour","Penalty for delay","Bonus for early completion"],c:1,e:"Escalation clause adjusts contract value based on published indices for materials (steel, cement, bitumen) and labour."},
+{q:"The total volume of materials (cement + sand) for 1 m³ of CM 1:6 wet mortar ≈",o:["1.00 m³","1.33 m³ dry volume","0.50 m³","2.00 m³"],c:1,e:"Wet 1 m³ needs ~1.33 m³ dry (33% bulkage). Cement = 1.33/7 = 0.19 m³ ≈ 5.5 bags. Sand = 1.33×6/7 ≈ 1.14 m³."},
+{q:"In BOQ (Bill of Quantities), items are arranged by:",o:["Random order","Trade or work sequence","Alphabetical","Reverse order"],c:1,e:"BOQ follows construction sequence: earthwork → foundation → masonry → concrete → finishing → services."},
+{q:"Number of bricks per m³ of brick masonry (standard size, CM 1:6) ≈",o:["100","300","500","1000"],c:2,e:"Approx 500 bricks per m³ for standard modular bricks (200×100×100 mm with mortar). Non-modular: ~450."},
+{q:"Valuation of a property by the investment method uses:",o:["Construction cost only","Net income capitalised at market yield","Only land value","Depreciated replacement cost"],c:1,e:"Investment method: Value = Net annual income / Rate of return. For income-producing properties."},
+{q:"Schedule of rates is revised typically every:",o:["Month","1–2 years","5–10 years","25 years"],c:1,e:"DSR is revised by PWD every 1–2 years to reflect current market prices of materials and labour."},
+{q:"In a tender, the earnest money deposit (EMD) is typically:",o:["1–2% of estimated cost","5–10%","25%","50%"],c:0,e:"EMD ≈ 1–2% of estimated cost. Security deposit ≈ 5–10%. Performance guarantee ≈ 5%."},
+{q:"Cost per m² of RCC construction in Uttarakhand (2024 approx) is roughly:",o:["₹500–1000","₹1500–2500","₹5000–8000","₹20000–30000"],c:1,e:"Approximate: ₹1500–2500/m² for RCC structure only (varies with location, specification, and market)."},
+{q:"Measurement of reinforcement in estimation is in:",o:["m³","kg (by weight)","m²","Numbers"],c:1,e:"Reinforcement steel is measured by weight (kg). Diameter and length are measured, weight = (φ²/162) × length (in kg, φ in mm, L in m)."},
+{q:"In tender evaluation, the L1 bidder is:",o:["Highest bidder","Lowest responsive bidder","Average bidder","Last bidder"],c:1,e:"L1 = lowest valid technical and financial bid. In government works, L1 is generally awarded the contract."},
+{q:"Defect liability period (DLP) in construction contracts is typically:",o:["1 month","6–12 months","5 years","10 years"],c:1,e:"DLP ≈ 6–12 months after completion. Contractor rectifies defects at own cost during this period."},
+{q:"The cost of formwork is typically what % of RCC cost?",o:["5–10%","20–30%","50–60%","70–80%"],c:1,e:"Formwork can be 20–30% of RCC cost. It includes materials, labour, and stripping. Reuse reduces cost."},
+{q:"For government works, technical sanction means:",o:["Financial approval","Approval of design and estimate by competent technical authority","Administrative approval","Audit clearance"],c:1,e:"Technical sanction: competent authority approves the design, specifications, and estimated cost."},
+{q:"Tender premium/rebate is applied on the:",o:["Estimated cost","Schedule of rates","BOQ total (quoted rates)","Material cost only"],c:2,e:"Contractor quotes a percentage above (premium) or below (rebate) the estimated rates in the BOQ."}
+]}},
+"ct":{n:"Concrete Technology",ic:"🧪",q:{
+easy:[
+{q:"Workability of concrete is measured by:",o:["Compression test","Slump test","Tensile test","Permeability test"],c:1,e:"Slump test (IS 1199): most common field test. Others: compacting factor, Vee-Bee, flow test."},
+{q:"Water-cement ratio most affects:",o:["Colour","Strength and durability","Weight","Curing time"],c:1,e:"Abrams' law: strength inversely related to w/c. IS 456 specifies max w/c for different exposures."},
+{q:"Initial setting time of OPC ≥",o:["15 min","30 min","60 min","120 min"],c:1,e:"IS 269: initial ≥ 30 min, final ≤ 600 min. Allows time for mixing, transport, and placement."},
+{q:"Segregation means:",o:["Uniform mixing","Separation of constituents","Bleeding","Workability loss"],c:1,e:"Coarse aggregate separates from mortar due to excessive vibration, free fall, or poor grading."},
+{q:"Standard cube size for testing (India):",o:["100 mm","150 mm","200 mm","300 mm"],c:1,e:"IS 516: 150 mm cubes. Cylinder (150×300 mm) strength ≈ 0.8 × cube strength."},
+{q:"Curing of concrete means:",o:["Heating concrete","Maintaining moisture and temperature for hydration","Adding chemicals","Removing formwork"],c:1,e:"Curing keeps concrete moist for cement hydration. Methods: water ponding, wet hessian, curing compound."},
+{q:"Bleeding in concrete is:",o:["Rise of water to the surface","Segregation of aggregate","Loss of cement","Cracking"],c:0,e:"Bleeding: water rises to surface as solids settle. Excessive bleeding creates weak surface layer."},
+{q:"A concrete mix 1:1.5:3 refers to:",o:["Cement:Sand:Aggregate by volume","Sand:Cement:Aggregate","Aggregate:Sand:Cement","Cement:Aggregate:Sand"],c:0,e:"Standard notation: cement : fine aggregate (sand) : coarse aggregate by volume."},
+{q:"The purpose of vibration in concreting is:",o:["To cool concrete","To compact and remove air voids","To add water","To increase setting time"],c:1,e:"Vibration expels trapped air, compacts concrete, and ensures it fills all spaces in the formwork."},
+{q:"Grade M25 means characteristic strength of:",o:["25 MPa at 7 days","25 MPa at 28 days","25 MPa at 3 days","25 kg/cm²"],c:1,e:"M = Mix, 25 = 28-day characteristic cube compressive strength in MPa (N/mm²)."},
+{q:"Ready-mix concrete (RMC) is batched at a:",o:["Site","Central mixing plant","Lab","Quarry"],c:1,e:"RMC is mixed in a central plant and transported in transit mixers. Better quality control."},
+{q:"Fineness modulus of sand for concrete should be:",o:["1.0–2.0","2.2–3.2","4.0–5.0","6.0–7.0"],c:1,e:"FM 2.2–3.2 for fine aggregate. <2.2 too fine, >3.2 too coarse. FM = ΣCumulative % retained/100."},
+{q:"Slump of concrete for beams and slabs is typically:",o:["0–25 mm","50–100 mm","150–200 mm","250+ mm"],c:1,e:"Beams/slabs: 50–100 mm. Mass concrete: 25–50 mm. Columns: 75–150 mm. Tremie: 150–200 mm."},
+{q:"The test to check the quality of concrete in an existing structure:",o:["Slump test","Rebound hammer test","Cube test","Flow test"],c:1,e:"Rebound hammer (NDT) estimates in-situ compressive strength from surface hardness."},
+{q:"Air entrainment improves:",o:["Strength significantly","Freeze-thaw resistance and workability","Density","Setting time"],c:1,e:"Tiny air bubbles (3–6 %) improve workability and frost resistance but reduce strength slightly (~5 % per 1 % air)."},
+{q:"The water used for mixing concrete should be:",o:["Any water","Potable (drinking) water quality","Sea water","Industrial waste water"],c:1,e:"IS 456 cl. 5.4: water should be clean, free from oils, acids, alkalis, organic matter. Potable water is generally acceptable."},
+{q:"Concrete gains about __% of 28-day strength at 7 days:",o:["25%","50%","65%","90%"],c:2,e:"7-day strength ≈ 65% of 28-day strength for OPC. 3-day ≈ 40%. 14-day ≈ 90%."},
+{q:"Honeycombing in concrete is caused by:",o:["Excess water","Inadequate compaction or insufficient fines","Over-vibration","Too much cement"],c:1,e:"Honeycombing: voids due to poor compaction, too little mortar, or formwork leakage. Weakens the member."},
+{q:"The most common method of concrete curing in India is:",o:["Steam curing","Water ponding","Membrane curing","Autoclave curing"],c:1,e:"Water ponding (flooding) on horizontal surfaces is the most common and effective method in India."},
+{q:"The purpose of coarse aggregate in concrete is:",o:["Only to reduce cost","To provide bulk volume, reduce shrinkage, and improve strength","To increase water demand","To replace cement"],c:1,e:"Coarse aggregate provides volume, restrains shrinkage, and forms the skeleton. 60–75 % of concrete volume."}
+],
+medium:[
+{q:"Target mean strength = fck + 1.65s, where s is:",o:["Slump","Standard deviation","Specific gravity","Strain"],c:1,e:"Target ensures 95 % of results exceed fck. For initial mix design, s is assumed (IS 10262 Table 1)."},
+{q:"Fly ash in concrete acts as:",o:["Accelerator","Pozzolanic admixture","Air-entrainer","Retarder"],c:1,e:"Fly ash reacts with Ca(OH)₂ → additional C-S-H gel. Improves workability, long-term strength, reduces heat."},
+{q:"Minimum curing period for OPC concrete:",o:["3 days","7 days","14 days","28 days"],c:1,e:"IS 456: min 7 days moist curing for OPC. 10–14 days for blended cements (PPC, PSC)."},
+{q:"Rebound hammer gives:",o:["Exact compressive strength","Approximate surface hardness correlated to strength","Tensile strength","Flexural strength"],c:1,e:"Rebound number from surface is correlated to compressive strength using calibration charts. Accuracy ±25 %."},
+{q:"Entrapped air for 20 mm aggregate (IS 10262) ≈",o:["1%","2%","3%","5%"],c:1,e:"IS 10262 Table 3: 20 mm = 2%; 10 mm = 3%; 40 mm = 1%. Reduces effective volume."},
+{q:"Alkali-silica reaction (ASR) causes:",o:["Rapid setting","Map cracking and expansion","Increased strength","Reduced permeability"],c:1,e:"Alkalis + reactive silica → swelling gel → cracking, pop-outs, structural distress."},
+{q:"Creep of concrete is mainly affected by:",o:["Aggregate size only","Loading age, w/c ratio, humidity","Colour","Formwork type"],c:1,e:"Higher w/c, early loading, low humidity → more creep. More aggregate → less creep."},
+{q:"High-performance concrete (HPC) has w/c ≈",o:["0.45–0.50","0.35–0.40","0.25–0.35","0.55–0.60"],c:2,e:"HPC: w/c 0.25–0.35 with superplasticisers + SCMs. Strength > 60 MPa, high durability."},
+{q:"Compacting factor test measures:",o:["Strength","Workability (especially low workability mixes)","Durability","Density"],c:1,e:"Compacting factor = weight of partially compacted / weight of fully compacted concrete. Suitable for low-workability mixes."},
+{q:"Superplasticisers are based on:",o:["Calcium chloride","Sulphonated naphthalene / polycarboxylate","Aluminium powder","Gypsum"],c:1,e:"SNF (sulphonated naphthalene formaldehyde) or PCE (polycarboxylate ether) types. Reduce water by 20–30 %."},
+{q:"Maturity of concrete =",o:["Age × Temperature","ΣTime × Temperature (°C·hours)","Strength × Age","Volume × Time"],c:1,e:"Maturity = Σ(temperature × time). Higher maturity → higher strength. Used to estimate in-situ strength development."},
+{q:"Silica fume is an ultrafine:",o:["Aggregate","Pozzolanic material from silicon smelting","Chemical admixture","Cement replacement"],c:1,e:"Silica fume (micro-silica): extremely fine SiO₂ particles. Fills pores, reacts pozzolanically, gives very high strength."},
+{q:"Carbonation of concrete reduces:",o:["Strength","pH of concrete (depassivation of steel)","Permeability","Shrinkage"],c:1,e:"CO₂ reacts with Ca(OH)₂ → CaCO₃. pH drops from ~12.5 to ~8.5, destroying the passive oxide film on steel."},
+{q:"Self-compacting concrete (SCC) requires no:",o:["Cement","Vibration","Water","Aggregate"],c:1,e:"SCC flows under its own weight, filling formwork and encapsulating reinforcement without vibration. High powder content and superplasticiser."},
+{q:"The IS code for concrete mix design is:",o:["IS 456","IS 10262","IS 516","IS 1199"],c:1,e:"IS 10262: guidelines for concrete mix proportioning. IS 456: code of practice. IS 516: testing. IS 1199: workability."},
+{q:"Shrinkage-compensating concrete uses:",o:["Ordinary cement","Expansive cement or SRA","Extra water","Calcium chloride"],c:1,e:"Expansive cements or shrinkage-reducing admixtures (SRA) counteract drying shrinkage with controlled expansion."},
+{q:"Core test on hardened concrete: core strength at l/d = 2 is equivalent to:",o:["Cube strength directly","Cylinder strength (multiply by 1.25 for cube equivalent)","Flexural strength","Split tensile strength"],c:1,e:"Core with l/d = 2 ≈ cylinder strength. For cube: multiply by ~1.25. Factor varies with l/d."},
+{q:"The maximum size of aggregate for RCC is generally limited by:",o:["Colour","Minimum clear spacing between bars and cover","Weight","Cost"],c:1,e:"Max aggregate size ≤ 1/4 of min member dimension; ≤ clear spacing − 5 mm; ≤ cover. IS 456 cl. 5.3.3."},
+{q:"Ultrasonic Pulse Velocity (UPV) test assesses:",o:["Strength directly","Quality and uniformity of concrete","Chemical composition","Water content"],c:1,e:"UPV: pulse speed through concrete. Good concrete: > 4.5 km/s. Doubtful: 3.0–3.5. Poor: < 3.0."},
+{q:"Fibre-reinforced concrete (FRC) uses:",o:["Steel/polypropylene/glass fibres","Extra aggregate","More cement","Chemical fibres only"],c:0,e:"Fibres improve tensile strength, crack resistance, impact resistance, and ductility of concrete."}
+],
+hard:[
+{q:"Equivalent core strength from l/d = 1 core: multiply by ≈",o:["0.80","1.00","1.25","1.50"],c:2,e:"l/d = 1: factor ≈ 1.25 for cube equivalent. l/d = 2: factor ≈ 1.0 (≈ cylinder strength)."},
+{q:"Drying shrinkage strain of concrete ≈",o:["0.0003 (300 με)","0.003","0.03","0.3"],c:0,e:"IS 456 cl. 6.2.4.1: ultimate drying shrinkage ≈ 0.0003. Reduced by aggregate content and proper curing."},
+{q:"Chloride content limit in RCC per IS 456:",o:["0.6 kg/m³","0.3 kg/m³ for PSC","Both depend on member type","No limit"],c:0,e:"IS 456: max total chloride = 0.6 kg/m³ for RCC. For PSC: 0.3 kg/m³. To prevent chloride-induced corrosion."},
+{q:"The ACI 318 equivalent of IS 456's stress block is:",o:["Triangular","Whitney's rectangular stress block","Parabolic","Trapezoidal"],c:1,e:"ACI uses Whitney's equivalent rectangular block: depth a = β₁c, uniform stress 0.85f'c. IS 456 uses parabolic-rectangular."},
+{q:"Degree of hydration of OPC at 28 days is approximately:",o:["30%","50%","70%","100%"],c:2,e:"At 28 days: ~70% hydration (w/c 0.5). Complete hydration needs w/c ≈ 0.38 but is rarely achieved in practice."},
+{q:"The phenomenon of 'delayed ettringite formation' (DEF) occurs when:",o:["Concrete is never heated","Concrete is steam-cured above 65°C then exposed to moisture","Too little gypsum","Too much silica fume"],c:1,e:"High early curing temperature prevents normal ettringite formation. Later moisture triggers DEF → expansion and cracking."},
+{q:"The relationship between cube and cylinder strength:",o:["Cube = cylinder","Cylinder ≈ 0.8 × cube","Cylinder ≈ 1.25 × cube","Cylinder = 2 × cube"],c:1,e:"Cylinder strength ≈ 0.8 to 0.85 × cube strength due to different aspect ratio and friction effects."},
+{q:"Maximum temperature of fresh concrete at the time of placing ≈",o:["20°C","30°C","40°C","50°C"],c:2,e:"For hot weather concreting: max placing temp ~40°C (30°C for mass concrete). Use ice, cool aggregate, etc."},
+{q:"Permeability of concrete is measured by:",o:["Slump test","Water permeability test (DIN 1048 / IS 3085)","Rebound hammer","UPV"],c:1,e:"Water permeability: depth of penetration under pressure. IS 3085 or DIN 1048. Low permeability = high durability."},
+{q:"Modulus of rupture (flexural strength) of M25 ≈",o:["1.5 MPa","3.5 MPa (0.7√fck)","5.0 MPa","7.0 MPa"],c:1,e:"IS 456: fcr = 0.7√fck. For M25: 0.7×5 = 3.5 MPa. Used for cracking moment calculation."},
+{q:"The gel-space ratio (Powers) determines:",o:["Workability","Compressive strength of cement paste","Permeability only","Heat of hydration"],c:1,e:"Powers: strength ∝ (gel-space ratio)³. Gel-space ratio = volume of gel / (volume of gel + capillary pores)."},
+{q:"Rapid Chloride Permeability Test (RCPT) measures:",o:["Chloride ion migration in coulombs","Chloride content","Water absorption","Carbonation depth"],c:0,e:"ASTM C1202: total charge (coulombs) passed in 6 hrs. < 1000 C = very low; 1000–2000 = low; > 4000 = high permeability."},
+{q:"The transition zone in concrete refers to:",o:["Between mixing and placing","Interface between aggregate and cement paste (ITZ)","Between forms and concrete","Between old and new concrete"],c:1,e:"ITZ (Interfacial Transition Zone): ~50 μm thick zone around aggregate. More porous and weaker than bulk paste. Often where cracks initiate."},
+{q:"For high-strength concrete (> 60 MPa), aggregate type becomes critical because:",o:["Colour matters","Aggregate strength becomes the limiting factor","Size doesn't matter","Shape is irrelevant"],c:1,e:"In HSC, paste is stronger than aggregate. Failure occurs through aggregate, so strong, high-quality aggregate is essential."},
+{q:"Geopolymer concrete uses:",o:["OPC + water","Fly ash + alkaline activator (no OPC)","Only aggregate","Gypsum + lime"],c:1,e:"Geopolymer: aluminosilicate (fly ash/GGBS) activated by alkaline solution (NaOH + Na₂SiO₃). No Portland cement needed."},
+{q:"The autogenous shrinkage in concrete is significant for w/c:",o:["> 0.50","< 0.42","= 0.60","Any w/c"],c:1,e:"At low w/c (< 0.42), not enough water for full hydration → self-desiccation → autogenous shrinkage (can cause cracking in HPC)."},
+{q:"Sulfate attack on concrete converts C₃A to:",o:["Calcium silicate hydrate","Ettringite (expansive)","Calcium hydroxide","Calcium carbonate"],c:1,e:"Sulphate + C₃A hydration products → ettringite (expansive) → cracking, softening. Use sulphate-resistant cement (low C₃A)."},
+{q:"The Bolomey equation relates strength to:",o:["Only age","Cement-water ratio (inverse of w/c)","Only aggregate size","Only curing temperature"],c:1,e:"σ = K(c/w − 0.5). Strength increases with cement-water ratio. Abrams' law uses w/c directly."},
+{q:"Pumping of concrete requires minimum cement content of:",o:["200 kg/m³","300 kg/m³","350 kg/m³","250 kg/m³"],c:1,e:"For pumpable concrete: min 300 kg/m³ cement, max 20 mm aggregate, slump 75–150 mm, w/c 0.4–0.5."},
+{q:"In hot weather concreting, the main risk is:",o:["Slow setting","Rapid moisture loss → plastic shrinkage cracking","Excess strength","Lower temperature"],c:1,e:"High temperature: rapid evaporation → plastic cracking, fast setting, reduced workability, lower ultimate strength."}
+]}},
+"cm":{n:"Construction Management",ic:"📋",q:{
+easy:[
+{q:"CPM stands for:",o:["Central Planning Method","Critical Path Method","Construction Project Management","Cost Planning Model"],c:1,e:"CPM identifies the longest sequence of dependent activities → minimum project duration."},
+{q:"Slack on the critical path is:",o:["Maximum","Minimum","Zero","Infinity"],c:2,e:"Critical activities: zero total float. Any delay → project delay."},
+{q:"A Gantt chart shows:",o:["Dependencies","Activities vs time","Resources only","Costs only"],c:1,e:"Horizontal bars against time. Simple but doesn't show interdependencies clearly."},
+{q:"PERT stands for:",o:["Program Evaluation and Review Technique","Project Estimation and Resource Tracking","Planning Engineering Resource Tool","Performance Evaluation Rating"],c:0,e:"PERT: probabilistic durations (optimistic, most likely, pessimistic). te = (a+4m+b)/6."},
+{q:"Quality is ensured by:",o:["Increasing labour","Regular inspection and testing","Reducing cost","Faster execution"],c:1,e:"QA/QC: regular testing (cube tests, soil tests), adherence to specifications and IS codes."},
+{q:"The earliest start time of the first activity is usually:",o:["1","0","Depends on the project","Negative"],c:1,e:"Convention: project starts at time 0. EST of first activity = 0 (or day 1 in some conventions)."},
+{q:"Float/slack of an activity =",o:["EST − LST","LST − EST or LFT − EFT","Duration − EST","LFT − LST"],c:1,e:"Total float = LST − EST = LFT − EFT. Positive float means the activity is non-critical."},
+{q:"A milestone in a project is:",o:["A critical activity","A significant event or achievement point (zero duration)","The longest activity","A dummy activity"],c:1,e:"Milestones mark key achievements (foundation complete, roof done). Zero duration, used for tracking progress."},
+{q:"The critical path is the:",o:["Shortest path","Longest duration path through the network","Path with most activities","Path with fewest activities"],c:1,e:"Critical path determines project duration. All activities on it have zero float."},
+{q:"Work breakdown structure (WBS) divides the project into:",o:["Financial packages","Manageable work packages","Time zones","Random groups"],c:1,e:"WBS: hierarchical decomposition of total scope into manageable deliverable-oriented work packages."},
+{q:"Procurement in construction involves:",o:["Only concrete buying","Acquiring all materials, equipment, and services","Hiring only labour","Only formwork"],c:1,e:"Procurement covers all materials, plant, equipment, and subcontractor services needed for the project."},
+{q:"Safety at construction site is governed by:",o:["IRC","Building and Other Construction Workers Act","IS 456","Municipal bylaws only"],c:1,e:"BOCW Act 1996 and BOCW Rules regulate safety, health, and welfare of construction workers in India."},
+{q:"Bar chart limitation is that it does not clearly show:",o:["Activity durations","Activity interdependencies","Start dates","End dates"],c:1,e:"Bar charts show duration and timing but not logical dependencies between activities. Network diagrams do."},
+{q:"In construction, RFI stands for:",o:["Request for Information","Rate for Item","Resource for Installation","Review for Inspection"],c:0,e:"RFI: formal document requesting clarification on drawings, specifications, or other contract documents."},
+{q:"A punch list is prepared:",o:["Before construction starts","Near completion to list defects/incomplete items","During excavation","After demolition"],c:1,e:"Punch list: items needing correction or completion before final acceptance by the client."},
+{q:"Method statement describes:",o:["Project cost","Step-by-step construction methodology","Only material quantities","Payment schedule"],c:1,e:"Method statement: detailed description of how a particular activity will be executed, including sequence, equipment, safety measures."},
+{q:"PPE in construction stands for:",o:["Personal Protective Equipment","Project Planning Equipment","Pre-Project Estimate","Post-Project Evaluation"],c:0,e:"PPE: helmets, safety boots, gloves, goggles, harnesses. Mandatory for all workers on site."},
+{q:"The defect liability period starts from:",o:["Contract signing","Date of completion/handover","First day of work","Design approval"],c:1,e:"DLP begins at completion/handover and lasts 6–12 months during which contractor fixes defects."},
+{q:"Liquidated damages are imposed for:",o:["Quality defects","Delay beyond the contract completion date","Safety violations","Design errors"],c:1,e:"LD: predetermined compensation (usually per day/week) for delay in completion. Capped at a percentage of contract value."},
+{q:"In a project, overhead costs include:",o:["Direct material costs","Indirect costs (office, admin, insurance, utilities)","Labour wages","Equipment purchase"],c:1,e:"Overhead = indirect costs not attributable to a specific activity. Site overhead + head office overhead."}
+],
+medium:[
+{q:"PERT variance σ² =",o:["(b−a)/6","(b−a)²/36","(a+b)/2","(b−a)²/6"],c:1,e:"σ² = [(b−a)/6]². σ = (b−a)/6. Project variance = Σ(variances of critical activities)."},
+{q:"Free float =",o:["TF − Head event slack","LST − EST","LFT − EFT","ES(successor) − EF(activity)"],c:3,e:"Free float = ES(j) − EF(i). Delay possible without affecting any successor's earliest start."},
+{q:"Crashing: crash duration is the:",o:["Normal duration","Maximum duration","Minimum feasible duration with extra resources","Duration without resources"],c:2,e:"Crash = minimum time with maximum resources. Cost slope = (Cc−Cn)/(Tn−Tc) per time unit."},
+{q:"Dummy activity has:",o:["Time and resources","Zero duration, shows logical dependency","Infinite duration","Negative float"],c:1,e:"Dummy (dashed arrow in AOA): zero duration, zero resources. Represents dependency only."},
+{q:"Lead time refers to:",o:["Time between ordering and delivery","Mobilisation time","Overlap between activities","Project duration"],c:0,e:"Lead time for long-lead items (structural steel, special equipment) must be planned early in procurement."},
+{q:"Cost slope in crashing =",o:["Total cost/duration","(Crash cost − Normal cost)/(Normal time − Crash time)","Normal cost/crash time","Crash cost/normal time"],c:1,e:"Crash the critical activity with lowest cost slope first. Recalculate critical path after each crash."},
+{q:"Earned Value: CPI (Cost Performance Index) =",o:["EV/AC","AC/EV","PV/AC","EV/PV"],c:0,e:"CPI = EV/AC. CPI > 1: under budget. CPI < 1: over budget. SPI = EV/PV. SPI > 1: ahead."},
+{q:"Resource levelling aims to:",o:["Reduce cost","Smooth peak resource demand","Increase scope","Eliminate float"],c:1,e:"Reschedule non-critical activities within float to reduce resource peaks without extending project."},
+{q:"Retention money held in contracts ≈",o:["1–2%","5–10%","15–20%","25%"],c:1,e:"5–10% of each RA bill retained. Half released on completion; half after DLP."},
+{q:"EVM: Schedule Variance SV =",o:["EV − PV","PV − EV","EV − AC","AC − PV"],c:0,e:"SV = EV − PV. Positive = ahead. Cost Variance CV = EV − AC. Positive = under budget."},
+{q:"In a network, event is:",o:["An activity","A point in time (start or end of activities)","A resource","A cost"],c:1,e:"Event (node): a point in time marking the beginning or end of one or more activities. Has no duration."},
+{q:"Total quality management (TQM) emphasises:",o:["Only inspection","Continuous improvement involving everyone","Only testing","Only manager's responsibility"],c:1,e:"TQM: company-wide approach. Continuous improvement (kaizen), customer focus, employee involvement, data-driven decisions."},
+{q:"The S-curve in project management shows:",o:["Activity durations","Cumulative cost or progress vs time","Resource histogram","Bar chart"],c:1,e:"S-curve: cumulative expenditure/progress. Slow start → rapid middle → slow finish. Used for monitoring actual vs planned."},
+{q:"Risk management in construction includes:",o:["Only insurance","Identification, analysis, response planning, monitoring","Only legal compliance","Only safety measures"],c:1,e:"Risk process: identify → qualitative/quantitative analysis → plan responses (avoid, mitigate, transfer, accept) → monitor."},
+{q:"In CPM, the forward pass calculates:",o:["Latest times","Earliest start and finish times","Float","Cost"],c:1,e:"Forward pass: ES and EF for all activities. Backward pass: LS and LF. Float = LS−ES or LF−EF."},
+{q:"Interfering float =",o:["Total float − Free float","Free float − Total float","Independent float","Total float + Free float"],c:0,e:"Interfering float = TF − FF. The portion of total float that affects the float of successor activities."},
+{q:"Mobilisation advance is given to the contractor at:",o:["Project end","Start of project (to set up site)","Midway","Never"],c:1,e:"Mobilisation advance (5–10%) helps the contractor establish site facilities, procure materials, and deploy equipment."},
+{q:"Bill of Materials (BOM) lists:",o:["All project activities","All materials with quantities and specifications","Only labour","Only equipment"],c:1,e:"BOM: comprehensive list of all materials needed for the project with quantities, specifications, and sometimes suppliers."},
+{q:"Benchmarking in construction management means:",o:["Setting out benchmarks","Comparing performance with best industry practices","Only surveying","Only costing"],c:1,e:"Benchmarking: measuring project KPIs against industry best practices to identify improvement opportunities."},
+{q:"In project scheduling, 'lag' between two activities means:",o:["Overlap","Mandatory waiting time between predecessor finish and successor start","Speed-up","Crash duration"],c:1,e:"Lag: delay between activities (e.g., curing time before next operation). Lead: overlap (successor starts before predecessor finishes)."}
+],
+hard:[
+{q:"Probability of completing PERT project by time T uses:",o:["Normal distribution (Z-score)","Poisson","Binomial","Uniform"],c:0,e:"Z = (T−Te)/σp. σp = √Σσ²(critical). Use standard normal tables for probability."},
+{q:"EVM: Estimate at Completion (EAC) =",o:["BAC/CPI","AC+ETC","Both A and B are common formulas","BAC only"],c:2,e:"EAC = BAC/CPI (performance-based) or AC + new ETC. Multiple formulas depending on assumptions."},
+{q:"In LOB (Line of Balance) scheduling, the technique is best for:",o:["One-off projects","Repetitive projects (housing, high-rise floors)","Only demolition","Only procurement"],c:1,e:"LOB plots repetitive activities across units (floors/houses) ensuring smooth resource flow and balanced production rates."},
+{q:"Critical chain project management (CCPM) addresses:",o:["Only cost","Resource constraints and project buffer management","Only scope","Only quality"],c:1,e:"CCPM (Goldratt): considers resource constraints, removes activity-level buffers, adds project buffer at end and feeding buffers."},
+{q:"Monte Carlo simulation in project management is used for:",o:["Exact duration calculation","Probabilistic risk analysis of schedule and cost","Resource levelling only","Quality control"],c:1,e:"Monte Carlo: run thousands of simulations with random activity durations → probability distribution of project completion."},
+{q:"BIM (Building Information Modelling) integrates:",o:["Only 3D geometry","3D model + time + cost + facilities management (nD)","Only cost data","Only scheduling"],c:1,e:"BIM: 3D (geometry) + 4D (time/schedule) + 5D (cost) + 6D (sustainability) + 7D (facility management)."},
+{q:"Lean construction principle of 'pull planning' means:",o:["Pushing work forward","Planning backwards from milestones, only producing what's needed","Pulling resources from other projects","Random scheduling"],c:1,e:"Pull: work is triggered by downstream need (just-in-time). Reduces overproduction and waiting. Based on Last Planner System."},
+{q:"Value engineering in construction aims to:",o:["Reduce quality","Achieve required function at lowest cost without compromising quality","Increase cost","Eliminate all design"],c:1,e:"VE: systematic analysis of functions to achieve essential functions at the lowest total cost, maintaining quality and performance."},
+{q:"In contract management, a variation order is:",o:["A change in site location","A change in scope/specification authorised by the client","A penalty clause","A quality certificate"],c:1,e:"Variation order: formal document authorising change in work scope, quantity, or specification. Requires cost and time assessment."},
+{q:"The Last Planner System (LPS) focuses on:",o:["Top-down control","Collaborative weekly work planning with commitment-based scheduling","Only CPM","Cost control only"],c:1,e:"LPS: collaborative, bottom-up planning. Weekly work plans based on commitments. Tracks PPC (Percent Plan Complete)."},
+{q:"Dispute resolution in construction contracts typically follows the order:",o:["Court → Arbitration → Negotiation","Negotiation → Mediation → Arbitration → Litigation","Only litigation","Only arbitration"],c:1,e:"Preferred sequence: negotiation → mediation → dispute adjudication board → arbitration → litigation (last resort)."},
+{q:"Earned Schedule (ES) extends EVM by measuring schedule performance in:",o:["Cost units","Time units","Resource units","Percentage"],c:1,e:"ES converts schedule variance to time units: ES = time at which PV = current EV. SV(t) = ES − AT."},
+{q:"In prequalification of contractors, the criteria typically include:",o:["Only lowest bid","Financial capacity, technical experience, equipment, and past performance","Only company size","Only registration"],c:1,e:"PQ evaluates: financial soundness, similar project experience, available resources (personnel + equipment), past performance track record."},
+{q:"Target cost contract incentivises:",o:["Maximum cost","Sharing of savings if actual cost < target","Only fixed price","Unlimited variation"],c:1,e:"Pain/gain share mechanism: savings below target shared between client and contractor. Overruns also shared."},
+{q:"Percent Plan Complete (PPC) in Last Planner System =",o:["Planned activities / Total activities","Completed commitments / Total commitments made × 100","Cost / Budget × 100","Time elapsed / Total time × 100"],c:1,e:"PPC measures reliability of weekly plans. Target PPC > 80%. Low PPC → investigate root causes (5 Whys)."},
+{q:"ISO 14001 relates to:",o:["Quality management","Environmental management system","Safety management","Project management"],c:1,e:"ISO 14001: EMS standard. ISO 9001: QMS. ISO 45001: Occupational H&S. ISO 21500: Project management guidance."},
+{q:"Cash flow projection in construction considers:",o:["Only income","Timing of income (client payments) vs expenditure (materials, labour, subcontractors)","Only expenditure","Only profit"],c:1,e:"Cash flow: positive (receipts) vs negative (payments). Poor cash flow is the #1 cause of contractor failure."},
+{q:"In EPC contracts, the contractor is responsible for:",o:["Only construction","Engineering + Procurement + Construction (turnkey)","Only design","Only procurement"],c:1,e:"EPC (turnkey): single point responsibility for design, procurement, and construction. Lump-sum price typically."},
+{q:"Agile/Scrum methods applied to construction focus on:",o:["Rigid long-term planning","Iterative short cycles (sprints), daily stand-ups, continuous improvement","Eliminating all planning","Only software tasks"],c:1,e:"Adapted agile: short planning cycles, daily site coordination meetings, visual management boards, rapid feedback loops."},
+{q:"Carbon footprint reduction in construction can be achieved by:",o:["Using only steel","Using blended cements, recycled materials, energy-efficient design","Ignoring sustainability","Increasing concrete volume"],c:1,e:"Strategies: blended cements (PPC/PSC), recycled aggregates, timber, energy-efficient HVAC, less wastage, local sourcing."}
+]}}};
+
+/* ══════ RANDOMIZE OPTIONS AT RUNTIME ══════ */
+// Shuffle options for each question so correct answer position varies
+(function randomizeOptions(){
+  for(const subj of Object.values(QB)){
+    const qs = subj.q || subj.questions;
+    if(!qs) continue;
+    for(const diff of ['easy','medium','hard']){
+      if(!qs[diff]) continue;
+      qs[diff].forEach(q => {
+        const opts = q.o || q.options;
+        const correct = q.c || q.correct;
+        if(!opts || correct === undefined) return;
+        const correctText = opts[correct];
+        // Fisher-Yates shuffle
+        for(let i=opts.length-1;i>0;i--){
+          const j=Math.floor(Math.random()*(i+1));
+          [opts[i],opts[j]]=[opts[j],opts[i]];
+        }
+        // Update correct index
+        const key = q.o ? 'c' : 'correct';
+        q[key] = opts.indexOf(correctText);
+      });
+    }
+  }
+})();
+
+/* ══════ NORMALIZE QB KEYS ══════ */
+for(const[k,v] of Object.entries(QB)){
+  if(v.name && !v.n) v.n=v.name;
+  if(v.icon && !v.ic) v.ic=v.icon;
+  if(v.questions && !v.q) v.q=v.questions;
+  if(v.q){
+    ['easy','medium','hard'].forEach(d=>{
+      if(v.q[d]) v.q[d].forEach(q=>{
+        if(q.options && !q.o) q.o=q.options;
+        if(q.correct!==undefined && q.c===undefined) q.c=q.correct;
+        if(q.exp && !q.e) q.e=q.exp;
+      });
+    });
+  }
+}
+
+/* ══════ STATE ══════ */
+let S={sel:[],diff:"easy",cnt:25,tmr:0,qs:[],cur:0,ans:[],ti:null,tl:0};
+const $=id=>document.getElementById(id);
+
+/* ══════ INIT ══════ */
+function init(){
+  renderGrid();setupPills();
+  $("start-btn").onclick=startQuiz;
+  $("skip-b").onclick=skipQ;
+  $("next-b").onclick=nextQ;
+  $("fin-b").onclick=showResults;
+  let total=0;
+  Object.values(QB).forEach(s=>{
+    const qs=s.q;
+    ['easy','medium','hard'].forEach(d=>{if(qs[d])total+=qs[d].length});
+  });
+  $("total-count").textContent=total+" questions across 12 subjects — fully offline";
+}
+function renderGrid(){
+  const g=$("subject-grid");g.innerHTML="";
+  for(const[k,s]of Object.entries(QB)){
+    const qs=s.q;
+    let t=0;['easy','medium','hard'].forEach(d=>{if(qs[d])t+=qs[d].length});
+    const c=document.createElement("div");c.className="sc";c.dataset.k=k;
+    c.innerHTML=`<span class="ic">${s.ic}</span><div class="nm">${s.n}</div><div class="ct">${t} Qs</div><div class="ck">✓</div>`;
+    c.onclick=()=>togSub(c,k);g.appendChild(c);
+  }
+}
+function togSub(c,k){c.classList.toggle("sel");S.sel=S.sel.includes(k)?S.sel.filter(x=>x!==k):[...S.sel,k];updBtn();}
+function updBtn(){
+  const pool=getPool();const n=S.cnt==="all"?pool.length:Math.min(S.cnt,pool.length);
+  $("start-btn").disabled=!S.sel.length;
+  $("si").textContent=S.sel.length?`${n} question${n>1?"s":""} from ${S.sel.length} subject${S.sel.length>1?"s":""}`:"Select at least one subject";
+}
+function setupPills(){
+  document.querySelectorAll(".pg").forEach(g=>{g.querySelectorAll(".pi").forEach(p=>{
+    p.onclick=()=>{g.querySelectorAll(".pi").forEach(x=>x.classList.remove("a"));p.classList.add("a");
+      const v=p.dataset.v;
+      if(g.id==="dp")S.diff=v;else if(g.id==="cp")S.cnt=v==="all"?"all":+v;else S.tmr=+v;
+      updBtn();};
+  });});
+}
+function getPool(){
+  let p=[];
+  S.sel.forEach(k=>{const s=QB[k];const qs=s.q;
+    if(S.diff==="mixed")['easy','medium','hard'].forEach(d=>{if(qs[d])qs[d].forEach(q=>p.push({...q,sub:s.n,d}))});
+    else if(qs[S.diff]) qs[S.diff].forEach(q=>p.push({...q,sub:s.n,d:S.diff}));
+  });
+  return shuffle(p);
+}
+function shuffle(a){const b=[...a];for(let i=b.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[b[i],b[j]]=[b[j],b[i]];}return b;}
+
+/* ══════ QUIZ ══════ */
+function startQuiz(){
+  let p=getPool();const n=S.cnt==="all"?p.length:Math.min(S.cnt,p.length);
+  S.qs=p.slice(0,n);S.cur=0;S.ans=Array(n).fill(null);
+  show("quiz-screen");renderQ();
+}
+function renderQ(){
+  const q=S.qs[S.cur],t=S.qs.length,L=["A","B","C","D"];
+  $("qs").textContent=q.sub;$("qcn").textContent=`${S.cur+1} / ${t}`;
+  $("pf").style.width=`${(S.cur/t)*100}%`;
+  $("qtxt").textContent=`Q${S.cur+1}. ${q.q}`;
+  const od=$("qo");od.innerHTML="";
+  q.o.forEach((o,i)=>{const el=document.createElement("div");el.className="op";el.dataset.i=i;
+    el.innerHTML=`<span class="lt">${L[i]}</span><span class="ot">${o}</span>`;
+    el.onclick=()=>selOpt(i);od.appendChild(el);});
+  $("qe").classList.add("hd");$("next-b").style.display="none";$("fin-b").style.display="none";$("skip-b").style.display="";
+  clearInterval(S.ti);const te=$("qtm");
+  if(S.tmr>0){S.tl=S.tmr;te.textContent=fmt(S.tl);te.style.display="";
+    S.ti=setInterval(()=>{S.tl--;te.textContent=fmt(S.tl);if(S.tl<=0){clearInterval(S.ti);autoSub();}},1000);
+  }else te.style.display="none";
+}
+function fmt(s){return`${Math.floor(s/60)}:${(s%60).toString().padStart(2,"0")}`;}
+function selOpt(i){
+  clearInterval(S.ti);const q=S.qs[S.cur];S.ans[S.cur]=i;
+  document.querySelectorAll("#qo .op").forEach(el=>{el.classList.add("dis");el.style.pointerEvents="none";
+    const idx=+el.dataset.i;if(idx===q.c)el.classList.add("cor");if(idx===i&&i!==q.c)el.classList.add("wrg");});
+  const ok=i===q.c;$("qe").innerHTML=`<strong>${ok?"✅ Correct!":"❌ Incorrect."}</strong> ${q.e}`;$("qe").classList.remove("hd");
+  $("skip-b").style.display="none";
+  (S.cur<S.qs.length-1?$("next-b"):$("fin-b")).style.display="";
+}
+function autoSub(){
+  if(S.ans[S.cur]!==null)return;S.ans[S.cur]=-1;
+  document.querySelectorAll("#qo .op").forEach(el=>{el.classList.add("dis");el.style.pointerEvents="none";
+    if(+el.dataset.i===S.qs[S.cur].c)el.classList.add("cor");});
+  $("qe").innerHTML=`<strong>⏱️ Time's up!</strong> ${S.qs[S.cur].e}`;$("qe").classList.remove("hd");
+  $("skip-b").style.display="none";(S.cur<S.qs.length-1?$("next-b"):$("fin-b")).style.display="";
+}
+function skipQ(){clearInterval(S.ti);S.ans[S.cur]=-1;S.cur<S.qs.length-1?(S.cur++,renderQ()):showResults();}
+function nextQ(){S.cur++;renderQ();}
+
+/* ══════ RESULTS ══════ */
+function showResults(){
+  clearInterval(S.ti);show("result-screen");
+  let ok=0,no=0,sk=0;S.ans.forEach((a,i)=>{if(a===null||a===-1)sk++;else if(a===S.qs[i].c)ok++;else no++;});
+  const t=S.qs.length,pct=Math.round(ok/t*100);
+  const circ=2*Math.PI*56,ring=$("ring");
+  ring.style.stroke=pct>=70?"var(--ok)":pct>=40?"var(--wa)":"var(--no)";
+  setTimeout(()=>ring.style.strokeDashoffset=circ-(circ*pct/100),100);
+  $("rpc").textContent=pct+"%";$("rof").textContent=`${ok} of ${t} correct`;
+  let g="";if(pct>=90)g="🏆 Outstanding!";else if(pct>=70)g="👏 Well Done!";else if(pct>=50)g="💪 Good Effort";else if(pct>=30)g="📖 Keep Practising";else g="🔄 Review Topics";
+  $("rgr").textContent=g;
+  $("rst").innerHTML=`<span><span class="dt g"></span> ${ok} correct</span><span><span class="dt r"></span> ${no} wrong</span><span><span class="dt y"></span> ${sk} skipped</span>`;
+  const rl=$("rvl");rl.innerHTML="";const L=["A","B","C","D"];
+  S.qs.forEach((q,i)=>{
+    const a=S.ans[i],wc=a===q.c,ws=a===null||a===-1;
+    const cls=ws?"ws":wc?"wc":"ww";
+    let ah="";
+    if(ws)ah=`<span class="tg skt">SKIPPED</span> Correct: ${L[q.c]}. ${q.o[q.c]}`;
+    else if(wc)ah=`<span class="tg ct2">CORRECT</span> ${L[a]}. ${q.o[a]}`;
+    else ah=`<span class="tg wt">WRONG</span> You: ${L[a]}. ${q.o[a]} — Correct: ${L[q.c]}. ${q.o[q.c]}`;
+    const d=document.createElement("div");d.className=`rvi ${cls}`;
+    d.innerHTML=`<div class="rvq">Q${i+1}. ${q.q} <span style="font-weight:400;font-size:.72rem;color:var(--tm)">[${q.sub}]</span></div><div class="rva">${ah}</div><div class="rve">${q.e}</div>`;
+    rl.appendChild(d);
+  });
+  $("rvs").classList.add("hd");
+}
+function show(id){document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));$(id).classList.add("active");window.scrollTo({top:0,behavior:"smooth"});}
+function goHome(){S.sel=[];document.querySelectorAll(".sc").forEach(c=>c.classList.remove("sel"));updBtn();show("home-screen");}
+init();
+</script>
+</body>
+</html>
